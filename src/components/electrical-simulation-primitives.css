@@ -1,0 +1,342 @@
+.ectp-extension-module .ectp-sim-piece {
+  vector-effect: non-scaling-stroke;
+}
+
+.ectp-extension-module .sim-piece-label,
+.ectp-extension-module .sim-motor-name,
+.ectp-extension-module .sim-small-label,
+.ectp-extension-module .sim-selector-state,
+.ectp-extension-module .sim-prototype-badge {
+  fill: #0f172a;
+  stroke: rgba(255, 255, 255, 0.98);
+  stroke-width: 2.4px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.ectp-extension-module .sim-small-label {
+  fill: #64748b;
+  stroke-width: 2px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ectp-extension-module .sim-terminal-outer {
+  fill: #f8fafc;
+  stroke: #64748b;
+  stroke-width: 1.6;
+}
+
+.ectp-extension-module .sim-terminal-inner {
+  fill: #e2e8f0;
+  stroke: #94a3b8;
+  stroke-width: 1.1;
+}
+
+.ectp-extension-module .sim-terminal-slot {
+  stroke: #475569;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+}
+
+.ectp-extension-module .sim-detail {
+  fill: none;
+  stroke: #475569;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.ectp-extension-module .sim-contact-fixed {
+  fill: #f59e0b;
+  stroke: #92400e;
+  stroke-width: 1.2;
+}
+
+.ectp-extension-module .sim-contact-bridge-live {
+  fill: none;
+  stroke: #16a34a;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: all 160ms ease;
+}
+
+.ectp-extension-module .sim-contact-bridge-open {
+  fill: none;
+  stroke: #ef4444;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  transition: all 160ms ease;
+}
+
+.ectp-extension-module .sim-contact-spring,
+.ectp-extension-module .sim-contact-nc-mark {
+  fill: none;
+  stroke: #64748b;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+}
+
+.ectp-extension-module .sim-qf-body {
+  fill: #f8fafc;
+  stroke: #64748b;
+  stroke-width: 2.4;
+}
+
+.ectp-extension-module .sim-qf-top {
+  fill: rgba(255, 255, 255, 0.92);
+  stroke: rgba(148, 163, 184, 0.55);
+  stroke-width: 1.2;
+}
+
+.ectp-extension-module .sim-qf-window {
+  fill: rgba(191, 219, 254, 0.7);
+  stroke: #60a5fa;
+  stroke-width: 1.8;
+}
+
+.ectp-extension-module .sim-qf-pole {
+  fill: rgba(226, 232, 240, 0.95);
+  stroke: #94a3b8;
+  stroke-width: 1.5;
+}
+
+.ectp-extension-module .sim-qf-copper {
+  stroke: #b45309;
+  stroke-width: 1.4;
+}
+
+.ectp-extension-module .sim-qf-link-bar {
+  fill: #cbd5e1;
+  stroke: #64748b;
+  stroke-width: 1.5;
+}
+
+.ectp-extension-module .sim-qf-handle {
+  stroke: #1d4ed8;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: all 200ms ease;
+}
+
+.ectp-extension-module .sim-qf-indicator {
+  fill: #fff;
+  stroke: #94a3b8;
+  stroke-width: 1.2;
+}
+
+.ectp-extension-module .sim-qf-status {
+  stroke: none;
+  font-size: 9px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.ectp-extension-module .sim-qf-status.is-on { fill: #15803d; }
+.ectp-extension-module .sim-qf-status.is-off { fill: #b91c1c; }
+
+.ectp-extension-module .sim-fuse-shell {
+  fill: rgba(255, 255, 255, 0.92);
+  stroke: #94a3b8;
+  stroke-width: 1.6;
+}
+
+.ectp-extension-module .sim-fuse-window {
+  fill: rgba(191, 219, 254, 0.26);
+  stroke: rgba(96, 165, 250, 0.72);
+  stroke-width: 1.1;
+}
+
+.ectp-extension-module .sim-fuse-core {
+  fill: none;
+  stroke: #b45309;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ectp-extension-module .sim-fuse-strap {
+  stroke: #475569;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+}
+
+.ectp-extension-module .sim-button-contactblock,
+.ectp-extension-module .sim-selector-contactblock {
+  fill: rgba(255, 255, 255, 0.95);
+  stroke: #64748b;
+  stroke-width: 1.4;
+}
+
+.ectp-extension-module .sim-button-backplate {
+  fill: #e2e8f0;
+  stroke: #94a3b8;
+  stroke-width: 1.4;
+}
+
+.ectp-extension-module .sim-button-stem {
+  stroke: #64748b;
+  stroke-width: 1.2;
+}
+
+.ectp-extension-module .sim-button-cap-stop {
+  fill: #ef4444;
+  stroke: #991b1b;
+  stroke-width: 2;
+}
+
+.ectp-extension-module .sim-button-cap-forward {
+  fill: #16a34a;
+  stroke: #166534;
+  stroke-width: 2;
+}
+
+.ectp-extension-module .sim-button-cap-reverse {
+  fill: #2563eb;
+  stroke: #1d4ed8;
+  stroke-width: 2;
+}
+
+.ectp-extension-module .sim-button-ring,
+.ectp-extension-module .sim-selector-ring {
+  fill: rgba(255, 255, 255, 0.72);
+  stroke: #94a3b8;
+  stroke-width: 1.5;
+}
+
+.ectp-extension-module .sim-selector-handle {
+  stroke: #1d4ed8;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: all 200ms ease;
+}
+
+.ectp-extension-module .sim-selector-state {
+  fill: #475569;
+  font-size: 11px;
+}
+
+.ectp-extension-module .sim-prototype-badge {
+  fill: #7c3aed;
+  font-size: 7px;
+  font-weight: 900;
+}
+
+.ectp-extension-module .sim-coil-body {
+  fill: rgba(255, 255, 255, 0.94);
+  stroke: #94a3b8;
+  stroke-width: 1.7;
+}
+
+.ectp-extension-module .sim-coil-highlight {
+  fill: rgba(245, 158, 11, 0.18);
+  stroke: rgba(245, 158, 11, 0.72);
+  stroke-width: 1.2;
+}
+
+.ectp-extension-module .sim-coil-core {
+  fill: #cbd5e1;
+  stroke: #64748b;
+  stroke-width: 1.2;
+}
+
+.ectp-extension-module .sim-coil-winding {
+  fill: none;
+  stroke: #b45309;
+  stroke-width: 2;
+}
+
+.ectp-extension-module .sim-timer-dial {
+  fill: #ede9fe;
+  stroke: #7c3aed;
+  stroke-width: 1.2;
+}
+
+.ectp-extension-module .sim-timer-hand {
+  stroke: #7c3aed;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+}
+
+.ectp-extension-module .sim-fr-channel {
+  fill: rgba(255, 247, 237, 0.86);
+  stroke: #b45309;
+  stroke-width: 1.4;
+}
+
+.ectp-extension-module .sim-fr-heater {
+  fill: none;
+  stroke: #ea580c;
+  stroke-width: 1.7;
+  stroke-linejoin: round;
+}
+
+.ectp-extension-module .ectp-fr.is-tripped .sim-fr-channel,
+.ectp-extension-module .sim-fr-channel.emphasized {
+  fill: #fef2f2;
+  stroke: #dc2626;
+}
+
+.ectp-extension-module .ectp-fr.is-tripped .sim-fr-heater,
+.ectp-extension-module .sim-fr-heater.emphasized {
+  stroke: #dc2626;
+}
+
+.ectp-extension-module .sim-motor-box,
+.ectp-extension-module .sim-motor-endcap,
+.ectp-extension-module .sim-motor-shaft,
+.ectp-extension-module .sim-motor-base {
+  fill: #dbe4ef;
+  stroke: #64748b;
+  stroke-width: 1.5;
+}
+
+.ectp-extension-module .sim-motor-shell {
+  fill: #eaf2ff;
+  stroke: #64748b;
+  stroke-width: 2;
+}
+
+.ectp-extension-module .sim-motor-fin {
+  stroke: #64748b;
+  stroke-width: 1.4;
+}
+
+.ectp-extension-module .sim-motor-rotor-hub {
+  fill: #94a3b8;
+  stroke: #475569;
+  stroke-width: 1.5;
+}
+
+.ectp-extension-module .sim-motor-rotor-spoke {
+  stroke: #334155;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}
+
+.ectp-extension-module .sim-motor-name {
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.ectp-extension-module .motor-rotor-assembly.is-active,
+.ectp-extension-module .motor-rotor-assembly.is-live {
+  animation: ectp-repository-motor-forward 0.78s linear infinite;
+}
+
+.ectp-extension-module .motor-rotor-assembly.reverse.is-active,
+.ectp-extension-module .motor-rotor-assembly.reverse.is-live {
+  animation-name: ectp-repository-motor-reverse;
+}
+
+@keyframes ectp-repository-motor-forward { to { transform: rotate(360deg); } }
+@keyframes ectp-repository-motor-reverse { to { transform: rotate(-360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ectp-extension-module .motor-rotor-assembly,
+  .ectp-extension-module .ectp-current-flow {
+    animation: none !important;
+  }
+}
