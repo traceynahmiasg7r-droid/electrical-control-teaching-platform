@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "ch02",
+  "moduleId": "ch02_time_sequence",
+  "routeId": "time-sequence-control",
+  "order": 8,
+  "code": "08",
+  "title": "时间原则控制线路",
+  "shortTitle": "时间原则控制",
+  "simulationLevel": "S2",
+  "maturity": "M2",
+  "status": "prototype",
+  "integrationMode": "facade-v1",
+  "geometryLockId": "ch02_time_sequence_geometry_v1_locked"
+}

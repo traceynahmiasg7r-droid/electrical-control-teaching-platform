@@ -1,0 +1,121 @@
+[data-module="ch02_multisite_control"] {
+  --multisite-wire: #94a3b8;
+  --multisite-component: #334155;
+  --multisite-control-flow: #f59e0b;
+  --multisite-l1: #facc15;
+  --multisite-l2: #06b6d4;
+  --multisite-l3: #22c55e;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  color: #111827;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+[data-module="ch02_multisite_control"] .multisite-summary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 6px 9px 10px;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+[data-module="ch02_multisite_control"] .multisite-summary span {
+  padding: 7px 10px;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+[data-module="ch02_multisite_control"] .multisite-summary strong { color: #0b63e6; }
+[data-module="ch02_multisite_control"] .multisite-summary .multisite-rule { margin-left: auto; color: #159447; font-weight: 750; }
+[data-module="ch02_multisite_control"] .multisite-board-shell { height: calc(100% - 50px); min-height: 0; }
+[data-module="ch02_multisite_control"] .multisite-board { display: block; width: 100%; height: 100%; min-height: 440px; background: #fff; text-rendering: geometricPrecision; }
+[data-module="ch02_multisite_control"] .ectp-zone { fill: #fbfdff; stroke: #dbe4ef; stroke-width: 1.5; }
+[data-module="ch02_multisite_control"] .ectp-section-title { fill: #0f172a; font-size: 18px; font-weight: 850; }
+[data-module="ch02_multisite_control"] .ectp-phase-label,
+[data-module="ch02_multisite_control"] .ectp-label { fill: #0f172a; stroke: rgba(255,255,255,.96); stroke-width: 2.2px; stroke-linejoin: round; paint-order: stroke fill; font-size: 14px; font-weight: 850; filter: none; }
+[data-module="ch02_multisite_control"] .ectp-small-label,
+[data-module="ch02_multisite_control"] .ectp-legend text { fill: #64748b; stroke: rgba(255,255,255,.96); stroke-width: 2px; stroke-linejoin: round; paint-order: stroke fill; font-size: 11.5px; font-weight: 700; filter: none; }
+[data-module="ch02_multisite_control"] .ectp-wire { fill: none; stroke: var(--multisite-wire); stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+[data-module="ch02_multisite_control"] .ectp-wire.is-partial { stroke: #64748b; stroke-width: 3.3; }
+[data-module="ch02_multisite_control"] .ectp-wire.is-active { stroke: #475569; stroke-width: 4; }
+[data-module="ch02_multisite_control"] .ectp-current-flow { fill: none; stroke-width: 4.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 12 22; vector-effect: non-scaling-stroke; pointer-events: none; animation: ch02-multisite-current-flow 1.1s linear infinite; }
+[data-module="ch02_multisite_control"] .ectp-current-flow.control { stroke: var(--multisite-control-flow); }
+[data-module="ch02_multisite_control"] .ectp-current-flow.phase-l1 { stroke: var(--multisite-l1); }
+[data-module="ch02_multisite_control"] .ectp-current-flow.phase-l2 { stroke: var(--multisite-l2); }
+[data-module="ch02_multisite_control"] .ectp-current-flow.phase-l3 { stroke: var(--multisite-l3); }
+[data-module="ch02_multisite_control"] .ectp-component { fill: #fff; stroke: var(--multisite-component); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; transition: stroke 180ms ease, filter 180ms ease; }
+[data-module="ch02_multisite_control"] .ectp-component.is-active { stroke: #0f172a; stroke-width: 3.1; filter: drop-shadow(0 0 2px rgba(245,158,11,.2)); }
+[data-module="ch02_multisite_control"] .ectp-actuator { fill: none; stroke: #64748b; stroke-width: 1.6; stroke-dasharray: 4 4; }
+[data-module="ch02_multisite_control"] .ectp-motor-rotor path { fill: #cbd5e1; stroke: none; }
+[data-module="ch02_multisite_control"] .ectp-component.is-active .ectp-motor-rotor { animation: ch02-multisite-motor-spin .78s linear infinite; }
+[data-module="ch02_multisite_control"] .ectp-motor-name { fill: #0f172a; stroke: none; font-size: 18px; font-weight: 850; }
+[data-module="ch02_multisite_control"] .ectp-indicator.is-active circle { fill: #fde68a; stroke: #f59e0b; filter: drop-shadow(0 0 7px rgba(245,158,11,.58)); }
+[data-module="ch02_multisite_control"] .ectp-prototype-badge { fill: #7c3aed; stroke: none; font-size: 8px; font-weight: 800; }
+
+/* 元件外观沿用正式仓库 index.html 中 sim-* 的工业仿真视觉语言。 */
+[data-module="ch02_multisite_control"] .repo-sim-qf-body { fill: #f8fafc; stroke: #64748b; stroke-width: 2.4; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-top { fill: rgba(255,255,255,.92); stroke: rgba(148,163,184,.55); stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-window { fill: rgba(191,219,254,.7); stroke: #60a5fa; stroke-width: 1.8; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-pole { fill: rgba(226,232,240,.95); stroke: #94a3b8; stroke-width: 1.5; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-copper { fill: rgba(217,119,6,.18); stroke: #b45309; stroke-width: 1.4; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-link { fill: #cbd5e1; stroke: #64748b; stroke-width: 1.5; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-handle,
+[data-module="ch02_multisite_control"] .repo-sim-qf-handle.is-closed { stroke: #1d4ed8; stroke-width: 5; stroke-linecap: round; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-indicator { fill: #fff; stroke: #94a3b8; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-status { stroke: none; font-size: 9px; font-weight: 900; text-anchor: middle; dominant-baseline: middle; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-status.is-on { fill: #15803d; }
+[data-module="ch02_multisite_control"] .repo-sim-qf-status.is-off { fill: #b91c1c; }
+[data-module="ch02_multisite_control"] .repo-sim-fuse-shell { fill: rgba(255,255,255,.92); stroke: #94a3b8; stroke-width: 1.6; }
+[data-module="ch02_multisite_control"] .repo-sim-fuse-cap { fill: #e2e8f0; stroke: #64748b; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-fuse-window { fill: rgba(191,219,254,.34); stroke: rgba(96,165,250,.78); stroke-width: 1.1; }
+[data-module="ch02_multisite_control"] .repo-sim-fuse-core { fill: none; stroke: #b45309; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+[data-module="ch02_multisite_control"] .repo-sim-contactor-shell { fill: rgba(255,255,255,.92); stroke: #94a3b8; stroke-width: 1.5; }
+[data-module="ch02_multisite_control"] .repo-sim-contact-frame { fill: rgba(255,255,255,.9); stroke: #94a3b8; stroke-width: 1.4; }
+[data-module="ch02_multisite_control"] .repo-sim-contact-channel { fill: rgba(226,232,240,.58); stroke: #94a3b8; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-terminal { fill: #f59e0b; stroke: #92400e; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-terminal-outer { fill: #f8fafc; stroke: #64748b; stroke-width: 1.6; }
+[data-module="ch02_multisite_control"] .repo-sim-terminal-inner { fill: #e2e8f0; stroke: #94a3b8; stroke-width: 1.1; }
+[data-module="ch02_multisite_control"] .repo-sim-terminal-slot { fill: none; stroke: #475569; stroke-width: 1.2; stroke-linecap: round; }
+[data-module="ch02_multisite_control"] .repo-sim-contact-fixed { fill: #f59e0b; stroke: #92400e; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-detail { stroke: #475569; stroke-width: 1.8; stroke-linecap: round; }
+[data-module="ch02_multisite_control"] .repo-sim-contact-live { stroke: #16a34a; stroke-width: 3; stroke-linecap: round; }
+[data-module="ch02_multisite_control"] .repo-sim-contact-open { stroke: #ef4444; stroke-width: 2.4; stroke-linecap: round; }
+[data-module="ch02_multisite_control"] .repo-sim-contact-spring { fill: none; stroke: #64748b; stroke-width: 1.1; stroke-linecap: round; }
+[data-module="ch02_multisite_control"] .repo-sim-button-backplate { fill: #e2e8f0; stroke: #94a3b8; stroke-width: 1.4; }
+[data-module="ch02_multisite_control"] .repo-sim-button-stem { stroke: #64748b; stroke-width: 1.8; }
+[data-module="ch02_multisite_control"] .repo-sim-button-cap.stop { fill: #ef4444; stroke: #991b1b; stroke-width: 2; }
+[data-module="ch02_multisite_control"] .repo-sim-button-cap.forward { fill: #16a34a; stroke: #166534; stroke-width: 2; }
+[data-module="ch02_multisite_control"] .repo-sim-button-ring { fill: rgba(255,255,255,.72); stroke: #94a3b8; stroke-width: 1.5; }
+[data-module="ch02_multisite_control"] .repo-sim-coil-body { fill: rgba(255,255,255,.94); stroke: #94a3b8; stroke-width: 1.7; }
+[data-module="ch02_multisite_control"] .repo-sim-coil-core { fill: #cbd5e1; stroke: #64748b; stroke-width: 1.3; }
+[data-module="ch02_multisite_control"] .repo-sim-coil-winding { fill: none; stroke: #b45309; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+[data-module="ch02_multisite_control"] .repo-sim-coil-highlight { fill: rgba(254,240,138,.32); stroke: #ca8a04; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-fr-body { fill: rgba(255,247,237,.95); stroke: #b45309; stroke-width: 2; }
+[data-module="ch02_multisite_control"] .repo-sim-fr-channel { fill: rgba(255,255,255,.94); stroke: #94a3b8; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-fr-heater { fill: none; stroke: #64748b; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+[data-module="ch02_multisite_control"] .repo-sim-fr-dial { fill: #f59e0b; stroke: #92400e; stroke-width: 1.1; }
+[data-module="ch02_multisite_control"] .repo-sim-motor-shell { fill: rgba(226,232,240,.96); stroke: #475569; stroke-width: 2.1; }
+[data-module="ch02_multisite_control"] .repo-sim-motor-fin { stroke: rgba(100,116,139,.9); stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-motor-endcap { fill: rgba(248,250,252,.95); stroke: #64748b; stroke-width: 1.4; }
+[data-module="ch02_multisite_control"] .repo-sim-motor-shaft { fill: #cbd5e1; stroke: #64748b; stroke-width: 1.1; }
+[data-module="ch02_multisite_control"] .repo-sim-motor-box { fill: rgba(255,255,255,.94); stroke: #64748b; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-motor-base { fill: #cbd5e1; stroke: #64748b; stroke-width: 1.1; }
+[data-module="ch02_multisite_control"] .repo-sim-motor-rotor-hub { fill: #f8fafc; stroke: #64748b; stroke-width: 1.2; }
+[data-module="ch02_multisite_control"] .repo-sim-contact-arm { stroke: #475569; stroke-width: 2.2; stroke-linecap: round; }
+[data-module="ch02_multisite_control"] .repo-sim-lamp-bezel { fill: #cbd5e1; stroke: #64748b; stroke-width: 2; }
+[data-module="ch02_multisite_control"] .repo-sim-lamp-glass { fill: rgba(248,250,252,.96); stroke: #94a3b8; stroke-width: 1.4; }
+[data-module="ch02_multisite_control"] .repo-sim-lamp-filament { fill: #e2e8f0; stroke: #64748b; stroke-width: 1.1; }
+[data-module="ch02_multisite_control"] .repo-sim-lamp-cross { stroke: #64748b; stroke-width: 1.7; }
+[data-module="ch02_multisite_control"] .ectp-indicator.is-active .repo-sim-lamp-glass { fill: #fde68a; stroke: #f59e0b; filter: drop-shadow(0 0 7px rgba(245,158,11,.58)); }
+[data-module="ch02_multisite_control"] .ectp-indicator.is-active .repo-sim-lamp-filament { fill: #f59e0b; stroke: #b45309; }
+@keyframes ch02-multisite-current-flow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -34; } }
+@keyframes ch02-multisite-motor-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  [data-module="ch02_multisite_control"] .ectp-current-flow,
+  [data-module="ch02_multisite_control"] .ectp-motor-rotor { animation: none; }
+}
