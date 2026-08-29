@@ -2763,8 +2763,19 @@
         flex-direction: column;
       }
     }
+
+    .module-extra-controls {
+      margin-top: 10px;
+    }
+
+    .module-extra-controls:empty {
+      display: none;
+    }
   </style>
   <link rel="stylesheet" href="./src/platform/shell/platform-shell-v1.css?v=20260822-2" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/module.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_multi_point/module.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/module.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -2798,6 +2809,7 @@
           <div id="experimentRoot" class="experiment-root">
           <div id="placeholderCanvas" class="module-canvas"></div>
 
+          <div id="chapterModuleCanvas" class="module-canvas hidden"></div>
           <div id="forwardReverseCanvas" class="module-canvas hidden">
             <div class="board-shell stage-board calibration-shell">
           <svg id="boardSvg" viewBox="0 0 1509 1134" preserveAspectRatio="xMidYMid meet" aria-label="电器控制教学板">
@@ -3107,6 +3119,7 @@
               <strong id="tripFr2Label">FR2 过载</strong>
             </button>
           </div>
+          <div id="moduleExtraControls" class="control-grid module-extra-controls"></div>
           <div class="btn-row">
             <button id="resetFr" class="small-btn">FR1 复位</button>
             <button id="resetFr2" class="small-btn hidden">FR2 复位</button>
@@ -3224,6 +3237,24 @@
   <script src="./src/chapters/chapter02/modules/ch02_continuous/module.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_reverse/module.js"></script>
   <script src="./src/platform/navigation/chapter-navigation.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/solver.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/view.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/teaching.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/module.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multi_point/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multi_point/solver.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multi_point/view.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multi_point/teaching.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multi_point/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multi_point/module.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/solver.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/view.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/teaching.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/module.js"></script>
   <script>
     window.__FORWARD_REVERSE_BUILD_ID__ = "artifact-audit-2026-08-14-v1";
 
@@ -3282,7 +3313,47 @@
         placeholderTag: "",
         placeholderNote: "",
         zones: []
+      },
+      "mixed-jog-continuous": {
+        code: "05",
+        name: "\u70b9\u52a8\u4e0e\u957f\u52a8\u6df7\u5408\u63a7\u5236",
+        experimentTitle: "\u70b9\u52a8\u4e0e\u957f\u52a8\u6df7\u5408\u63a7\u5236\u6f14\u793a",
+        experimentSubtitle: "\u5728\u540c\u4e00\u63a7\u5236\u56de\u8def\u4e2d\u6bd4\u8f83\u70b9\u52a8\u4e0e\u81ea\u9501\u957f\u52a8\u7684\u7535\u6c14\u884c\u4e3a\u3002",
+        principleTitle: "\u70b9\u52a8\u4e0e\u957f\u52a8\u6df7\u5408\u63a7\u5236\u539f\u7406",
+        principleText: "\u77ac\u65f6\u70b9\u52a8\u4e0d\u5efa\u7acb\u81ea\u9501\uff0c\u957f\u52a8\u5219\u7531\u8f85\u52a9\u89e6\u70b9\u4fdd\u6301\u7ebf\u5708\u5f97\u7535\u3002",
+        promptText: "\u9009\u62e9\u6a21\u5f0f\u540e\u64cd\u4f5c QF1 \u548c\u6309\u94ae\uff0c\u89c2\u5bdf Solver \u8f93\u51fa\u4e0e Current Flow\u3002",
+        footerTip: "\u672c\u6a21\u5757\u4fdd\u7559\u4e09\u79cd\u5df2\u9a8c\u8bc1\u6df7\u5408\u63a7\u5236\u65b9\u6848\u3002",
+        placeholderTag: "",
+        placeholderNote: "",
+        zones: []
+      },
+      "multi-point-control": {
+        code: "06",
+        name: "\u591a\u5730\u70b9\u63a7\u5236",
+        experimentTitle: "\u591a\u5730\u70b9\u63a7\u5236\u6f14\u793a",
+        experimentSubtitle: "\u4e32\u8054\u505c\u6b62\u94fe\u4e0e\u5e76\u8054\u542f\u52a8\u7f51\u7edc\u5b9e\u73b0\u591a\u64cd\u4f5c\u70b9\u5b89\u5168\u63a7\u5236\u3002",
+        principleTitle: "\u591a\u5730\u70b9\u63a7\u5236\u539f\u7406",
+        principleText: "\u4efb\u4e00\u542f\u52a8\u70b9\u53ef\u5efa\u7acb\u56de\u8def\uff0c\u4efb\u4e00\u505c\u6b62\u70b9\u90fd\u80fd\u5207\u65ad\u5168\u90e8\u63a7\u5236\u56de\u8def\u3002",
+        promptText: "\u5206\u522b\u4ece\u4e24\u4e2a\u64cd\u4f5c\u70b9\u542f\u505c\uff0c\u9a8c\u8bc1\u72b6\u6001\u4e0e\u6307\u793a\u540c\u6b65\u3002",
+        footerTip: "\u672c\u6a21\u5757\u7684 HL1/HL2 \u4ec5\u4f5c\u4e3a\u6a21\u5757\u5185\u663e\u793a\u3002",
+        placeholderTag: "",
+        placeholderNote: "",
+        zones: []
+      },
+      "machine-tool-circuits": {
+        code: "07",
+        name: "\u673a\u5e8a\u7efc\u5408\u7ebf\u8def",
+        experimentTitle: "\u673a\u5e8a\u7efc\u5408\u7ebf\u8def\u6f14\u793a",
+        experimentSubtitle: "CA6140 \u5367\u5f0f\u8f66\u5e8a\u4e0e Z3040 \u6447\u81c2\u94bb\u5e8a\u7535\u6c14\u63a7\u5236\u7ebf\u8def\u3002",
+        principleTitle: "\u673a\u5e8a\u7efc\u5408\u7ebf\u8def\u539f\u7406",
+        principleText: "\u7efc\u5408\u9a8c\u8bc1\u4e3b\u8f74\u3001\u6b63\u53cd\u8f6c\u3001\u6447\u81c2\u5347\u964d\u3001\u6db2\u538b\u4e0e\u9650\u4f4d\u4fdd\u62a4\u3002",
+        promptText: "\u5728 CA6140 \u4e0e Z3040 \u4e4b\u95f4\u5207\u6362\uff0c\u89c2\u5bdf SQ\u3001KT\u3001YV \u4e0e\u53cc\u4fdd\u62a4\u72b6\u6001\u3002",
+        footerTip: "Current Flow \u7531 Solver wire IDs \u4e0e circuit.data routePoints \u552f\u4e00\u9a71\u52a8\u3002",
+        placeholderTag: "",
+        placeholderNote: "",
+        zones: []
       }
+
     };
 
     const uiState = {
@@ -3537,6 +3608,8 @@
       experimentSubtitle: document.getElementById("experimentSubtitle"),
       placeholderCanvas: document.getElementById("placeholderCanvas"),
       forwardReverseCanvas: document.getElementById("forwardReverseCanvas"),
+      chapterModuleCanvas: document.getElementById("chapterModuleCanvas"),
+      moduleExtraControls: document.getElementById("moduleExtraControls"),
       boardShell: document.querySelector("#forwardReverseCanvas .board-shell"),
       boardSvg: document.getElementById("boardSvg"),
       toggleQf: document.getElementById("toggleQf"),
@@ -11583,15 +11656,18 @@
       refs.referenceSourceImage.setAttribute("preserveAspectRatio", "none");
 
       const live = isLiveCircuitModule();
+      const moduleCanvas = isModuleCanvasFacade();
+      const interactive = live || moduleCanvas;
       const showDeveloperControls = live && hasDeveloperToolsEnabled();
       refs.forwardReverseCanvas.classList.toggle("hidden", !live);
-      refs.placeholderCanvas.classList.toggle("hidden", live);
+      refs.chapterModuleCanvas.classList.toggle("hidden", !moduleCanvas);
+      refs.placeholderCanvas.classList.toggle("hidden", interactive);
       refs.developerCalibrationCard.classList.toggle("hidden", !showDeveloperControls);
       refs.developerPreviewCard.classList.toggle("hidden", !showDeveloperControls || isMainControlModule() || isContinuousControlModule() || isJogControlModule());
       refs.resetDemo.classList.toggle("hidden", !showDeveloperControls);
       refs.solverDebugCard.classList.toggle("hidden", !(showDeveloperControls && isSimulationSolverMode() && state.debug.solverPanel));
 
-      if (!live) {
+      if (!interactive) {
         refs.placeholderCanvas.innerHTML = buildPlaceholderMarkup(uiState.currentModule);
       }
 
@@ -11608,7 +11684,7 @@
         refs.resetFr2,
         refs.resetDemo
       ].forEach((button) => {
-        button.disabled = !live || (state.calibration.enabled && !isSimulationSolverMode());
+        button.disabled = !interactive || (live && state.calibration.enabled && !isSimulationSolverMode());
       });
 
       const facadeOperationViewModel = getCurrentFacadeInstance()?.getOperationViewModel();
@@ -11689,6 +11765,12 @@
         refs.toggleQf.disabled = qfClosed;
         refs.openQf.disabled = !qfClosed;
       }
+    }
+
+    function isModuleCanvasFacade() {
+      const current = platformModuleLoader?.getCurrent();
+      return current?.definition?.meta?.integrationMode === "facade-v1"
+        && current.definition.meta.renderTarget === "module-canvas";
     }
 
     function setContinuousControlOperationState(patch, actionMessage) {
@@ -11974,6 +12056,14 @@
     function render() {
       updateModuleShell();
       renderActionFeedback();
+
+      if (isModuleCanvasFacade()) {
+        const facadeInstance = getCurrentFacadeInstance();
+        facadeInstance?.render();
+        renderCurrentFacadeStatusViewModel();
+        renderFacadeTeachingFeedback(facadeInstance?.buildTeachingFeedback());
+        return;
+      }
 
       if (isContinuousControlModule()) {
         renderContinuousControlModule();
@@ -12457,7 +12547,7 @@
       if (phase === "press") actionType = control && control.pressAction;
       if (phase === "release") actionType = control && control.releaseAction;
       if (!actionType) return false;
-      dispatchCurrentFacadeAction(actionType, payload);
+      dispatchCurrentFacadeAction(actionType, { ...(control.payload || {}), ...payload });
       return true;
     }
 
@@ -12487,37 +12577,33 @@
     }
 
     function handleProtectionPlatformAction() {
-      const facadeInstance = getCurrentFacadeInstance();
-      const viewModel = facadeInstance && facadeInstance.getOperationViewModel();
-      const actionType = viewModel && viewModel.protection && viewModel.protection.toggleAction;
-      if (actionType) return dispatchCurrentFacadeAction(actionType);
+      const protection = getCurrentFacadeProtection("primary");
+      if (protection?.toggleAction) return dispatchCurrentFacadeAction(protection.toggleAction, protection.togglePayload || {});
       return handleTripFrButtonClick();
     }
 
     function handleProtectionResetPlatformAction() {
-      const facadeInstance = getCurrentFacadeInstance();
-      const viewModel = facadeInstance && facadeInstance.getOperationViewModel();
-      const actionType = viewModel && viewModel.protection && viewModel.protection.resetAction;
-      if (actionType) return dispatchCurrentFacadeAction(actionType);
+      const protection = getCurrentFacadeProtection("primary");
+      if (protection?.resetAction) return dispatchCurrentFacadeAction(protection.resetAction, protection.resetPayload || {});
       return resetFr();
     }
 
     function getCurrentFacadeProtection(slot) {
       const facadeInstance = getCurrentFacadeInstance();
       const viewModel = facadeInstance && facadeInstance.getOperationViewModel();
-      const protections = viewModel?.protections || [];
+      const protections = viewModel?.protections || (viewModel?.protection ? [viewModel.protection] : []);
       return protections.find((item) => item.slot === slot && item.visible !== false) || null;
     }
 
     function handleSecondaryProtectionPlatformAction() {
-      const actionType = getCurrentFacadeProtection("secondary")?.toggleAction;
-      if (actionType) return dispatchCurrentFacadeAction(actionType);
+      const protection = getCurrentFacadeProtection("secondary");
+      if (protection?.toggleAction) return dispatchCurrentFacadeAction(protection.toggleAction, protection.togglePayload || {});
       return handleTripFr2ButtonClick();
     }
 
     function handleSecondaryProtectionResetPlatformAction() {
-      const actionType = getCurrentFacadeProtection("secondary")?.resetAction;
-      if (actionType) return dispatchCurrentFacadeAction(actionType);
+      const protection = getCurrentFacadeProtection("secondary");
+      if (protection?.resetAction) return dispatchCurrentFacadeAction(protection.resetAction, protection.resetPayload || {});
       return resetFr2();
     }
 
@@ -12530,7 +12616,7 @@
     }
 
     function openQf1() {
-      if (!isLiveCircuitModule() || !isSimulationSolverMode() || !isCurrentQfClosed()) return;
+      if (!getCurrentFacadeInstance() || !isCurrentQfClosed()) return;
       if (dispatchCurrentFacadeAction("POWER_OPEN")) return;
       toggleQf1();
     }
@@ -13443,6 +13529,7 @@
       if (!moduleCatalog[routeId]) return;
       if (platformModuleLoader) {
         platformModuleLoader.load(moduleId, { reason: "navigation" });
+        render();
         return;
       }
       state.actionFeedback = {
@@ -13464,6 +13551,28 @@
       return current.instance;
     }
 
+    function renderFacadeExtraControls(controls, coreSlots) {
+      refs.moduleExtraControls.replaceChildren();
+      (controls || []).filter((control) => control.visible !== false && !coreSlots.has(control.slot))
+        .forEach((control) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "ctrl-btn";
+          if (control.buttonClass) button.classList.add(control.buttonClass);
+          button.dataset.facadeSlot = control.slot;
+          button.disabled = Boolean(control.disabled);
+          const chip = document.createElement("span");
+          chip.className = "chip";
+          const label = document.createElement("strong");
+          label.textContent = control.label || control.slot;
+          const stateText = document.createElement("span");
+          stateText.className = "ctrl-btn-status";
+          stateText.textContent = control.stateText || "";
+          button.append(chip, label, stateText);
+          refs.moduleExtraControls.appendChild(button);
+        });
+    }
+
     function renderFacadeOperationViewModel(viewModel) {
       const slotMap = {
         primary: { button: refs.pressSb1, label: refs.pressSb1Label, state: refs.pressSb1State },
@@ -13472,6 +13581,7 @@
         quaternary: { button: refs.pressSb4, label: refs.pressSb4Label, state: refs.pressSb4State }
       };
       const controlsBySlot = Object.fromEntries((viewModel.controls || []).map((control) => [control.slot, control]));
+      renderFacadeExtraControls(viewModel.controls, new Set(Object.keys(slotMap)));
       Object.entries(slotMap).forEach(([slot, binding]) => {
         const control = controlsBySlot[slot] || { visible: false };
         binding.button.classList.toggle("hidden", control.visible === false);
@@ -13481,7 +13591,7 @@
         if (binding.state) binding.state.textContent = control.stateText || "";
         binding.button.disabled = control.visible === false
           || Boolean(control.disabled)
-          || (state.calibration.enabled && !isSimulationSolverMode());
+          || (isLiveCircuitModule() && state.calibration.enabled && !isSimulationSolverMode());
       });
 
       refs.toggleQf.textContent = viewModel.power.closeLabel;
@@ -13537,6 +13647,29 @@
         binding.label.textContent = row.label;
         setPill(binding.pill, row.value, row.tone || "off");
       });
+    }
+
+    function renderFacadeTeachingFeedback(feedback) {
+      if (!feedback) return;
+      refs.teachTitle.textContent = feedback.title || "Teaching Feedback";
+      refs.teachText.textContent = feedback.text || "";
+      refs.tipText.textContent = feedback.text || "";
+      refs.footerTip.textContent = feedback.text || "";
+      const tone = feedback.tone === "on" ? "success" : feedback.tone === "off" ? "info" : (feedback.tone || "info");
+      setActionFeedback({
+        actionId: "facade-output",
+        label: feedback.title || "Teaching Feedback",
+        tone,
+        feedbackText: feedback.text || ""
+      });
+      renderActionFeedback();
+    }
+
+    function handleFacadeOutput(output) {
+      if (!output) return;
+      if (output.operationViewModel) renderFacadeOperationViewModel(output.operationViewModel);
+      renderCurrentFacadeStatusViewModel();
+      renderFacadeTeachingFeedback(output.feedback);
     }
 
     function getLegacyCircuitData(routeId) {
@@ -13788,7 +13921,10 @@
         platform.moduleDefinitions.createCh02Reverse({
           circuitData: getLegacyCircuitData("forward-reverse"),
           port: createReverseModulePort()
-        })
+        }),
+        platform.moduleDefinitions.createCh02MixedJogContinuous(),
+        platform.moduleDefinitions.createCh02MultiPoint(),
+        platform.moduleDefinitions.createCh02MachineToolCircuits()
       ];
       registrations.forEach((definition) => platformModuleRegistry.register(definition));
 
@@ -13802,8 +13938,12 @@
 
       platformModuleLoader = platform.loader.createModuleLoader({
         registry: platformModuleRegistry,
-        mountRoot: refs.experimentRoot,
-        services: Object.freeze({ setActionFeedback }),
+        mountRoot: refs.chapterModuleCanvas,
+        services: Object.freeze({
+          setActionFeedback,
+          onFacadeOutput: handleFacadeOutput,
+          renderShell: () => render()
+        }),
         setActiveModuleId: (routeId) => {
           uiState.currentModule = routeId;
           state.actionFeedback = {
@@ -13995,6 +14135,12 @@
       setSimulationMode("preview");
       setSimulationPreviewPreset("ki2_energized_preview");
       render();
+    });
+
+    refs.moduleExtraControls.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-facade-slot]");
+      if (!button || !refs.moduleExtraControls.contains(button)) return;
+      dispatchCurrentFacadeControl(button.dataset.facadeSlot);
     });
 
     refs.toggleQf.addEventListener("click", handleCloseQfButtonClick);
