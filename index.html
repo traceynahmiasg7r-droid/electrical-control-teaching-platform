@@ -2773,6 +2773,7 @@
     }
   </style>
   <link rel="stylesheet" href="./src/platform/shell/platform-shell-v1.css?v=20260822-2" />
+  <link rel="stylesheet" href="./src/chapters/chapter01/modules/chapter01-circuits.css?v=20260825-3" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/module.css" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_multi_point/module.css" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/module.css" />
@@ -3228,6 +3229,13 @@
   <script src="./src/registry/module-registry.js"></script>
   <script src="./src/platform/module-loader/module-loader.js"></script>
   <script src="./src/platform/module-adapter/facade-module-adapter.js"></script>
+  <script src="./src/chapters/chapter01/modules/_shared/direct-start-runtime.js?v=20260825-4"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog/circuit-data.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/circuit-data.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog/facade.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/facade.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog/module.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/module.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_main_control/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_jog/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_continuous/facade.js"></script>
@@ -3259,6 +3267,28 @@
     window.__FORWARD_REVERSE_BUILD_ID__ = "artifact-audit-2026-08-14-v1";
 
     const moduleCatalog = {
+      "ch01-jog-control": {
+        code: "01",
+        name: "点动控制",
+        experimentTitle: "点动控制演示",
+        experimentSubtitle: "按住启动按钮时，KM 线圈得电并接通主回路；按钮松开后，线圈释放，电机立即停止。",
+        principleTitle: "点动控制原理",
+        principleText: "点动线路没有自锁支路，按钮的按下时间直接决定 KM 与电动机的运行时间。",
+        promptText: "先合上 QF，再按住并松开 SB；也可触发 FR 过载，观察保护触点切断控制回路。",
+        footerTip: "参考 PDF 第 3、12 页；电路由模块数据驱动，可重复复位和修改。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "ch01-direct-start-protection": {
+        code: "02",
+        name: "综合直接启动保护",
+        experimentTitle: "综合直接启动保护演示",
+        experimentSubtitle: "QF1、FU、SB1、SB2、KM1、FR1 和 M 组成完整直接启动链路，具有自锁、停止和过载保护功能。",
+        principleTitle: "综合直接启动保护原理",
+        principleText: "SB1 建立启动通路，KM1 辅助常开触点完成自锁；SB2 或 FR1 断开控制回路后，KM1 释放，电动机停止。",
+        promptText: "依次执行 QF1 合闸、SB1 启动、SB2 停止、FR1 过载与复位，观察完整保护链路。",
+        footerTip: "参考 PDF 第 11 页；复位保护不会自动重启。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
       "main-control": {
         code: "01",
         name: "主电路与控制电路",
@@ -13906,6 +13936,8 @@
 
       platformModuleRegistry = platform.registry.createModuleRegistry(platform.contracts);
       const registrations = [
+        platform.moduleDefinitions.createCh01Jog(),
+        platform.moduleDefinitions.createCh01DirectStartProtection(),
         platform.moduleDefinitions.createCh02MainControl({
           circuitData: getLegacyCircuitData("main-control"),
           port: createMainControlModulePort()
