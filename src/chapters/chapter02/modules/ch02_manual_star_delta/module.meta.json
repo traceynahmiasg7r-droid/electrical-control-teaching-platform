@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "ch02",
+  "moduleId": "ch02_manual_star_delta",
+  "routeId": "manual-star-delta",
+  "order": 9,
+  "code": "09",
+  "title": "手动星形—三角形启动",
+  "shortTitle": "手动星—三角启动",
+  "simulationLevel": "S2",
+  "maturity": "M2",
+  "status": "ready",
+  "integrationMode": "facade-v1",
+  "geometryLockId": "ch02_manual_star_delta_geometry_v1_locked",
+  "renderTarget": "module-canvas"
+}

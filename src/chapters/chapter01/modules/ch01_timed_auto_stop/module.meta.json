@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "ch01",
+  "moduleId": "ch01_timed_auto_stop",
+  "routeId": "timed-auto-stop",
+  "order": 3,
+  "code": "03",
+  "title": "电机启动后定时自动停止",
+  "shortTitle": "定时自动停止",
+  "simulationLevel": "S2",
+  "maturity": "M2",
+  "status": "ready",
+  "integrationMode": "facade-v1",
+  "geometryLockId": "ch01_timed_auto_stop_geometry_v1_locked",
+  "renderTarget": "module-canvas"
+}

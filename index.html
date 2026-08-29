@@ -2774,8 +2774,13 @@
   </style>
   <link rel="stylesheet" href="./src/platform/shell/platform-shell-v1.css?v=20260822-2" />
   <link rel="stylesheet" href="./src/chapters/chapter01/modules/chapter01-circuits.css?v=20260825-3" />
-  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/module.css" />
-  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_multi_point/module.css" />
+  <link rel="stylesheet" href="./src/components/electrical-simulation-primitives.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter01/modules/ch01_timed_auto_stop/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_mixed_control/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_multisite_control/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_manual_star_delta/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_time_sequence/styles.css" />
+
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/module.css" />
 </head>
 <body>
@@ -3229,6 +3234,7 @@
   <script src="./src/registry/module-registry.js"></script>
   <script src="./src/platform/module-loader/module-loader.js"></script>
   <script src="./src/platform/module-adapter/facade-module-adapter.js"></script>
+  <script src="./src/components/electrical-simulation-primitives.js"></script>
   <script src="./src/chapters/chapter01/modules/_shared/direct-start-runtime.js?v=20260825-4"></script>
   <script src="./src/chapters/chapter01/modules/ch01_jog/circuit-data.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/circuit-data.js"></script>
@@ -3236,6 +3242,11 @@
   <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/facade.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_jog/module.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/module.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/circuit.data.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/solver.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/renderer.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/facade.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/module.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_main_control/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_jog/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_continuous/facade.js"></script>
@@ -3245,18 +3256,37 @@
   <script src="./src/chapters/chapter02/modules/ch02_continuous/module.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_reverse/module.js"></script>
   <script src="./src/platform/navigation/chapter-navigation.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/circuit.data.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/solver.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/view.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/teaching.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/facade.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_mixed_jog_continuous/module.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_multi_point/circuit.data.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_multi_point/solver.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_multi_point/view.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_multi_point/teaching.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_multi_point/facade.js"></script>
-  <script src="./src/chapters/chapter02/modules/ch02_multi_point/module.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_control/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_control/solver.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_control/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_control/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_mixed_control/module.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multisite_control/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multisite_control/solver.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multisite_control/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multisite_control/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_multisite_control/module.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_manual_star_delta/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_manual_star_delta/solver.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_manual_star_delta/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_manual_star_delta/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_manual_star_delta/module.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_time_sequence/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_time_sequence/solver.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_time_sequence/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_time_sequence/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_time_sequence/module.js"></script>
+
+
+
+
+
+
+
+
+
+
+
   <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/circuit.data.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/solver.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/view.js"></script>
@@ -3287,6 +3317,17 @@
         principleText: "SB1 建立启动通路，KM1 辅助常开触点完成自锁；SB2 或 FR1 断开控制回路后，KM1 释放，电动机停止。",
         promptText: "依次执行 QF1 合闸、SB1 启动、SB2 停止、FR1 过载与复位，观察完整保护链路。",
         footerTip: "参考 PDF 第 11 页；复位保护不会自动重启。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "timed-auto-stop": {
+        code: "03",
+        name: "定时自动停止",
+        experimentTitle: "电机启动后定时自动停止",
+        experimentSubtitle: "KM1 自锁后 KT1、KT2 同步计时，达到 120 秒后由延时触点自动切断控制回路。",
+        principleTitle: "定时自动停止原理",
+        principleText: "启动后 KM1 保持运行，KT1、KT2 进入计时；累计到 120 秒时 KT2 延时常闭触点断开，电动机自动停止。",
+        promptText: "合上 QF1、启动电机，再按 30 秒步长推进计时，观察 120 秒到时动作。",
+        footerTip: "Current Flow 与状态均来自模块 Solver，切换模块后重新初始化。",
         placeholderTag: "", placeholderNote: "", zones: []
       },
       "main-control": {
@@ -3344,31 +3385,49 @@
         placeholderNote: "",
         zones: []
       },
-      "mixed-jog-continuous": {
+      "mixed-control": {
         code: "05",
-        name: "\u70b9\u52a8\u4e0e\u957f\u52a8\u6df7\u5408\u63a7\u5236",
-        experimentTitle: "\u70b9\u52a8\u4e0e\u957f\u52a8\u6df7\u5408\u63a7\u5236\u6f14\u793a",
-        experimentSubtitle: "\u5728\u540c\u4e00\u63a7\u5236\u56de\u8def\u4e2d\u6bd4\u8f83\u70b9\u52a8\u4e0e\u81ea\u9501\u957f\u52a8\u7684\u7535\u6c14\u884c\u4e3a\u3002",
-        principleTitle: "\u70b9\u52a8\u4e0e\u957f\u52a8\u6df7\u5408\u63a7\u5236\u539f\u7406",
-        principleText: "\u77ac\u65f6\u70b9\u52a8\u4e0d\u5efa\u7acb\u81ea\u9501\uff0c\u957f\u52a8\u5219\u7531\u8f85\u52a9\u89e6\u70b9\u4fdd\u6301\u7ebf\u5708\u5f97\u7535\u3002",
-        promptText: "\u9009\u62e9\u6a21\u5f0f\u540e\u64cd\u4f5c QF1 \u548c\u6309\u94ae\uff0c\u89c2\u5bdf Solver \u8f93\u51fa\u4e0e Current Flow\u3002",
-        footerTip: "\u672c\u6a21\u5757\u4fdd\u7559\u4e09\u79cd\u5df2\u9a8c\u8bc1\u6df7\u5408\u63a7\u5236\u65b9\u6848\u3002",
-        placeholderTag: "",
-        placeholderNote: "",
-        zones: []
+        name: "点动与长动混合控制",
+        experimentTitle: "点动与长动混合控制演示",
+        experimentSubtitle: "比较三种点动与长动混合接线，观察点动、自锁和中间继电器的因果差异。",
+        principleTitle: "点动与长动混合控制原理",
+        principleText: "点动路径只在按钮按住期间导通，长动路径通过辅助触点保持；三种接线均由同一 Solver 状态驱动。",
+        promptText: "切换三种接线方式，分别验证长动、自锁、点动、停止和 FR1 保护。",
+        footerTip: "PR #7 最终版整体替换 PR #3 中间版，不混用两代实现。",
+        placeholderTag: "", placeholderNote: "", zones: []
       },
-      "multi-point-control": {
+      "multisite-control": {
         code: "06",
-        name: "\u591a\u5730\u70b9\u63a7\u5236",
-        experimentTitle: "\u591a\u5730\u70b9\u63a7\u5236\u6f14\u793a",
-        experimentSubtitle: "\u4e32\u8054\u505c\u6b62\u94fe\u4e0e\u5e76\u8054\u542f\u52a8\u7f51\u7edc\u5b9e\u73b0\u591a\u64cd\u4f5c\u70b9\u5b89\u5168\u63a7\u5236\u3002",
-        principleTitle: "\u591a\u5730\u70b9\u63a7\u5236\u539f\u7406",
-        principleText: "\u4efb\u4e00\u542f\u52a8\u70b9\u53ef\u5efa\u7acb\u56de\u8def\uff0c\u4efb\u4e00\u505c\u6b62\u70b9\u90fd\u80fd\u5207\u65ad\u5168\u90e8\u63a7\u5236\u56de\u8def\u3002",
-        promptText: "\u5206\u522b\u4ece\u4e24\u4e2a\u64cd\u4f5c\u70b9\u542f\u505c\uff0c\u9a8c\u8bc1\u72b6\u6001\u4e0e\u6307\u793a\u540c\u6b65\u3002",
-        footerTip: "\u672c\u6a21\u5757\u7684 HL1/HL2 \u4ec5\u4f5c\u4e3a\u6a21\u5757\u5185\u663e\u793a\u3002",
-        placeholderTag: "",
-        placeholderNote: "",
-        zones: []
+        name: "多地点控制",
+        experimentTitle: "多地点远程控制演示",
+        experimentSubtitle: "两个启动点并联、两个停止点串联，共同控制同一 KM1 与电动机。",
+        principleTitle: "多地点控制原理",
+        principleText: "任一地点均可启动；任一停止按钮都能切断自锁回路，FR1 过载对所有地点同时生效。",
+        promptText: "交叉使用两地启动和停止按钮，验证并联启动、串联停止与状态隔离。",
+        footerTip: "新版自身验收与 PR #3 旧版行为门槛同时保留。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "manual-star-delta": {
+        code: "09",
+        name: "手动星—三角启动",
+        experimentTitle: "手动星形—三角形启动演示",
+        experimentSubtitle: "先以星形接法降压启动，再在互锁条件下手动切换为三角形运行。",
+        principleTitle: "手动星—三角启动原理",
+        principleText: "KMY 与 KMΔ 不能同时吸合；切换时先释放星形接触器，再投入三角形接触器。",
+        promptText: "依次合闸、星形启动、三角切换和停止，观察接触器互锁。",
+        footerTip: "模块通过基础验收后升级为正式可展示状态。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "time-sequence-control": {
+        code: "10",
+        name: "时间原则控制",
+        experimentTitle: "时间原则控制线路演示",
+        experimentSubtitle: "KT1、KT2、KT3 按顺序动作，逐级切除转子电阻。",
+        principleTitle: "时间原则控制原理",
+        principleText: "启动后按时序依次切除 R1、R2、R3，全部完成后进入全速运行。",
+        promptText: "启动后逐步推进时序，观察三段电阻与接触器状态变化。",
+        footerTip: "模块通过基础验收后升级为正式可展示状态。",
+        placeholderTag: "", placeholderNote: "", zones: []
       },
       "machine-tool-circuits": {
         code: "07",
@@ -13938,6 +13997,7 @@
       const registrations = [
         platform.moduleDefinitions.createCh01Jog(),
         platform.moduleDefinitions.createCh01DirectStartProtection(),
+        platform.moduleDefinitions.createCh01TimedAutoStop(),
         platform.moduleDefinitions.createCh02MainControl({
           circuitData: getLegacyCircuitData("main-control"),
           port: createMainControlModulePort()
@@ -13954,9 +14014,11 @@
           circuitData: getLegacyCircuitData("forward-reverse"),
           port: createReverseModulePort()
         }),
-        platform.moduleDefinitions.createCh02MixedJogContinuous(),
-        platform.moduleDefinitions.createCh02MultiPoint(),
-        platform.moduleDefinitions.createCh02MachineToolCircuits()
+        platform.moduleDefinitions.createCh02MixedControl(),
+        platform.moduleDefinitions.createCh02MultisiteControl(),
+        platform.moduleDefinitions.createCh02MachineToolCircuits(),
+        platform.moduleDefinitions.createCh02ManualStarDelta(),
+        platform.moduleDefinitions.createCh02TimeSequence()
       ];
       registrations.forEach((definition) => platformModuleRegistry.register(definition));
 
