@@ -1,0 +1,182 @@
+.two-motor-sequence-module {
+  min-width: 0;
+  color: #172033;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+.two-motor-module-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 18px 10px;
+  border-bottom: 1px solid #e8edf5;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.two-motor-module-heading h3 {
+  margin: 3px 0 0;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.two-motor-kicker {
+  color: #147a43;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.two-motor-sequence-rule {
+  display: grid;
+  gap: 3px;
+  min-width: 212px;
+  padding: 9px 12px;
+  border: 1px solid #cfe9d9;
+  border-radius: 10px;
+  background: #f2fbf6;
+  color: #276341;
+  font-size: 12px;
+}
+
+.two-motor-canvas-wrap {
+  overflow: hidden;
+  padding: 6px 10px 10px;
+  background: #fff;
+}
+
+.two-motor-circuit {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 660px;
+  min-height: 430px;
+  background: #fff;
+}
+
+.two-motor-wire,
+.two-motor-device-edge path,
+path.two-motor-device-edge {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.two-motor-wire.base {
+  stroke: #28313f;
+  stroke-width: 2.1;
+}
+
+.two-motor-wire.base.main {
+  stroke: #303947;
+}
+
+.two-motor-wire.partial {
+  stroke: #f2aa16;
+  stroke-width: 5;
+  opacity: .62;
+}
+
+.two-motor-wire.current {
+  stroke: #0f9f53;
+  stroke-width: 5.5;
+  stroke-dasharray: 11 8;
+  animation: two-motor-current-flow .75s linear infinite;
+}
+
+.two-motor-wire.current.main {
+  stroke: #e14c43;
+}
+
+.two-motor-device-edge path,
+path.two-motor-device-edge {
+  stroke: #263342;
+  stroke-width: 2.2;
+}
+
+.two-motor-device-edge.conductive {
+  stroke: #0f9f53;
+  stroke-width: 3.4;
+}
+
+.two-motor-device-edge.open path {
+  stroke: #556170;
+}
+
+.two-motor-component text,
+.two-motor-zone-title,
+.two-motor-supply-label {
+  fill: #182230;
+  font-size: 18px;
+  font-weight: 700;
+  text-anchor: middle;
+  user-select: none;
+}
+
+.two-motor-zone-title {
+  fill: #147a43;
+  font-size: 24px;
+  text-anchor: start;
+}
+
+.two-motor-supply-label {
+  font-size: 17px;
+  text-anchor: start;
+}
+
+.two-motor-component rect,
+.two-motor-component circle {
+  fill: #fff;
+  stroke: #273342;
+  stroke-width: 2.2;
+  vector-effect: non-scaling-stroke;
+}
+
+.two-motor-component.active rect,
+.two-motor-component.active circle {
+  fill: #eefbf4;
+  stroke: #0f9f53;
+}
+
+.two-motor-component.motor text {
+  font-size: 24px;
+}
+
+.two-motor-component.motor .motor-state {
+  fill: #687486;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.two-motor-component.motor.active .motor-state {
+  fill: #0f8a49;
+}
+
+.two-motor-component.fuse rect {
+  fill: #f8fafc;
+}
+
+.two-motor-junction {
+  fill: #182230;
+}
+
+@keyframes two-motor-current-flow {
+  to { stroke-dashoffset: -19; }
+}
+
+@media (max-width: 1100px) {
+  .two-motor-module-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .two-motor-sequence-rule {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .two-motor-circuit {
+    min-height: 360px;
+  }
+}

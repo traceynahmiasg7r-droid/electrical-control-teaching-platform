@@ -2780,6 +2780,7 @@
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_multisite_control/styles.css" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_manual_star_delta/styles.css" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_time_sequence/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_two_motor_sequence/module.css" />
 
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/module.css" />
 </head>
@@ -3276,6 +3277,9 @@
   <script src="./src/chapters/chapter02/modules/ch02_time_sequence/renderer.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_time_sequence/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_time_sequence/module.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_two_motor_sequence/runtime.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_two_motor_sequence/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_two_motor_sequence/module.js"></script>
 
 
 
@@ -3438,6 +3442,19 @@
         principleText: "\u7efc\u5408\u9a8c\u8bc1\u4e3b\u8f74\u3001\u6b63\u53cd\u8f6c\u3001\u6447\u81c2\u5347\u964d\u3001\u6db2\u538b\u4e0e\u9650\u4f4d\u4fdd\u62a4\u3002",
         promptText: "\u5728 CA6140 \u4e0e Z3040 \u4e4b\u95f4\u5207\u6362\uff0c\u89c2\u5bdf SQ\u3001KT\u3001YV \u4e0e\u53cc\u4fdd\u62a4\u72b6\u6001\u3002",
         footerTip: "Current Flow \u7531 Solver wire IDs \u4e0e circuit.data routePoints \u552f\u4e00\u9a71\u52a8\u3002",
+        placeholderTag: "",
+        placeholderNote: "",
+        zones: []
+      },
+      "two-motor-sequence": {
+        code: "08",
+        name: "两台电动机顺序控制",
+        experimentTitle: "两台电动机顺序控制演示",
+        experimentSubtitle: "1M 启动并使 KM1 顺序允许触点闭合后，2M 才能启动；停止 1M 时 2M 同步停止。",
+        principleTitle: "两台电动机顺序启动原理",
+        principleText: "KM1 的辅助常开触点串入 KM2 控制支路，构成先启动 1M、再启动 2M 的顺序许可。",
+        promptText: "先合上 QF1，尝试直接启动 2M；再依次启动 1M、2M，并验证停止与两级过载保护。",
+        footerTip: "模块私有状态经 Facade 输出，电路路径复用主电路正式 routePoints。",
         placeholderTag: "",
         placeholderNote: "",
         zones: []
@@ -14017,6 +14034,9 @@
         platform.moduleDefinitions.createCh02MixedControl(),
         platform.moduleDefinitions.createCh02MultisiteControl(),
         platform.moduleDefinitions.createCh02MachineToolCircuits(),
+        platform.moduleDefinitions.createCh02TwoMotorSequence({
+          baseCircuitData: getLegacyCircuitData("main-control")
+        }),
         platform.moduleDefinitions.createCh02ManualStarDelta(),
         platform.moduleDefinitions.createCh02TimeSequence()
       ];
