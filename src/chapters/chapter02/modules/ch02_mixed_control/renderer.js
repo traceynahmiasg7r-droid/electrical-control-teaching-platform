@@ -33,8 +33,8 @@
     return deviceOn;
   }
 
-  function componentMarkup(component, operation, result) {
-    const { x, y, width, height } = component.geometry;
+  function componentMarkup(component, operation, result, wires = []) {
+    const { x, y, width, height } = component.circuitDomain === "control" ? primitives.controlGeometry(component, wires) : component.geometry;
     const label = escapeText(component.label.text);
     const active = isDeviceOn(component, operation, result);
     const localDevice = shortId(component.deviceId);
@@ -49,8 +49,8 @@
     if (component.type === "motor") return primitives.motor({ x, y, labelText: "M", running: active, direction: result.motorStates[`${MODULE_ID}__dev__m1`]?.direction || "forward", subtitle: "三相异步电动机" });
     if (component.type === "fuse") return primitives.fuse({ x, y, labelText: label, poleCount: 1 });
     if (component.partType === "coil") return primitives.coil({ x, y, labelText: label, on: active, width, height });
-    if (component.type === "selector_switch") return primitives.selectorSwitch({ x, y, labelText: label, mode: active ? "continuous" : "jog" });
-    if (component.type === "push_button") return primitives.pushButton({ x, y, labelText: label, color: component.label.text.includes("停止") ? "stop" : component.label.text.includes("SB3") ? "reverse" : "forward", pressed, contactClosed: active, normalClosed: component.partType === "nc", active });
+    if (component.type === "selector_switch") return primitives.selectorSwitch({ x, y, labelText: label, mode: active ? "continuous" : "jog", width });
+    if (component.type === "push_button") return primitives.pushButton({ x, y, labelText: label, color: component.label.text.includes("停止") ? "stop" : component.label.text.includes("SB3") ? "reverse" : "forward", pressed, contactClosed: active, normalClosed: component.partType === "nc", active, width });
     return primitives.inlineContact({ x, y, labelText: label, closed: component.partType === "nc" ? !active : active, normalClosed: component.partType === "nc", active, width });
   }
 
@@ -101,7 +101,7 @@
             ${wiresMarkup(circuitData.mainWires, solverResult)}
             ${wiresMarkup(variant.wires, solverResult)}
             ${circuitData.mainComponents.map((item) => componentMarkup(item, operation, solverResult)).join("")}
-            ${variant.components.map((item) => componentMarkup(item, operation, solverResult)).join("")}
+            ${variant.components.map((item) => componentMarkup(item, operation, solverResult, variant.wires)).join("")}
             ${operation.scheme === "three" ? `<line class="ectp-mechanical-link" x1="662" y1="151" x2="500" y2="229"/><text class="ectp-micro-label" x="579" y="196">SB3 机械联动</text>` : ""}
             <g class="ectp-legend" transform="translate(284 462)">
               <line class="ectp-wire" x1="0" y1="0" x2="42" y2="0"/><text x="50" y="4">未导通</text>
