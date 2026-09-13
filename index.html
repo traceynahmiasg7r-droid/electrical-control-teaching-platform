@@ -2776,6 +2776,7 @@
   <link rel="stylesheet" href="./src/chapters/chapter01/modules/chapter01-circuits.css?v=20260825-3" />
   <link rel="stylesheet" href="./src/components/electrical-simulation-primitives.css" />
   <link rel="stylesheet" href="./src/chapters/chapter01/modules/ch01_timed_auto_stop/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter01/modules/ch01_forward_reverse/styles.css" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_mixed_control/styles.css" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_multisite_control/styles.css" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_manual_star_delta/styles.css" />
@@ -3239,10 +3240,13 @@
   <script src="./src/chapters/chapter01/modules/_shared/direct-start-runtime.js?v=20260825-4"></script>
   <script src="./src/chapters/chapter01/modules/ch01_jog/circuit-data.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/circuit-data.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_overload_protection/circuit-data.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_jog/facade.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/facade.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_overload_protection/facade.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_jog/module.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/module.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_overload_protection/module.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/circuit.data.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/solver.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/renderer.js"></script>
@@ -3256,6 +3260,11 @@
   <script src="./src/chapters/chapter02/modules/ch02_jog/module.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_continuous/module.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_reverse/module.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_forward_reverse/circuit.data.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_forward_reverse/solver.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_forward_reverse/renderer.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_forward_reverse/facade.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_forward_reverse/module.js"></script>
   <script src="./src/platform/navigation/chapter-navigation.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_mixed_control/circuit.data.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_mixed_control/solver.js"></script>
@@ -3332,6 +3341,28 @@
         principleText: "启动后 KM1 保持运行，KT1、KT2 进入计时；累计到 120 秒时 KT2 延时常闭触点断开，电动机自动停止。",
         promptText: "合上 QF1、启动电机，再按 30 秒步长推进计时，观察 120 秒到时动作。",
         footerTip: "Current Flow 与状态均来自模块 Solver，切换模块后重新初始化。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "ch01-forward-reverse": {
+        code: "04",
+        name: "正反转控制",
+        experimentTitle: "三相异步电动机正反转控制演示",
+        experimentSubtitle: "按第一章第61页，以A—N 220V控制电源驱动KM1、KM2，观察ABC/CBA换相、自锁与接触器互锁。",
+        principleTitle: "正反转与电气互锁原理",
+        principleText: "SB1使KM1吸合并自锁，主回路按ABC相序接通；SB2使KM2吸合并自锁，主回路交换A、C两相形成CBA相序。KM1、KM2常闭辅助触点互相串入对方线圈支路，防止同时吸合。",
+        promptText: "先接通A—N控制电源，再使用SB1正转、SB3停止和SB2反转，观察自锁、互锁及两种相序。运行中不能直接换向。",
+        footerTip: "对应第一章第61页；电路数据、Solver与Current Flow均为第一章独立实现。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "ch01-overload-protection": {
+        code: "05",
+        name: "过载保护",
+        experimentTitle: "热继电器过载保护演示",
+        experimentSubtitle: "FR1 发生过载时，其控制常闭触点断开，使 KM1 线圈失电、主触点释放并切断电动机电源。",
+        principleTitle: "FR 过载保护原理",
+        principleText: "正常运行时 FR1 控制常闭触点保持导通；过载动作后控制回路被切断，KM1 与电动机停止。FR1 复位只恢复待机条件，不会自动重启。",
+        promptText: "依次执行 QF1 合闸、SB1 启动、FR1 过载和 FR1 复位，观察保护动作链及复位不自启动。",
+        footerTip: "对应第一章第 113 页；状态、导通路径和教学回放均由 Solver 结果驱动。",
         placeholderTag: "", placeholderNote: "", zones: []
       },
       "main-control": {
@@ -12658,6 +12689,12 @@
     }
 
     function handleCloseQfButtonClick() {
+      const facadeInstance = getCurrentFacadeInstance();
+      const power = facadeInstance?.getOperationViewModel()?.power;
+      if (power?.layout === "single-toggle" && power.closed) {
+        dispatchCurrentFacadeAction("POWER_OPEN");
+        return;
+      }
       if (dispatchCurrentFacadeAction("POWER_CLOSE")) return;
       toggleQf1();
     }
@@ -13700,11 +13737,17 @@
           || (isLiveCircuitModule() && state.calibration.enabled && !isSimulationSolverMode());
       });
 
-      refs.toggleQf.textContent = viewModel.power.closeLabel;
+      const singlePowerToggle = viewModel.power.layout === "single-toggle";
+      refs.toggleQf.textContent = singlePowerToggle && viewModel.power.closed
+        ? viewModel.power.openLabel
+        : viewModel.power.closeLabel;
       refs.openQf.textContent = viewModel.power.openLabel;
       refs.toggleQf.classList.toggle("on", Boolean(viewModel.power.closed));
       refs.openQf.classList.toggle("on", !viewModel.power.closed);
-      refs.toggleQf.disabled = !viewModel.power.closeEnabled;
+      refs.openQf.classList.toggle("hidden", singlePowerToggle);
+      refs.toggleQf.disabled = singlePowerToggle
+        ? !(viewModel.power.closed ? viewModel.power.openEnabled : viewModel.power.closeEnabled)
+        : !viewModel.power.closeEnabled;
       refs.openQf.disabled = !viewModel.power.openEnabled;
 
       const protections = viewModel.protections || (viewModel.protection ? [viewModel.protection] : []);
@@ -14015,6 +14058,8 @@
         platform.moduleDefinitions.createCh01Jog(),
         platform.moduleDefinitions.createCh01DirectStartProtection(),
         platform.moduleDefinitions.createCh01TimedAutoStop(),
+        platform.moduleDefinitions.createCh01ForwardReverse(),
+        platform.moduleDefinitions.createCh01OverloadProtection(),
         platform.moduleDefinitions.createCh02MainControl({
           circuitData: getLegacyCircuitData("main-control"),
           port: createMainControlModulePort()
