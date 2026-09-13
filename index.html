@@ -3339,6 +3339,28 @@
         footerTip: "Current Flow 与状态均来自模块 Solver，切换模块后重新初始化。",
         placeholderTag: "", placeholderNote: "", zones: []
       },
+      "ch01-forward-reverse": {
+        code: "04",
+        name: "正反转控制",
+        experimentTitle: "三相异步电动机正反转控制演示",
+        experimentSubtitle: "通过 KM1、KM2 改变两相相序实现正反转，并利用辅助常闭触点完成电气互锁。",
+        principleTitle: "正反转与电气互锁原理",
+        principleText: "KM1 建立正常相序使电动机正转，KM2 对调两相使电动机反转；两个接触器的常闭辅助触点互相串入对方线圈回路，防止同时吸合。",
+        promptText: "先合上 QF1，再使用 SB2 正转、SB1 停止和 SB3 反转，观察相序、自锁、互锁及 FR1 过载保护。",
+        footerTip: "对应第一章第 61 页；复用已锁定的成熟正反转 Geometry、Solver 与 Current Flow。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "ch01-overload-protection": {
+        code: "05",
+        name: "过载保护",
+        experimentTitle: "热继电器过载保护演示",
+        experimentSubtitle: "FR1 发生过载时，其控制常闭触点断开，使 KM1 线圈失电、主触点释放并切断电动机电源。",
+        principleTitle: "FR 过载保护原理",
+        principleText: "正常运行时 FR1 控制常闭触点保持导通；过载动作后控制回路被切断，KM1 与电动机停止。FR1 复位只恢复待机条件，不会自动重启。",
+        promptText: "依次执行 QF1 合闸、SB1 启动、FR1 过载和 FR1 复位，观察保护动作链及复位不自启动。",
+        footerTip: "对应第一章第 113 页；状态、导通路径和教学回放均由 Solver 结果驱动。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
       "main-control": {
         code: "01",
         name: "主电路与控制电路",
