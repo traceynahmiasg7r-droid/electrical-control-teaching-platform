@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第二章新增模块视觉验收</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { margin: 0; color: #172033; background: #eef2f7; font-family: "Microsoft YaHei", sans-serif; }
+    .qa-shell { display: grid; grid-template-columns: 220px minmax(0, 1fr) 280px; min-height: 100vh; }
+    .qa-nav, .qa-panel { padding: 18px; background: #fff; border-right: 1px solid #dbe3ee; }
+    .qa-panel { border-right: 0; border-left: 1px solid #dbe3ee; }
+    .qa-nav button, .qa-panel button { width: 100%; margin: 5px 0; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; cursor: pointer; }
+    .qa-nav button.active { color: #fff; border-color: #2563eb; background: #2563eb; }
+    #canvas { padding: 16px; }
+    pre { white-space: pre-wrap; font-size: 12px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <main class="qa-shell">
+    <nav class="qa-nav"><h2>模块视觉验收</h2><div id="moduleButtons"></div></nav>
+    <section id="canvas"></section>
+    <aside class="qa-panel"><h2>操作</h2><div id="actions"></div><h2>状态</h2><pre id="status"></pre></aside>
+  </main>
+  <script src="../../../../../schemas/module-contract.js"></script>
+  <script src="../../../../../platform/runtime/runtime-scope.js"></script>
+  <script src="../../../../../platform/module-adapter/facade-module-adapter.js"></script>
+  <script src="../runtime.js"></script>
+  <script src="../../ch02_mixed_mode1/circuit.data.js"></script><script src="../../ch02_mixed_mode1/facade.js"></script><script src="../../ch02_mixed_mode1/module.js"></script>
+  <script src="../../ch02_mixed_mode2/circuit.data.js"></script><script src="../../ch02_mixed_mode2/facade.js"></script><script src="../../ch02_mixed_mode2/module.js"></script>
+  <script src="../../ch02_mixed_mode3/circuit.data.js"></script><script src="../../ch02_mixed_mode3/facade.js"></script><script src="../../ch02_mixed_mode3/module.js"></script>
+  <script src="../../ch02_multi_station/circuit.data.js"></script><script src="../../ch02_multi_station/facade.js"></script><script src="../../ch02_multi_station/module.js"></script>
+  <script>
+    const p = window.ECTPPlatform;
+    const entries = [
+      ["ch02_mixed_mode1", p.moduleDefinitions.createCh02MixedMode1],
+      ["ch02_mixed_mode2", p.moduleDefinitions.createCh02MixedMode2],
+      ["ch02_mixed_mode3", p.moduleDefinitions.createCh02MixedMode3],
+      ["ch02_multi_station", p.moduleDefinitions.createCh02MultiStation]
+    ];
+    let current = null;
+    function updatePanel() {
+      const vm = current.instance.getOperationViewModel();
+      document.getElementById("actions").innerHTML = [
+        `<button data-action="${vm.power.closed ? "POWER_OPEN" : "POWER_CLOSE"}">${vm.power.closed ? vm.power.openLabel : vm.power.closeLabel}</button>`,
+        ...vm.controls.filter((c) => c.visible).map((c) => `<button data-action="${c.action}">${c.label}</button>`),
+        `<button data-action="${vm.protection.tripped ? "PROTECTION_RESET" : "PROTECTION_TOGGLE"}">${vm.protection.tripped ? vm.protection.resetLabel : vm.protection.label}</button>`
+      ].join("");
+      document.getElementById("status").textContent = JSON.stringify({ state: current.instance.getStateSnapshot(), feedback: current.instance.buildTeachingFeedback() }, null, 2);
+    }
+    function loadEntry(index) {
+      if (current) { current.instance.unmount(); current.scope.dispose(); }
+      const [id, factory] = entries[index];
+      const scope = p.runtime.createRuntimeScope(id);
+      const definition = factory();
+      const instance = definition.create({ mountRoot: document.getElementById("canvas"), services: {}, scope });
+      instance.createInitialState(); instance.mount(); instance.render();
+      current = { id, instance, scope };
+      document.querySelectorAll(".qa-nav button").forEach((button, buttonIndex) => button.classList.toggle("active", buttonIndex === index));
+      updatePanel();
+    }
+    document.getElementById("moduleButtons").innerHTML = entries.map(([id], index) => `<button data-index="${index}">${id}</button>`).join("");
+    document.getElementById("moduleButtons").addEventListener("click", (event) => { if (event.target.dataset.index) loadEntry(Number(event.target.dataset.index)); });
+    document.getElementById("actions").addEventListener("click", (event) => { if (!event.target.dataset.action) return; current.instance.dispatchAction(event.target.dataset.action); updatePanel(); });
+    loadEntry(0);
+  </script>
+</body>
+</html>

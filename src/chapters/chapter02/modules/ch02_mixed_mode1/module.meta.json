@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "ch02",
+  "moduleId": "ch02_mixed_mode1",
+  "routeId": "mixed-mode-1",
+  "order": 5,
+  "code": "05",
+  "title": "点动和长动混合控制（方式一）",
+  "shortTitle": "混合控制一",
+  "simulationLevel": "S2",
+  "maturity": "M3",
+  "status": "ready",
+  "integrationMode": "facade-v1",
+  "geometryLockId": "ch02_mixed_mode1_geometry_v1_locked"
+}
