@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "ch01",
+  "moduleId": "ch01_forward_reverse",
+  "routeId": "ch01-forward-reverse",
+  "order": 4,
+  "code": "04",
+  "title": "正反转控制（第一章 61）",
+  "shortTitle": "正反转控制",
+  "simulationLevel": "S2",
+  "maturity": "M3",
+  "status": "ready",
+  "integrationMode": "facade-v1",
+  "renderTarget": "module-canvas",
+  "geometryLockId": "ch01_forward_reverse_page61_geometry_v2_locked"
+}
