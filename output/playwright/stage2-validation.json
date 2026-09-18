@@ -1,0 +1,3136 @@
+{
+  "electrical": {
+    "geometryHash": "248befb2c0522e4f72bb9574baa50b0cd3afd195a8a069bd40617e1b28ffb018",
+    "checks": [
+      {
+        "name": "QF open",
+        "pass": true
+      },
+      {
+        "name": "QF open: no double energization",
+        "pass": true
+      },
+      {
+        "name": "QF open: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "QF open: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "QF open: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "QF open: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "standby",
+        "pass": true
+      },
+      {
+        "name": "standby: no double energization",
+        "pass": true
+      },
+      {
+        "name": "standby: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "standby: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "standby: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "standby: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward start",
+        "pass": true
+      },
+      {
+        "name": "forward start: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward start: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward start: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward start: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward start: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward self hold",
+        "pass": true
+      },
+      {
+        "name": "forward self hold: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward self hold: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward self hold: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward self hold: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward self hold: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward to reverse held",
+        "pass": true
+      },
+      {
+        "name": "forward to reverse held: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward to reverse held: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward to reverse held: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward to reverse held: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward to reverse held: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward reversal break before make",
+        "pass": true
+      },
+      {
+        "name": "reverse self hold",
+        "pass": true
+      },
+      {
+        "name": "reverse self hold: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse self hold: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse self hold: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse self hold: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse self hold: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse to forward held",
+        "pass": true
+      },
+      {
+        "name": "reverse to forward held: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse to forward held: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse to forward held: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse to forward held: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse to forward held: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse reversal break before make",
+        "pass": true
+      },
+      {
+        "name": "forward release after reversal",
+        "pass": true
+      },
+      {
+        "name": "forward release after reversal: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward release after reversal: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward release after reversal: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward release after reversal: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward release after reversal: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward repeat start is not stop",
+        "pass": true
+      },
+      {
+        "name": "forward repeat start is not stop: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward repeat start is not stop: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward repeat start is not stop: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward repeat start is not stop: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward repeat start is not stop: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "both buttons pressed",
+        "pass": true
+      },
+      {
+        "name": "both buttons pressed: no double energization",
+        "pass": true
+      },
+      {
+        "name": "both buttons pressed: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "both buttons pressed: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "both buttons pressed: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "both buttons pressed: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "only reverse remains held",
+        "pass": true
+      },
+      {
+        "name": "only reverse remains held: no double energization",
+        "pass": true
+      },
+      {
+        "name": "only reverse remains held: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "only reverse remains held: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "only reverse remains held: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "only reverse remains held: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse repeat release",
+        "pass": true
+      },
+      {
+        "name": "reverse repeat release: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse repeat release: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse repeat release: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse repeat release: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse repeat release: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward initial",
+        "pass": true
+      },
+      {
+        "name": "forward initial: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward initial: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward initial: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward initial: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward initial: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward hold",
+        "pass": true
+      },
+      {
+        "name": "forward hold: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward hold: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward hold: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward hold: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward hold: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 stop",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 stop: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 stop: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 stop: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 stop: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 stop: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 release",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 release: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 release: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 release: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 release: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward SB1 release: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward restart",
+        "pass": true
+      },
+      {
+        "name": "forward restart: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward restart: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward restart: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward restart: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward restart: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward restart release",
+        "pass": true
+      },
+      {
+        "name": "forward restart release: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward restart release: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward restart release: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward restart release: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward restart release: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward overload",
+        "pass": true
+      },
+      {
+        "name": "forward overload: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward overload: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward overload: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward overload: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward overload: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB2 blocked",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB2 blocked: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB2 blocked: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB2 blocked: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB2 blocked: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB2 blocked: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB3 blocked",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB3 blocked: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB3 blocked: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB3 blocked: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB3 blocked: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward overload SB3 blocked: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward overload buttons released",
+        "pass": true
+      },
+      {
+        "name": "forward overload buttons released: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward overload buttons released: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward overload buttons released: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward overload buttons released: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward overload buttons released: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward reset no restart",
+        "pass": true
+      },
+      {
+        "name": "forward reset no restart: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward reset no restart: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward reset no restart: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward reset no restart: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward reset no restart: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward fresh start after reset",
+        "pass": true
+      },
+      {
+        "name": "forward fresh start after reset: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward fresh start after reset: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward fresh start after reset: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward fresh start after reset: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward fresh start after reset: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward power removed",
+        "pass": true
+      },
+      {
+        "name": "forward power removed: no double energization",
+        "pass": true
+      },
+      {
+        "name": "forward power removed: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward power removed: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "forward power removed: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "forward power removed: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse initial",
+        "pass": true
+      },
+      {
+        "name": "reverse initial: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse initial: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse initial: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse initial: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse initial: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse hold",
+        "pass": true
+      },
+      {
+        "name": "reverse hold: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse hold: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse hold: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse hold: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse hold: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 stop",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 stop: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 stop: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 stop: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 stop: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 stop: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 release",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 release: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 release: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 release: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 release: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse SB1 release: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse restart",
+        "pass": true
+      },
+      {
+        "name": "reverse restart: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse restart: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse restart: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse restart: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse restart: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse restart release",
+        "pass": true
+      },
+      {
+        "name": "reverse restart release: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse restart release: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse restart release: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse restart release: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse restart release: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse overload",
+        "pass": true
+      },
+      {
+        "name": "reverse overload: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse overload: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse overload: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse overload: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse overload: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB2 blocked",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB2 blocked: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB2 blocked: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB2 blocked: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB2 blocked: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB2 blocked: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB3 blocked",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB3 blocked: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB3 blocked: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB3 blocked: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB3 blocked: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse overload SB3 blocked: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse overload buttons released",
+        "pass": true
+      },
+      {
+        "name": "reverse overload buttons released: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse overload buttons released: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse overload buttons released: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse overload buttons released: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse overload buttons released: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse reset no restart",
+        "pass": true
+      },
+      {
+        "name": "reverse reset no restart: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse reset no restart: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse reset no restart: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse reset no restart: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse reset no restart: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse fresh start after reset",
+        "pass": true
+      },
+      {
+        "name": "reverse fresh start after reset: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse fresh start after reset: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse fresh start after reset: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse fresh start after reset: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse fresh start after reset: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse power removed",
+        "pass": true
+      },
+      {
+        "name": "reverse power removed: no double energization",
+        "pass": true
+      },
+      {
+        "name": "reverse power removed: sb2 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse power removed: sb3 linked NO/NC",
+        "pass": true
+      },
+      {
+        "name": "reverse power removed: ki1 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "reverse power removed: ki2 contact linkage",
+        "pass": true
+      },
+      {
+        "name": "edge_sb3_nc: no bypass even if all other contacts closed",
+        "pass": true
+      },
+      {
+        "name": "cw_07: no unconditional wire",
+        "pass": true
+      },
+      {
+        "name": "edge_sb2_nc: no bypass even if all other contacts closed",
+        "pass": true
+      },
+      {
+        "name": "cw_15: no unconditional wire",
+        "pass": true
+      },
+      {
+        "name": "state combination 1",
+        "pass": true
+      },
+      {
+        "name": "state combination 2",
+        "pass": true
+      },
+      {
+        "name": "state combination 3",
+        "pass": true
+      },
+      {
+        "name": "state combination 4",
+        "pass": true
+      },
+      {
+        "name": "state combination 5",
+        "pass": true
+      },
+      {
+        "name": "state combination 6",
+        "pass": true
+      },
+      {
+        "name": "state combination 7",
+        "pass": true
+      },
+      {
+        "name": "state combination 8",
+        "pass": true
+      },
+      {
+        "name": "state combination 9",
+        "pass": true
+      },
+      {
+        "name": "state combination 10",
+        "pass": true
+      },
+      {
+        "name": "state combination 11",
+        "pass": true
+      },
+      {
+        "name": "state combination 12",
+        "pass": true
+      },
+      {
+        "name": "state combination 13",
+        "pass": true
+      },
+      {
+        "name": "state combination 14",
+        "pass": true
+      },
+      {
+        "name": "state combination 15",
+        "pass": true
+      },
+      {
+        "name": "state combination 16",
+        "pass": true
+      },
+      {
+        "name": "state combination 17",
+        "pass": true
+      },
+      {
+        "name": "state combination 18",
+        "pass": true
+      },
+      {
+        "name": "state combination 19",
+        "pass": true
+      },
+      {
+        "name": "state combination 20",
+        "pass": true
+      },
+      {
+        "name": "state combination 21",
+        "pass": true
+      },
+      {
+        "name": "state combination 22",
+        "pass": true
+      },
+      {
+        "name": "state combination 23",
+        "pass": true
+      },
+      {
+        "name": "state combination 24",
+        "pass": true
+      },
+      {
+        "name": "state combination 25",
+        "pass": true
+      },
+      {
+        "name": "state combination 26",
+        "pass": true
+      },
+      {
+        "name": "state combination 27",
+        "pass": true
+      },
+      {
+        "name": "state combination 28",
+        "pass": true
+      },
+      {
+        "name": "state combination 29",
+        "pass": true
+      },
+      {
+        "name": "state combination 30",
+        "pass": true
+      },
+      {
+        "name": "state combination 31",
+        "pass": true
+      },
+      {
+        "name": "state combination 32",
+        "pass": true
+      },
+      {
+        "name": "state combination 33",
+        "pass": true
+      },
+      {
+        "name": "state combination 34",
+        "pass": true
+      },
+      {
+        "name": "state combination 35",
+        "pass": true
+      },
+      {
+        "name": "state combination 36",
+        "pass": true
+      },
+      {
+        "name": "state combination 37",
+        "pass": true
+      },
+      {
+        "name": "state combination 38",
+        "pass": true
+      },
+      {
+        "name": "state combination 39",
+        "pass": true
+      },
+      {
+        "name": "state combination 40",
+        "pass": true
+      },
+      {
+        "name": "state combination 41",
+        "pass": true
+      },
+      {
+        "name": "state combination 42",
+        "pass": true
+      },
+      {
+        "name": "state combination 43",
+        "pass": true
+      },
+      {
+        "name": "state combination 44",
+        "pass": true
+      },
+      {
+        "name": "state combination 45",
+        "pass": true
+      },
+      {
+        "name": "state combination 46",
+        "pass": true
+      },
+      {
+        "name": "state combination 47",
+        "pass": true
+      },
+      {
+        "name": "state combination 48",
+        "pass": true
+      },
+      {
+        "name": "state combination 49",
+        "pass": true
+      },
+      {
+        "name": "state combination 50",
+        "pass": true
+      },
+      {
+        "name": "state combination 51",
+        "pass": true
+      },
+      {
+        "name": "state combination 52",
+        "pass": true
+      },
+      {
+        "name": "state combination 53",
+        "pass": true
+      },
+      {
+        "name": "state combination 54",
+        "pass": true
+      },
+      {
+        "name": "state combination 55",
+        "pass": true
+      },
+      {
+        "name": "state combination 56",
+        "pass": true
+      },
+      {
+        "name": "state combination 57",
+        "pass": true
+      },
+      {
+        "name": "state combination 58",
+        "pass": true
+      },
+      {
+        "name": "state combination 59",
+        "pass": true
+      },
+      {
+        "name": "state combination 60",
+        "pass": true
+      },
+      {
+        "name": "state combination 61",
+        "pass": true
+      },
+      {
+        "name": "state combination 62",
+        "pass": true
+      },
+      {
+        "name": "state combination 63",
+        "pass": true
+      },
+      {
+        "name": "state combination 64",
+        "pass": true
+      },
+      {
+        "name": "state combination 65",
+        "pass": true
+      },
+      {
+        "name": "state combination 66",
+        "pass": true
+      },
+      {
+        "name": "state combination 67",
+        "pass": true
+      },
+      {
+        "name": "state combination 68",
+        "pass": true
+      },
+      {
+        "name": "state combination 69",
+        "pass": true
+      },
+      {
+        "name": "state combination 70",
+        "pass": true
+      },
+      {
+        "name": "state combination 71",
+        "pass": true
+      },
+      {
+        "name": "state combination 72",
+        "pass": true
+      },
+      {
+        "name": "state combination 73",
+        "pass": true
+      },
+      {
+        "name": "state combination 74",
+        "pass": true
+      },
+      {
+        "name": "state combination 75",
+        "pass": true
+      },
+      {
+        "name": "state combination 76",
+        "pass": true
+      },
+      {
+        "name": "state combination 77",
+        "pass": true
+      },
+      {
+        "name": "state combination 78",
+        "pass": true
+      },
+      {
+        "name": "state combination 79",
+        "pass": true
+      },
+      {
+        "name": "state combination 80",
+        "pass": true
+      },
+      {
+        "name": "state combination 81",
+        "pass": true
+      },
+      {
+        "name": "state combination 82",
+        "pass": true
+      },
+      {
+        "name": "state combination 83",
+        "pass": true
+      },
+      {
+        "name": "state combination 84",
+        "pass": true
+      },
+      {
+        "name": "state combination 85",
+        "pass": true
+      },
+      {
+        "name": "state combination 86",
+        "pass": true
+      },
+      {
+        "name": "state combination 87",
+        "pass": true
+      },
+      {
+        "name": "state combination 88",
+        "pass": true
+      },
+      {
+        "name": "state combination 89",
+        "pass": true
+      },
+      {
+        "name": "state combination 90",
+        "pass": true
+      },
+      {
+        "name": "state combination 91",
+        "pass": true
+      },
+      {
+        "name": "state combination 92",
+        "pass": true
+      },
+      {
+        "name": "state combination 93",
+        "pass": true
+      },
+      {
+        "name": "state combination 94",
+        "pass": true
+      },
+      {
+        "name": "state combination 95",
+        "pass": true
+      },
+      {
+        "name": "state combination 96",
+        "pass": true
+      },
+      {
+        "name": "updated legacy 14/14",
+        "pass": true
+      }
+    ],
+    "combinations": 96,
+    "legacy": [
+      {
+        "id": "TEST 01",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        }
+      },
+      {
+        "id": "TEST 02",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        }
+      },
+      {
+        "id": "TEST 03",
+        "pass": true,
+        "expected": {
+          "ki1": true,
+          "ki2": false,
+          "motor": "forward"
+        },
+        "actual": {
+          "ki1": true,
+          "ki2": false,
+          "motor": "forward"
+        }
+      },
+      {
+        "id": "TEST 04",
+        "pass": true,
+        "expected": {
+          "ki1": true,
+          "ki2": false,
+          "motor": "forward"
+        },
+        "actual": {
+          "ki1": true,
+          "ki2": false,
+          "motor": "forward"
+        }
+      },
+      {
+        "id": "TEST 05",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": true,
+          "motor": "reverse"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": true,
+          "motor": "reverse"
+        }
+      },
+      {
+        "id": "TEST 06",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        }
+      },
+      {
+        "id": "TEST 07",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": true,
+          "motor": "reverse"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": true,
+          "motor": "reverse"
+        }
+      },
+      {
+        "id": "TEST 08",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": true,
+          "motor": "reverse"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": true,
+          "motor": "reverse"
+        }
+      },
+      {
+        "id": "TEST 09",
+        "pass": true,
+        "expected": {
+          "ki1": true,
+          "ki2": false,
+          "motor": "forward"
+        },
+        "actual": {
+          "ki1": true,
+          "ki2": false,
+          "motor": "forward"
+        }
+      },
+      {
+        "id": "TEST 10",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        }
+      },
+      {
+        "id": "TEST 11",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        }
+      },
+      {
+        "id": "TEST 12",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        }
+      },
+      {
+        "id": "TEST 13",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        }
+      },
+      {
+        "id": "TEST 14",
+        "pass": true,
+        "expected": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        },
+        "actual": {
+          "ki1": false,
+          "ki2": false,
+          "motor": "stopped"
+        }
+      }
+    ],
+    "reversalTraces": {
+      "toReverse": [
+        {
+          "before": {
+            "ki1": true,
+            "ki2": false
+          },
+          "after": {
+            "ki1": false,
+            "ki2": false
+          }
+        },
+        {
+          "before": {
+            "ki1": false,
+            "ki2": false
+          },
+          "after": {
+            "ki1": false,
+            "ki2": true
+          }
+        },
+        {
+          "before": {
+            "ki1": false,
+            "ki2": true
+          },
+          "after": {
+            "ki1": false,
+            "ki2": true
+          }
+        }
+      ],
+      "toForward": [
+        {
+          "before": {
+            "ki1": false,
+            "ki2": true
+          },
+          "after": {
+            "ki1": false,
+            "ki2": false
+          }
+        },
+        {
+          "before": {
+            "ki1": false,
+            "ki2": false
+          },
+          "after": {
+            "ki1": true,
+            "ki2": false
+          }
+        },
+        {
+          "before": {
+            "ki1": true,
+            "ki2": false
+          },
+          "after": {
+            "ki1": true,
+            "ki2": false
+          }
+        }
+      ]
+    },
+    "passed": 331
+  },
+  "states": {
+    "A": {
+      "operation": {
+        "power": "open",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": false
+      },
+      "motor": "stopped",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "B": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": false
+      },
+      "motor": "stopped",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "C": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "pressed",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": true,
+        "KM2": false
+      },
+      "motor": "forward",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "true",
+          "energized": false,
+          "pressed": true
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": true,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "D": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": true,
+        "KM2": false
+      },
+      "motor": "forward",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": true,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "E": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "pressed"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": true
+      },
+      "motor": "reverse",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "true",
+          "energized": false,
+          "pressed": true
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": true,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "F": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "pressed"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": true
+      },
+      "motor": "reverse",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "true",
+          "energized": false,
+          "pressed": true
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": true,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "G": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": true
+      },
+      "motor": "reverse",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": true,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "H": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "pressed",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": true,
+        "KM2": false
+      },
+      "motor": "forward",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "true",
+          "energized": false,
+          "pressed": true
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": true,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "I": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": false
+      },
+      "motor": "stopped",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "J": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "overload"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": false
+      },
+      "motor": "stopped",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "K": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "overload"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": false
+      },
+      "motor": "stopped",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    },
+    "L": {
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "coils": {
+        "KM1": false,
+        "KM2": false
+      },
+      "motor": "stopped",
+      "components": {
+        "source": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "qf1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "fu1": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_main": {
+          "closed": "false false false",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_main": {
+          "closed": "true true true",
+          "energized": false,
+          "pressed": false
+        },
+        "motor": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "fu2": {
+          "closed": "",
+          "energized": false,
+          "pressed": false
+        },
+        "sb1": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_self": {
+          "closed": "false",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_interlock": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb3_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "sb2_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "fr1_nc": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki1_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        },
+        "ki2_coil": {
+          "closed": "true",
+          "energized": false,
+          "pressed": false
+        }
+      },
+      "render": {
+        "svgCount": 1,
+        "wireCount": 59,
+        "exactPaths": true,
+        "images": 0,
+        "currentFlow": 0,
+        "transforms": 0
+      }
+    }
+  },
+  "browserErrors": []
+}

@@ -4,7 +4,7 @@
   platform.moduleDefinitions = platform.moduleDefinitions || {};
   platform.moduleDefinitions.createCh02Reverse = (options) => platform.facadeAdapter.createFacadeModuleDefinition({
     circuitData: options.circuitData,
-    createFacade: () => platform.moduleFacades.createReverseFacade({ port: options.port }),
+    createFacade: (context) => platform.moduleFacades.createReverseFacade({ context, circuitData: options.circuitData, port: options.port }),
     meta: {
       schemaVersion: "1.0",
       chapterId: "ch02",
@@ -18,7 +18,8 @@
       maturity: "M3",
       status: "ready",
       integrationMode: "facade-v1",
-      geometryLockId: "forward_reverse_geometry_v1_locked"
+      renderTarget: "module-canvas",
+      geometryLockId: options.circuitData.geometryLockId
     },
     aliases: ["ch02_reverse"]
   });

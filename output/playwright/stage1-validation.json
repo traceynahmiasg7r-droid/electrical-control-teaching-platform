@@ -1,0 +1,243 @@
+{
+  "geometry": {
+    "valid": true,
+    "errors": []
+  },
+  "solverTests": [
+    {
+      "id": "TEST 01",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      }
+    },
+    {
+      "id": "TEST 02",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      }
+    },
+    {
+      "id": "TEST 03",
+      "pass": true,
+      "expected": {
+        "ki1": true,
+        "ki2": false,
+        "motor": "forward"
+      },
+      "actual": {
+        "ki1": true,
+        "ki2": false,
+        "motor": "forward"
+      }
+    },
+    {
+      "id": "TEST 04",
+      "pass": true,
+      "expected": {
+        "ki1": true,
+        "ki2": false,
+        "motor": "forward"
+      },
+      "actual": {
+        "ki1": true,
+        "ki2": false,
+        "motor": "forward"
+      }
+    },
+    {
+      "id": "TEST 05",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": true,
+        "motor": "reverse"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": true,
+        "motor": "reverse"
+      }
+    },
+    {
+      "id": "TEST 06",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      }
+    },
+    {
+      "id": "TEST 07",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": true,
+        "motor": "reverse"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": true,
+        "motor": "reverse"
+      }
+    },
+    {
+      "id": "TEST 08",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": true,
+        "motor": "reverse"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": true,
+        "motor": "reverse"
+      }
+    },
+    {
+      "id": "TEST 09",
+      "pass": true,
+      "expected": {
+        "ki1": true,
+        "ki2": false,
+        "motor": "forward"
+      },
+      "actual": {
+        "ki1": true,
+        "ki2": false,
+        "motor": "forward"
+      }
+    },
+    {
+      "id": "TEST 10",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      }
+    },
+    {
+      "id": "TEST 11",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      }
+    },
+    {
+      "id": "TEST 12",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      }
+    },
+    {
+      "id": "TEST 13",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      }
+    },
+    {
+      "id": "TEST 14",
+      "pass": true,
+      "expected": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      },
+      "actual": {
+        "ki1": false,
+        "ki2": false,
+        "motor": "stopped"
+      }
+    }
+  ],
+  "contract": {
+    "valid": true,
+    "errors": []
+  },
+  "mappings": {
+    "unknownPorts": [],
+    "unknownWires": [],
+    "unknownEdges": []
+  },
+  "pendingDynamicMapping": {
+    "forwardWithSB3Pressed": {
+      "coils": {
+        "ki1": false,
+        "ki2": true
+      },
+      "converged": true,
+      "path": []
+    },
+    "reverseWithSB2Pressed": {
+      "coils": {
+        "ki1": true,
+        "ki2": false
+      },
+      "converged": true,
+      "path": []
+    }
+  },
+  "render": {
+    "svgCount": 1,
+    "wirePathCount": 59,
+    "dataWireCount": 59,
+    "exactPaths": true,
+    "images": 0,
+    "activeOrFlow": 0,
+    "animations": 0,
+    "transforms": 0,
+    "legacyVisible": false
+  },
+  "browserErrors": []
+}

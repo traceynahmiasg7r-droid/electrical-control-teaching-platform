@@ -2784,6 +2784,7 @@
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_two_motor_sequence/module.css" />
 
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/module.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_reverse/styles.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -3060,12 +3061,14 @@
           <div class="footer-playback-panel">
             <div class="footer-playback-head">
               <strong>展示原理（操作步骤回放）</strong>
+              <label id="reverseScenarioLabel" class="hidden">场景 <select id="reverseScenario" aria-label="正反转教学场景"></select></label>
               <div class="footer-playback-actions">
                 <button id="showPrinciplePlayback" class="small-btn principle-play-btn" disabled>展示原理</button>
                 <div id="playbackControls" class="playback-controls">
                   <button id="playbackPrev" class="small-btn" disabled>上一步</button>
                   <button id="playbackToggle" class="small-btn" disabled>播放</button>
                   <button id="playbackNext" class="small-btn" disabled>下一步</button>
+                  <button id="reversePlaybackExit" class="small-btn hidden">返回 Live</button>
                 </div>
               </div>
             </div>
@@ -3255,6 +3258,11 @@
   <script src="./src/chapters/chapter02/modules/ch02_main_control/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_jog/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_continuous/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_reverse/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_reverse/visual-binding.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_reverse/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_reverse/teaching.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_reverse/playback.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_reverse/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_main_control/module.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_jog/module.js"></script>
@@ -4584,6 +4592,8 @@
       { edgeId: "edge_sb1_nc", fromPort: "sb1_l", toPort: "sb1_r", deviceId: "dev_sb1", domain: "control", label: "SB1 NC" },
       { edgeId: "edge_sb2_no", fromPort: "sb2_l", toPort: "sb2_r", deviceId: "dev_sb2", domain: "control", label: "SB2 NO" },
       { edgeId: "edge_sb3_no", fromPort: "sb3_l", toPort: "sb3_r", deviceId: "dev_sb3", domain: "control", label: "SB3 NO" },
+      { edgeId: "edge_sb3_nc", fromPort: "node_3", toPort: "ki2_interlock_l", deviceId: "dev_sb3", domain: "control", label: "SB3 NC", seriesWireId: "cw_07" },
+      { edgeId: "edge_sb2_nc", fromPort: "node_4", toPort: "ki1_interlock_l", deviceId: "dev_sb2", domain: "control", label: "SB2 NC", seriesWireId: "cw_15" },
       { edgeId: "edge_ki1_main_a", fromPort: "ki1_main_a_in", toPort: "ki1_main_a_out", deviceId: "dev_ki1", domain: "main", label: "KI1 主触点 A" },
       { edgeId: "edge_ki1_main_b", fromPort: "ki1_main_b_in", toPort: "ki1_main_b_out", deviceId: "dev_ki1", domain: "main", label: "KI1 主触点 B" },
       { edgeId: "edge_ki1_main_c", fromPort: "ki1_main_c_in", toPort: "ki1_main_c_out", deviceId: "dev_ki1", domain: "main", label: "KI1 主触点 C" },
@@ -4603,6 +4613,7 @@
     ];
 
     const deviceEdgeMap = Object.fromEntries(deviceEdgeDefs.map((edge) => [edge.edgeId, edge]));
+    const switchedSeriesWireIds = new Set(deviceEdgeDefs.map((edge) => edge.seriesWireId).filter(Boolean));
     const electricalJunctionCoordKeys = new Set(
       [
         ...calibrationJunctions.map((junction) => `${junction.x},${junction.y}`),
@@ -4673,6 +4684,10 @@
           return operationState.sb2 === "pressed";
         case "edge_sb3_no":
           return operationState.sb3 === "pressed";
+        case "edge_sb2_nc":
+          return operationState.sb2 === "released";
+        case "edge_sb3_nc":
+          return operationState.sb3 === "released";
         case "edge_ki1_main_a":
         case "edge_ki1_main_b":
         case "edge_ki1_main_c":
@@ -4724,6 +4739,8 @@
       }
 
       calibrationWires.filter(wireFilter).forEach((wire) => {
+        // These series spans are represented by button NC edges, never by a parallel wire.
+        if (switchedSeriesWireIds.has(wire.wireId)) return;
         const significantIndexes = new Set([0, wire.routePoints.length - 1]);
         wire.routePoints.forEach((point, index) => {
           if (index !== 0 && index !== wire.routePoints.length - 1 && electricalJunctionCoordKeys.has(`${point.x},${point.y}`)) {
@@ -4749,6 +4766,7 @@
           id: edge.edgeId,
           type: "edge",
           edgeId: edge.edgeId,
+          seriesWireId: edge.seriesWireId,
           domain: edge.domain
         });
       });
@@ -4810,6 +4828,7 @@
           if (phase) wirePhaseMap[item.wireId] = phase;
         } else if (item.type === "edge") {
           edgeSet.add(item.edgeId);
+          if (item.seriesWireId) wireSet.add(item.seriesWireId);
         }
       });
     }
@@ -4818,6 +4837,7 @@
       let assumedCoils = cloneCoilState(previousCoilState);
       let iterationCount = 0;
       let converged = false;
+      const iterationTrace = [];
 
       while (iterationCount < SOLVER_MAX_ITERATIONS) {
         iterationCount += 1;
@@ -4836,6 +4856,7 @@
           ki1: sourceReach.has(getPortCoordKey("coil_ki1_l")) && returnReach.has(getPortCoordKey("coil_ki1_r")),
           ki2: sourceReach.has(getPortCoordKey("coil_ki2_l")) && returnReach.has(getPortCoordKey("coil_ki2_r"))
         };
+        iterationTrace.push({ before: { ...assumedCoils }, after: { ...nextCoils } });
 
         if (nextCoils.ki1 === assumedCoils.ki1 && nextCoils.ki2 === assumedCoils.ki2) {
           converged = true;
@@ -4893,6 +4914,7 @@
 
       return {
         coils: assumedCoils,
+        iterationTrace,
         iterationCount,
         converged,
         edgeStates,
@@ -6479,7 +6501,8 @@
       }, { ki1: true, ki2: false, motor: "forward" });
       snapshot("TEST 05", (op) => {
         op.sb3 = "pressed";
-      }, { ki1: true, ki2: false, motor: "forward" });
+      // OLD TEST INVALID: SB3 linked NC releases KI1 before KI2 can energize.
+      }, { ki1: false, ki2: true, motor: "reverse" });
       snapshot("TEST 06", (op) => {
         op.sb1 = "pressed";
         op.sb3 = "released";
@@ -6493,7 +6516,8 @@
       }, { ki1: false, ki2: true, motor: "reverse" });
       snapshot("TEST 09", (op) => {
         op.sb2 = "pressed";
-      }, { ki1: false, ki2: true, motor: "reverse" });
+      // OLD TEST INVALID: SB2 linked NC releases KI2 before KI1 can energize.
+      }, { ki1: true, ki2: false, motor: "forward" });
       snapshot("TEST 10", (op) => {
         op.sb1 = "pressed";
         op.sb2 = "released";
@@ -11796,12 +11820,12 @@
       const moduleCanvas = isModuleCanvasFacade();
       const interactive = live || moduleCanvas;
       const showDeveloperControls = live && hasDeveloperToolsEnabled();
-      refs.forwardReverseCanvas.classList.toggle("hidden", !live);
+      refs.forwardReverseCanvas.classList.toggle("hidden", !live || moduleCanvas);
       refs.chapterModuleCanvas.classList.toggle("hidden", !moduleCanvas);
       refs.placeholderCanvas.classList.toggle("hidden", interactive);
       refs.developerCalibrationCard.classList.toggle("hidden", !showDeveloperControls);
       refs.developerPreviewCard.classList.toggle("hidden", !showDeveloperControls || isMainControlModule() || isContinuousControlModule() || isJogControlModule());
-      refs.resetDemo.classList.toggle("hidden", !showDeveloperControls);
+      refs.resetDemo.classList.toggle("hidden", !showDeveloperControls && !document.body.classList.contains("ch02-reverse-active"));
       refs.solverDebugCard.classList.toggle("hidden", !(showDeveloperControls && isSimulationSolverMode() && state.debug.solverPanel));
 
       if (!interactive) {
@@ -12193,6 +12217,7 @@
     function render() {
       updateModuleShell();
       renderActionFeedback();
+      renderModulePlayback();
 
       if (isModuleCanvasFacade()) {
         const facadeInstance = getCurrentFacadeInstance();
@@ -13798,6 +13823,58 @@
       });
     }
 
+    function dispatchModulePlayback(command, value) {
+      const instance = getCurrentFacadeInstance();
+      if (!instance?.getPlaybackViewModel?.()) return false;
+      instance.dispatchPlayback(command, value);
+      return true;
+    }
+
+    function renderModulePlayback() {
+      const view = getCurrentFacadeInstance()?.getPlaybackViewModel?.();
+      const label = document.getElementById("reverseScenarioLabel");
+      const selector = document.getElementById("reverseScenario");
+      const exit = document.getElementById("reversePlaybackExit");
+      label.classList.toggle("hidden", !view);
+      exit.classList.toggle("hidden", !view);
+      if (!view) {
+        if (refs.showPrinciplePlayback.dataset.modulePlayer) {
+          delete refs.showPrinciplePlayback.dataset.modulePlayer;
+          refs.showPrinciplePlayback.textContent = "展示原理";
+          refs.principleStepList.replaceChildren();
+          updatePlaybackControls();
+          refs.currentStepText.textContent = "当前步骤：待机，未播放教学回放。";
+        }
+        return;
+      }
+      if (!selector.options.length) view.scenarios.forEach((scenario) => {
+        const option = document.createElement("option");
+        option.value = scenario.id; option.textContent = scenario.title; selector.appendChild(option);
+      });
+      selector.value = view.scenarioId;
+      refs.showPrinciplePlayback.dataset.modulePlayer = "true";
+      refs.showPrinciplePlayback.textContent = "重播";
+      refs.showPrinciplePlayback.disabled = false;
+      refs.playbackToggle.disabled = false;
+      refs.playbackToggle.textContent = view.running ? "暂停" : "播放";
+      refs.playbackPrev.disabled = view.index <= 0;
+      refs.playbackNext.disabled = view.index >= 0 && view.index >= view.count - 1;
+      exit.disabled = view.mode === "Live";
+      [[refs.playbackSpeed05, 0.5], [refs.playbackSpeed10, 1], [refs.playbackSpeed15, 1.5]].forEach(([button, speed]) => {
+        button.disabled = false; button.classList.toggle("active", view.speed === speed);
+      });
+      refs.currentStepText.textContent = view.step
+        ? `Playback · ${view.running ? "播放中" : "已暂停"} · ${view.index + 1}/${view.count} · ${view.step.title}`
+        : `Live · ${view.completed ? "教学完成，已恢复原 Live 状态。" : "选择场景后播放；手动操作会退出回放。"}`;
+      refs.principleStepList.replaceChildren();
+      const hint = document.createElement("div");
+      hint.className = "reverse-teaching-hint";
+      hint.textContent = view.step
+        ? `教学观察 ${view.index + 1}/${view.count} · ${view.step.displayState.electricalPhase === "solver-iteration-release" ? "Solver 换向瞬态（已放慢）" : "Solver 求解状态"}。蓝色为教学焦点，红色为导通路径。`
+        : "图中按钮可按住操作；右侧按钮为一次完整按下/松开。底部可独立回放八个教学场景。";
+      refs.principleStepList.appendChild(hint);
+    }
+
     function renderFacadeTeachingFeedback(feedback) {
       if (!feedback) return;
       refs.teachTitle.textContent = feedback.title || "Teaching Feedback";
@@ -14012,6 +14089,35 @@
       }
       return Object.freeze({
         readRawState,
+        // Display-only evaluation. Explicit arguments avoid all live-state defaults.
+        // Core Solver, graph search and topology remain frozen.
+        evaluateDisplay: (operation, previousCoils) => {
+          const op = cloneFacadePortValue(operation);
+          const control = solveControlCircuit(op, previousCoils);
+          const main = solveMainCircuit(control.edgeStates);
+          const final = { operationState: op, solver: {
+            ...control, ...main, stableControlState: control.coils,
+            lastAction: "Detached teaching evaluation", partialControlWireIds: []
+          } };
+          const release = control.iterationTrace.find((step) =>
+            (step.before.ki1 || step.before.ki2) && !step.after.ki1 && !step.after.ki2);
+          let releaseFrame = null;
+          if (release) {
+            const edges = computeDeviceEdgeStates(op, release.after);
+            releaseFrame = { operationState: cloneFacadePortValue(op), solver: {
+              ...final.solver, ...solveMainCircuit(edges), edgeStates: edges,
+              stableControlState: { ...release.after }, activeControlWireIds: [], activeControlEdgeIds: [],
+              displayPhase: "solver-iteration-release", displayIteration: cloneFacadePortValue(release)
+            } };
+          }
+          return cloneFacadePortValue({ final, releaseFrame });
+        },
+        setOperationState: (patch, label) => {
+          cancelCurrentFlowReplay();
+          setCurrentFlowReplayDescriptor(null);
+          setSolverOperationState(patch, label);
+          return readRawState();
+        },
         reset: () => {
           resetSolverState();
           return readRawState();
@@ -14073,7 +14179,7 @@
           port: createContinuousModulePort()
         }),
         platform.moduleDefinitions.createCh02Reverse({
-          circuitData: getLegacyCircuitData("forward-reverse"),
+          circuitData: platform.moduleCircuitData.ch02Reverse,
           port: createReverseModulePort()
         }),
         platform.moduleDefinitions.createCh02MixedControl(),
@@ -14156,7 +14262,9 @@
         getCurrentTeachingFeedback: () => {
           const current = platformModuleLoader.getCurrent();
           return current ? current.instance.buildTeachingFeedback() : null;
-        }
+        },
+        getCurrentPlaybackViewModel: () => getCurrentFacadeInstance()?.getPlaybackViewModel?.() || null,
+        dispatchPlayback: (command, value) => dispatchModulePlayback(command, value)
       });
     }
 
@@ -14327,33 +14435,43 @@
     refs.resetFr2.addEventListener("click", handleSecondaryProtectionResetPlatformAction);
     refs.resetDemo.addEventListener("click", resetAll);
     refs.showPrinciplePlayback.addEventListener("click", () => {
+      if (dispatchModulePlayback("restart")) return;
       if (!isLiveCircuitModule() || !state.currentFlow.lastReplayDescriptor?.steps?.length) return;
       restartCurrentFlowReplay();
     });
     refs.playbackPrev.addEventListener("click", () => {
+      if (dispatchModulePlayback("prev")) return;
       if (!isLiveCircuitModule()) return;
       stepCurrentFlowReplay(-1);
     });
     refs.playbackToggle.addEventListener("click", () => {
+      if (dispatchModulePlayback("toggle")) return;
       if (!isLiveCircuitModule()) return;
       toggleCurrentFlowReplayPlayback();
     });
     refs.playbackNext.addEventListener("click", () => {
+      if (dispatchModulePlayback("next")) return;
       if (!isLiveCircuitModule()) return;
       stepCurrentFlowReplay(1);
     });
     refs.playbackSpeed05.addEventListener("click", () => {
+      if (dispatchModulePlayback("speed", 0.5)) return;
       if (!isLiveCircuitModule()) return;
       setCurrentFlowPlaybackSpeed(0.5);
     });
     refs.playbackSpeed10.addEventListener("click", () => {
+      if (dispatchModulePlayback("speed", 1)) return;
       if (!isLiveCircuitModule()) return;
       setCurrentFlowPlaybackSpeed(1);
     });
     refs.playbackSpeed15.addEventListener("click", () => {
+      if (dispatchModulePlayback("speed", 1.5)) return;
       if (!isLiveCircuitModule()) return;
       setCurrentFlowPlaybackSpeed(1.5);
     });
+
+    document.getElementById("reverseScenario").addEventListener("change", (event) => dispatchModulePlayback("scenario", event.target.value));
+    document.getElementById("reversePlaybackExit").addEventListener("click", () => dispatchModulePlayback("exit"));
 
     refs.boardFu1.addEventListener("click", () => { setInfo("fu1"); render(); });
     refs.boardKi1.addEventListener("click", () => {

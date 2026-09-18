@@ -1,0 +1,3685 @@
+{
+  "passed": 752,
+  "checks": [
+    {
+      "name": "Live forward unified source",
+      "passed": true
+    },
+    {
+      "name": "Live forward contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "Live forward components from Solver",
+      "passed": true
+    },
+    {
+      "name": "Live forward Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "Live forward only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "Live forward principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live forward focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live forward operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live forward one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "Live forward phase sequence",
+      "passed": true
+    },
+    {
+      "name": "Live forward",
+      "passed": true
+    },
+    {
+      "name": "Live reverse unified source",
+      "passed": true
+    },
+    {
+      "name": "Live reverse contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "Live reverse components from Solver",
+      "passed": true
+    },
+    {
+      "name": "Live reverse Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "Live reverse only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "Live reverse principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live reverse focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live reverse operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live reverse one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "Live reverse phase sequence",
+      "passed": true
+    },
+    {
+      "name": "Live forward to reverse",
+      "passed": true
+    },
+    {
+      "name": "Live reverse to forward",
+      "passed": true
+    },
+    {
+      "name": "Live stop unified source",
+      "passed": true
+    },
+    {
+      "name": "Live stop contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "Live stop components from Solver",
+      "passed": true
+    },
+    {
+      "name": "Live stop Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "Live stop only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "Live stop principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live stop focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live stop operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live stop one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "Live stop no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "Live SB1 stop explanation",
+      "passed": true
+    },
+    {
+      "name": "Live overload unified source",
+      "passed": true
+    },
+    {
+      "name": "Live overload contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "Live overload components from Solver",
+      "passed": true
+    },
+    {
+      "name": "Live overload Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "Live overload only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "Live overload principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live overload focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live overload operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live overload one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "Live overload no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "Live overload",
+      "passed": true
+    },
+    {
+      "name": "unreset cannot start",
+      "passed": true
+    },
+    {
+      "name": "Live reset unified source",
+      "passed": true
+    },
+    {
+      "name": "Live reset contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "Live reset components from Solver",
+      "passed": true
+    },
+    {
+      "name": "Live reset Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "Live reset only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "Live reset principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live reset focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live reset operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "Live reset one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "Live reset no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reset never auto restarts",
+      "passed": true
+    },
+    {
+      "name": "original system reset",
+      "passed": true
+    },
+    {
+      "name": "both pressed unified source",
+      "passed": true
+    },
+    {
+      "name": "both pressed contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "both pressed components from Solver",
+      "passed": true
+    },
+    {
+      "name": "both pressed Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "both pressed only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "both pressed principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "both pressed focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "both pressed operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "both pressed one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "both pressed no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "simultaneous held buttons safe",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 1 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-start live untouched 0",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 2 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-start live untouched 1",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 3 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-start live untouched 2",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 4 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-start live untouched 3",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 5 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-start live untouched 4",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 6 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-start live untouched 5",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 7 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-start live untouched 6",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-start step 8 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-start live untouched 7",
+      "passed": true
+    },
+    {
+      "name": "forward-start final direction",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 1 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-stop live untouched 0",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 2 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-stop live untouched 1",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 3 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-stop live untouched 2",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-stop step 4 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-stop live untouched 3",
+      "passed": true
+    },
+    {
+      "name": "forward-stop final direction",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 1 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-start live untouched 0",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 2 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-start live untouched 1",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 3 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-start live untouched 2",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 4 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-start live untouched 3",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 5 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-start live untouched 4",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 6 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-start live untouched 5",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 7 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-start live untouched 6",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-start step 8 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-start live untouched 7",
+      "passed": true
+    },
+    {
+      "name": "reverse-start final direction",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 1 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop live untouched 0",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 2 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop live untouched 1",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 3 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop live untouched 2",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop step 4 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop live untouched 3",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop final direction",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 1 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 0",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 2 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 1",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 3 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 2",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 4 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 3",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 5 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 4",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 6 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 5",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 7 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 6",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 8 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 7",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 9 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 8",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 unified source",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse step 10 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse live untouched 9",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse final direction",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse Solver-proven release before pickup",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 1 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 0",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 2 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 1",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 3 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 2",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 4 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 3",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 5 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 4",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 6 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 5",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 7 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 6",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 8 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 7",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 9 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 8",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 unified source",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward step 10 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward live untouched 9",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward final direction",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward Solver-proven release before pickup",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 unified source",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "overload step 1 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "overload live untouched 0",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 unified source",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "overload step 2 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "overload live untouched 1",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 unified source",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "overload step 3 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "overload live untouched 2",
+      "passed": true
+    },
+    {
+      "name": "overload final direction",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 unified source",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reset step 1 phase sequence",
+      "passed": true
+    },
+    {
+      "name": "reset live untouched 0",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 unified source",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reset step 2 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reset live untouched 1",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 unified source",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reset step 3 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reset live untouched 2",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 unified source",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reset step 4 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reset live untouched 3",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 unified source",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reset step 5 no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "reset live untouched 4",
+      "passed": true
+    },
+    {
+      "name": "reset final direction",
+      "passed": true
+    },
+    {
+      "name": "previous",
+      "passed": true
+    },
+    {
+      "name": "completion restores exact live state",
+      "passed": true
+    },
+    {
+      "name": "completion unified source",
+      "passed": true
+    },
+    {
+      "name": "completion contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "completion components from Solver",
+      "passed": true
+    },
+    {
+      "name": "completion Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "completion only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "completion principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "completion focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "completion operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "completion one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "completion phase sequence",
+      "passed": true
+    },
+    {
+      "name": "completion no override/focus/timers",
+      "passed": true
+    },
+    {
+      "name": "restart",
+      "passed": true
+    },
+    {
+      "name": "pause stable",
+      "passed": true
+    },
+    {
+      "name": "paused timer cleared",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt unified source",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt components from Solver",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "manual interrupt phase sequence",
+      "passed": true
+    },
+    {
+      "name": "manual action exits Playback first",
+      "passed": true
+    },
+    {
+      "name": "scenario switch unified source",
+      "passed": true
+    },
+    {
+      "name": "scenario switch contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "scenario switch components from Solver",
+      "passed": true
+    },
+    {
+      "name": "scenario switch Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "scenario switch only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "scenario switch principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "scenario switch focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "scenario switch operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "scenario switch one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "scenario switch phase sequence",
+      "passed": true
+    },
+    {
+      "name": "scenario cleanup",
+      "passed": true
+    },
+    {
+      "name": "explicit exit",
+      "passed": true
+    },
+    {
+      "name": "reset playback unified source",
+      "passed": true
+    },
+    {
+      "name": "reset playback contactor exclusion",
+      "passed": true
+    },
+    {
+      "name": "reset playback components from Solver",
+      "passed": true
+    },
+    {
+      "name": "reset playback Active = Flow = binding",
+      "passed": true
+    },
+    {
+      "name": "reset playback only conductive flow / same geometry",
+      "passed": true
+    },
+    {
+      "name": "reset playback principle synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset playback focus synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset playback operation state synchronized",
+      "passed": true
+    },
+    {
+      "name": "reset playback one scope timer maximum",
+      "passed": true
+    },
+    {
+      "name": "reset playback no ghost flow",
+      "passed": true
+    },
+    {
+      "name": "module reset cancels playback",
+      "passed": true
+    },
+    {
+      "name": "forward-start natural full autoplay",
+      "passed": true
+    },
+    {
+      "name": "forward-start natural end restores live",
+      "passed": true
+    },
+    {
+      "name": "forward-stop natural full autoplay",
+      "passed": true
+    },
+    {
+      "name": "forward-stop natural end restores live",
+      "passed": true
+    },
+    {
+      "name": "reverse-start natural full autoplay",
+      "passed": true
+    },
+    {
+      "name": "reverse-start natural end restores live",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop natural full autoplay",
+      "passed": true
+    },
+    {
+      "name": "reverse-stop natural end restores live",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse natural full autoplay",
+      "passed": true
+    },
+    {
+      "name": "forward-reverse natural end restores live",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward natural full autoplay",
+      "passed": true
+    },
+    {
+      "name": "reverse-forward natural end restores live",
+      "passed": true
+    },
+    {
+      "name": "overload natural full autoplay",
+      "passed": true
+    },
+    {
+      "name": "overload natural end restores live",
+      "passed": true
+    },
+    {
+      "name": "reset natural full autoplay",
+      "passed": true
+    },
+    {
+      "name": "reset natural end restores live",
+      "passed": true
+    },
+    {
+      "name": "module cleanup 0",
+      "passed": true
+    },
+    {
+      "name": "detached animations canceled 0",
+      "passed": true
+    },
+    {
+      "name": "reentry one input handler 0",
+      "passed": true
+    },
+    {
+      "name": "reentry zero timers 0",
+      "passed": true
+    },
+    {
+      "name": "module cleanup 1",
+      "passed": true
+    },
+    {
+      "name": "detached animations canceled 1",
+      "passed": true
+    },
+    {
+      "name": "reentry one input handler 1",
+      "passed": true
+    },
+    {
+      "name": "reentry zero timers 1",
+      "passed": true
+    },
+    {
+      "name": "module cleanup 2",
+      "passed": true
+    },
+    {
+      "name": "detached animations canceled 2",
+      "passed": true
+    },
+    {
+      "name": "reentry one input handler 2",
+      "passed": true
+    },
+    {
+      "name": "reentry zero timers 2",
+      "passed": true
+    },
+    {
+      "name": "jog-control original contract",
+      "passed": true
+    },
+    {
+      "name": "jog-control original power action",
+      "passed": true
+    },
+    {
+      "name": "self-lock original contract",
+      "passed": true
+    },
+    {
+      "name": "self-lock original power action",
+      "passed": true
+    },
+    {
+      "name": "main-control original contract",
+      "passed": true
+    },
+    {
+      "name": "main-control original power action",
+      "passed": true
+    },
+    {
+      "name": "disposed scope resources empty",
+      "passed": true
+    },
+    {
+      "name": "1920 no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "1920 no overlapping panels",
+      "passed": true
+    },
+    {
+      "name": "1920 Playback visible",
+      "passed": true
+    },
+    {
+      "name": "1920 component labels readable",
+      "passed": true
+    },
+    {
+      "name": "1920 right cards never internally clipped",
+      "passed": true
+    },
+    {
+      "name": "1600 no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "1600 no overlapping panels",
+      "passed": true
+    },
+    {
+      "name": "1600 Playback visible",
+      "passed": true
+    },
+    {
+      "name": "1600 component labels readable",
+      "passed": true
+    },
+    {
+      "name": "1600 right cards never internally clipped",
+      "passed": true
+    },
+    {
+      "name": "1366 no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "1366 no overlapping panels",
+      "passed": true
+    },
+    {
+      "name": "1366 Playback visible",
+      "passed": true
+    },
+    {
+      "name": "1366 component labels readable",
+      "passed": true
+    },
+    {
+      "name": "1366 right cards never internally clipped",
+      "passed": true
+    },
+    {
+      "name": "final clean state",
+      "passed": true
+    }
+  ],
+  "scenarios": {
+    "forward-start": [
+      {
+        "index": 0,
+        "title": "QF1 合闸",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 1,
+        "title": "按下 SB2",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 2,
+        "title": "KI1 线圈得电",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 3,
+        "title": "KI1 触点联动",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 4,
+        "title": "主回路相序",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 5,
+        "title": "M 正转",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 6,
+        "title": "SB2 松开",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 7,
+        "title": "KI1 自锁维持",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      }
+    ],
+    "forward-stop": [
+      {
+        "index": 0,
+        "title": "正转 自锁运行",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 1,
+        "title": "SB1 切断控制回路",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 2,
+        "title": "KI1 释放",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 3,
+        "title": "松开停止按钮",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      }
+    ],
+    "reverse-start": [
+      {
+        "index": 0,
+        "title": "QF1 合闸",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 1,
+        "title": "按下 SB3",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 2,
+        "title": "KI2 线圈得电",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 3,
+        "title": "KI2 触点联动",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 4,
+        "title": "主回路相序",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 5,
+        "title": "M 反转",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 6,
+        "title": "SB3 松开",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 7,
+        "title": "KI2 自锁维持",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      }
+    ],
+    "reverse-stop": [
+      {
+        "index": 0,
+        "title": "反转 自锁运行",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 1,
+        "title": "SB1 切断控制回路",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 2,
+        "title": "KI2 释放",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 3,
+        "title": "松开停止按钮",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      }
+    ],
+    "forward-reverse": [
+      {
+        "index": 0,
+        "title": "正转 稳定运行",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 1,
+        "title": "按下 SB3：NC 先切断旧方向",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 2,
+        "title": "KI1 线圈失电",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 3,
+        "title": "KI1 主触点释放",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 4,
+        "title": "KI1 自锁打开",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 5,
+        "title": "KI1 互锁 NC 恢复",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 6,
+        "title": "KI2 得电",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 7,
+        "title": "KI2 触点联动",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 8,
+        "title": "换相与新方向",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 9,
+        "title": "新方向自锁",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      }
+    ],
+    "reverse-forward": [
+      {
+        "index": 0,
+        "title": "反转 稳定运行",
+        "motor": "reverse",
+        "coils": {
+          "KM1": false,
+          "KM2": true
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 1,
+        "title": "按下 SB2：NC 先切断旧方向",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 2,
+        "title": "KI2 线圈失电",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 3,
+        "title": "KI2 主触点释放",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 4,
+        "title": "KI2 自锁打开",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 5,
+        "title": "KI2 互锁 NC 恢复",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "solver-iteration-release"
+      },
+      {
+        "index": 6,
+        "title": "KI1 得电",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 7,
+        "title": "KI1 触点联动",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 8,
+        "title": "换相与新方向",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 9,
+        "title": "新方向自锁",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      }
+    ],
+    "overload": [
+      {
+        "index": 0,
+        "title": "电机运行",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 1,
+        "title": "FR1 过载：NC 打开",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 2,
+        "title": "接触器释放，电机停止",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      }
+    ],
+    "reset": [
+      {
+        "index": 0,
+        "title": "电机运行",
+        "motor": "forward",
+        "coils": {
+          "KM1": true,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 1,
+        "title": "FR1 过载：NC 打开",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 2,
+        "title": "接触器释放，电机停止",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 3,
+        "title": "FR1 复位",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      },
+      {
+        "index": 4,
+        "title": "等待新启动命令",
+        "motor": "stopped",
+        "coils": {
+          "KM1": false,
+          "KM2": false
+        },
+        "phase": "settled"
+      }
+    ]
+  },
+  "layouts": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "board": {
+        "x": 239,
+        "y": 227.390625,
+        "right": 1567,
+        "bottom": 791.90625,
+        "width": 1328,
+        "height": 564.515625
+      },
+      "inspector": {
+        "x": 1584,
+        "y": 76,
+        "right": 1908,
+        "bottom": 837.4375,
+        "width": 324,
+        "height": 761.4375
+      },
+      "footer": {
+        "x": 232,
+        "y": 867,
+        "right": 1574,
+        "bottom": 1060,
+        "width": 1342,
+        "height": 193
+      },
+      "ai": {
+        "x": 1584,
+        "y": 769.84375,
+        "right": 1908,
+        "bottom": 837.4375,
+        "width": 324,
+        "height": 67.59375
+      },
+      "labelPx": 16.657839721254355
+    },
+    {
+      "width": 1600,
+      "height": 900,
+      "scrollWidth": 1600,
+      "board": {
+        "x": 239,
+        "y": 205.40625,
+        "right": 1247,
+        "bottom": 633.890625,
+        "width": 1008,
+        "height": 428.484375
+      },
+      "inspector": {
+        "x": 1264,
+        "y": 76,
+        "right": 1588,
+        "bottom": 837.4375,
+        "width": 324,
+        "height": 761.4375
+      },
+      "footer": {
+        "x": 232,
+        "y": 687,
+        "right": 1254,
+        "bottom": 880,
+        "width": 1022,
+        "height": 193
+      },
+      "ai": {
+        "x": 1264,
+        "y": 769.84375,
+        "right": 1588,
+        "bottom": 837.4375,
+        "width": 324,
+        "height": 67.59375
+      },
+      "labelPx": 12.64390243902439
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "board": {
+        "x": 205,
+        "y": 172.0625,
+        "right": 1037,
+        "bottom": 525.734375,
+        "width": 832,
+        "height": 353.671875
+      },
+      "inspector": {
+        "x": 1054,
+        "y": 76,
+        "right": 1354,
+        "bottom": 744,
+        "width": 300,
+        "height": 668
+      },
+      "footer": {
+        "x": 198,
+        "y": 555,
+        "right": 1044,
+        "bottom": 748,
+        "width": 846,
+        "height": 193
+      },
+      "ai": {
+        "x": 1054,
+        "y": 791.9375,
+        "right": 1354,
+        "bottom": 877.125,
+        "width": 300,
+        "height": 85.1875
+      },
+      "labelPx": 10.43623693379791
+    }
+  ],
+  "cleanup": {
+    "moduleId": "ch02_reverse",
+    "disposed": false,
+    "timeoutCount": 0,
+    "intervalCount": 0,
+    "cleanupCount": 1,
+    "flows": 0,
+    "focus": 0
+  },
+  "solverHash": "257603bc758841a5764556c06f5443209936d04b7f2a7448423ee2ea2879959e",
+  "browserErrors": [],
+  "stage1to4": {
+    "activePathPassed": 106,
+    "electricalPassed": 331,
+    "combinations": 96,
+    "geometryHash": "248befb2c0522e4f72bb9574baa50b0cd3afd195a8a069bd40617e1b28ffb018",
+    "currentFlowPassed": 480
+  }
+}

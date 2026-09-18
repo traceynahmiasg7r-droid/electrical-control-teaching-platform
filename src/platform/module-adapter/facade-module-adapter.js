@@ -41,6 +41,9 @@
         getStatusViewModel: (...args) => facade.getStatusViewModel(...args),
         buildTeachingFeedback: (...args) => facade.buildTeachingFeedback(...args),
         buildReplaySteps: (...args) => facade.buildReplaySteps(...args),
+        // Optional module-owned Playback; legacy modules retain their existing player.
+        getPlaybackViewModel: (...args) => facade.getPlaybackViewModel?.(...args),
+        dispatchPlayback: (...args) => facade.dispatchPlayback?.(...args),
         mount(payload) {
           mounted = true;
           return facade.mount?.(payload, context);

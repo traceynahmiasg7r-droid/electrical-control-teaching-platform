@@ -1,0 +1,1843 @@
+{
+  "status": "BLOCKED",
+  "blocker": "FLOW_DATA_BLOCKER",
+  "classification": "visual subdivision versus Solver same-node wire membership; not an electrical topology mismatch",
+  "proposedChangeApplied": false,
+  "solverModified": false,
+  "regression": {
+    "activePathPassed": 106,
+    "electricalPassed": 331,
+    "combinations": 96,
+    "geometryHash": "248befb2c0522e4f72bb9574baa50b0cd3afd195a8a069bd40617e1b28ffb018"
+  },
+  "states": [
+    {
+      "label": "QF open",
+      "operation": {
+        "power": "open",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "motor": "stopped",
+      "activeMainWireIds": [],
+      "activeControlWireIds": [],
+      "activeMainEdgeIds": [],
+      "activeControlEdgeIds": [],
+      "activeMainWirePhaseMap": {},
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {},
+        "mainDirectionMap": {}
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "standby",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "motor": "stopped",
+      "activeMainWireIds": [],
+      "activeControlWireIds": [],
+      "activeMainEdgeIds": [],
+      "activeControlEdgeIds": [],
+      "activeMainWirePhaseMap": {},
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {},
+        "mainDirectionMap": {}
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "SB2 pressed",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "pressed",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "motor": "forward",
+      "activeMainWireIds": [
+        "mw_01",
+        "mw_03",
+        "mw_10",
+        "mw_13",
+        "mw_22",
+        "mw_23",
+        "mw_24",
+        "mw_04",
+        "mw_06",
+        "mw_11",
+        "mw_14",
+        "mw_25",
+        "mw_26",
+        "mw_27",
+        "mw_07",
+        "mw_09",
+        "mw_12",
+        "mw_15",
+        "mw_28",
+        "mw_29",
+        "mw_30"
+      ],
+      "activeControlWireIds": [
+        "mw_07",
+        "mw_09",
+        "cw_01",
+        "cw_02",
+        "cw_03",
+        "cw_04",
+        "cw_07",
+        "cw_08",
+        "cw_09",
+        "cw_10",
+        "cw_19",
+        "cw_20",
+        "mw_06",
+        "mw_04"
+      ],
+      "activeMainEdgeIds": [
+        "qf1_edge_l1",
+        "fu1_edge_l1",
+        "edge_ki1_main_a",
+        "edge_fr1_u",
+        "qf1_edge_l2",
+        "fu1_edge_l2",
+        "edge_ki1_main_b",
+        "edge_fr1_v",
+        "qf1_edge_l3",
+        "fu1_edge_l3",
+        "edge_ki1_main_c",
+        "edge_fr1_w"
+      ],
+      "activeControlEdgeIds": [
+        "qf1_edge_l3",
+        "fu1_edge_l3",
+        "edge_sb1_nc",
+        "edge_sb2_no",
+        "edge_sb3_nc",
+        "edge_ki2_interlock_nc",
+        "edge_fr1_nc",
+        "fu1_edge_l2",
+        "qf1_edge_l2",
+        "edge_coil_ki1"
+      ],
+      "activeMainWirePhaseMap": {
+        "mw_01": "l1",
+        "mw_03": "l1",
+        "mw_10": "l1",
+        "mw_13": "l1",
+        "mw_22": "l1",
+        "mw_23": "l1",
+        "mw_24": "l1",
+        "mw_04": "l2",
+        "mw_06": "l2",
+        "mw_11": "l2",
+        "mw_14": "l2",
+        "mw_25": "l2",
+        "mw_26": "l2",
+        "mw_27": "l2",
+        "mw_07": "l3",
+        "mw_09": "l3",
+        "mw_12": "l3",
+        "mw_15": "l3",
+        "mw_28": "l3",
+        "mw_29": "l3",
+        "mw_30": "l3"
+      },
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {
+          "mw_07": 1,
+          "mw_09": 1,
+          "cw_01": 1,
+          "cw_02": 1,
+          "cw_03": 1,
+          "cw_04": 1,
+          "cw_08": 1,
+          "cw_09": 1,
+          "cw_10": 1,
+          "cw_19": 1,
+          "cw_20": 1,
+          "mw_06": -1,
+          "mw_04": -1
+        },
+        "mainDirectionMap": {
+          "mw_01": 1,
+          "mw_03": 1,
+          "mw_10": 1,
+          "mw_13": 1,
+          "mw_22": 1,
+          "mw_23": 1,
+          "mw_24": 1,
+          "mw_04": 1,
+          "mw_06": 1,
+          "mw_11": 1,
+          "mw_14": 1,
+          "mw_25": 1,
+          "mw_26": 1,
+          "mw_27": 1,
+          "mw_07": 1,
+          "mw_09": 1,
+          "mw_12": 1,
+          "mw_15": 1,
+          "mw_28": 1,
+          "mw_29": 1,
+          "mw_30": 1
+        }
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "forward self-hold",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "motor": "forward",
+      "activeMainWireIds": [
+        "mw_01",
+        "mw_03",
+        "mw_10",
+        "mw_13",
+        "mw_22",
+        "mw_23",
+        "mw_24",
+        "mw_04",
+        "mw_06",
+        "mw_11",
+        "mw_14",
+        "mw_25",
+        "mw_26",
+        "mw_27",
+        "mw_07",
+        "mw_09",
+        "mw_12",
+        "mw_15",
+        "mw_28",
+        "mw_29",
+        "mw_30"
+      ],
+      "activeControlWireIds": [
+        "mw_07",
+        "mw_09",
+        "cw_01",
+        "cw_02",
+        "cw_05",
+        "cw_06",
+        "cw_07",
+        "cw_08",
+        "cw_09",
+        "cw_10",
+        "cw_19",
+        "cw_20",
+        "mw_06",
+        "mw_04"
+      ],
+      "activeMainEdgeIds": [
+        "qf1_edge_l1",
+        "fu1_edge_l1",
+        "edge_ki1_main_a",
+        "edge_fr1_u",
+        "qf1_edge_l2",
+        "fu1_edge_l2",
+        "edge_ki1_main_b",
+        "edge_fr1_v",
+        "qf1_edge_l3",
+        "fu1_edge_l3",
+        "edge_ki1_main_c",
+        "edge_fr1_w"
+      ],
+      "activeControlEdgeIds": [
+        "qf1_edge_l3",
+        "fu1_edge_l3",
+        "edge_sb1_nc",
+        "edge_ki1_self_no",
+        "edge_sb3_nc",
+        "edge_ki2_interlock_nc",
+        "edge_fr1_nc",
+        "fu1_edge_l2",
+        "qf1_edge_l2",
+        "edge_coil_ki1"
+      ],
+      "activeMainWirePhaseMap": {
+        "mw_01": "l1",
+        "mw_03": "l1",
+        "mw_10": "l1",
+        "mw_13": "l1",
+        "mw_22": "l1",
+        "mw_23": "l1",
+        "mw_24": "l1",
+        "mw_04": "l2",
+        "mw_06": "l2",
+        "mw_11": "l2",
+        "mw_14": "l2",
+        "mw_25": "l2",
+        "mw_26": "l2",
+        "mw_27": "l2",
+        "mw_07": "l3",
+        "mw_09": "l3",
+        "mw_12": "l3",
+        "mw_15": "l3",
+        "mw_28": "l3",
+        "mw_29": "l3",
+        "mw_30": "l3"
+      },
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {
+          "mw_07": 1,
+          "mw_09": 1,
+          "cw_01": 1,
+          "cw_02": 1,
+          "cw_05": 1,
+          "cw_06": 1,
+          "cw_08": 1,
+          "cw_09": 1,
+          "cw_10": 1,
+          "cw_19": 1,
+          "cw_20": 1,
+          "mw_06": -1,
+          "mw_04": -1
+        },
+        "mainDirectionMap": {
+          "mw_01": 1,
+          "mw_03": 1,
+          "mw_10": 1,
+          "mw_13": 1,
+          "mw_22": 1,
+          "mw_23": 1,
+          "mw_24": 1,
+          "mw_04": 1,
+          "mw_06": 1,
+          "mw_11": 1,
+          "mw_14": 1,
+          "mw_25": 1,
+          "mw_26": 1,
+          "mw_27": 1,
+          "mw_07": 1,
+          "mw_09": 1,
+          "mw_12": 1,
+          "mw_15": 1,
+          "mw_28": 1,
+          "mw_29": 1,
+          "mw_30": 1
+        }
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "SB3 reversal pressed",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "pressed"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "motor": "reverse",
+      "activeMainWireIds": [
+        "mw_07",
+        "mw_09",
+        "mw_20",
+        "mw_21",
+        "mw_22",
+        "mw_23",
+        "mw_24",
+        "mw_04",
+        "mw_06",
+        "mw_18",
+        "mw_19",
+        "mw_25",
+        "mw_26",
+        "mw_27",
+        "mw_01",
+        "mw_03",
+        "mw_16",
+        "mw_17",
+        "mw_28",
+        "mw_29",
+        "mw_30"
+      ],
+      "activeControlWireIds": [
+        "mw_07",
+        "mw_09",
+        "cw_01",
+        "cw_02",
+        "cw_11",
+        "cw_12",
+        "cw_15",
+        "cw_16",
+        "cw_17",
+        "cw_18",
+        "cw_19",
+        "cw_20",
+        "mw_06",
+        "mw_04"
+      ],
+      "activeMainEdgeIds": [
+        "qf1_edge_l3",
+        "fu1_edge_l3",
+        "edge_ki2_main_c",
+        "edge_fr1_u",
+        "qf1_edge_l2",
+        "fu1_edge_l2",
+        "edge_ki2_main_b",
+        "edge_fr1_v",
+        "qf1_edge_l1",
+        "fu1_edge_l1",
+        "edge_ki2_main_a",
+        "edge_fr1_w"
+      ],
+      "activeControlEdgeIds": [
+        "qf1_edge_l3",
+        "fu1_edge_l3",
+        "edge_sb1_nc",
+        "edge_sb3_no",
+        "edge_sb2_nc",
+        "edge_ki1_interlock_nc",
+        "edge_fr1_nc",
+        "fu1_edge_l2",
+        "qf1_edge_l2",
+        "edge_coil_ki2"
+      ],
+      "activeMainWirePhaseMap": {
+        "mw_07": "l3",
+        "mw_09": "l3",
+        "mw_20": "l3",
+        "mw_21": "l3",
+        "mw_22": "l3",
+        "mw_23": "l3",
+        "mw_24": "l3",
+        "mw_04": "l2",
+        "mw_06": "l2",
+        "mw_18": "l2",
+        "mw_19": "l2",
+        "mw_25": "l2",
+        "mw_26": "l2",
+        "mw_27": "l2",
+        "mw_01": "l1",
+        "mw_03": "l1",
+        "mw_16": "l1",
+        "mw_17": "l1",
+        "mw_28": "l1",
+        "mw_29": "l1",
+        "mw_30": "l1"
+      },
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {
+          "mw_07": 1,
+          "mw_09": 1,
+          "cw_01": 1,
+          "cw_02": 1,
+          "cw_11": 1,
+          "cw_12": 1,
+          "cw_16": 1,
+          "cw_17": 1,
+          "cw_18": 1,
+          "cw_19": 1,
+          "cw_20": 1,
+          "mw_06": -1,
+          "mw_04": -1
+        },
+        "mainDirectionMap": {
+          "mw_07": 1,
+          "mw_09": 1,
+          "mw_20": 1,
+          "mw_21": 1,
+          "mw_22": 1,
+          "mw_23": 1,
+          "mw_24": 1,
+          "mw_04": 1,
+          "mw_06": 1,
+          "mw_18": 1,
+          "mw_19": 1,
+          "mw_25": 1,
+          "mw_26": 1,
+          "mw_27": 1,
+          "mw_01": 1,
+          "mw_03": 1,
+          "mw_16": 1,
+          "mw_17": 1,
+          "mw_28": 1,
+          "mw_29": 1,
+          "mw_30": 1
+        }
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "reverse self-hold",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "motor": "reverse",
+      "activeMainWireIds": [
+        "mw_07",
+        "mw_09",
+        "mw_20",
+        "mw_21",
+        "mw_22",
+        "mw_23",
+        "mw_24",
+        "mw_04",
+        "mw_06",
+        "mw_18",
+        "mw_19",
+        "mw_25",
+        "mw_26",
+        "mw_27",
+        "mw_01",
+        "mw_03",
+        "mw_16",
+        "mw_17",
+        "mw_28",
+        "mw_29",
+        "mw_30"
+      ],
+      "activeControlWireIds": [
+        "mw_07",
+        "mw_09",
+        "cw_01",
+        "cw_02",
+        "cw_13",
+        "cw_14",
+        "cw_15",
+        "cw_16",
+        "cw_17",
+        "cw_18",
+        "cw_19",
+        "cw_20",
+        "mw_06",
+        "mw_04"
+      ],
+      "activeMainEdgeIds": [
+        "qf1_edge_l3",
+        "fu1_edge_l3",
+        "edge_ki2_main_c",
+        "edge_fr1_u",
+        "qf1_edge_l2",
+        "fu1_edge_l2",
+        "edge_ki2_main_b",
+        "edge_fr1_v",
+        "qf1_edge_l1",
+        "fu1_edge_l1",
+        "edge_ki2_main_a",
+        "edge_fr1_w"
+      ],
+      "activeControlEdgeIds": [
+        "qf1_edge_l3",
+        "fu1_edge_l3",
+        "edge_sb1_nc",
+        "edge_ki2_self_no",
+        "edge_sb2_nc",
+        "edge_ki1_interlock_nc",
+        "edge_fr1_nc",
+        "fu1_edge_l2",
+        "qf1_edge_l2",
+        "edge_coil_ki2"
+      ],
+      "activeMainWirePhaseMap": {
+        "mw_07": "l3",
+        "mw_09": "l3",
+        "mw_20": "l3",
+        "mw_21": "l3",
+        "mw_22": "l3",
+        "mw_23": "l3",
+        "mw_24": "l3",
+        "mw_04": "l2",
+        "mw_06": "l2",
+        "mw_18": "l2",
+        "mw_19": "l2",
+        "mw_25": "l2",
+        "mw_26": "l2",
+        "mw_27": "l2",
+        "mw_01": "l1",
+        "mw_03": "l1",
+        "mw_16": "l1",
+        "mw_17": "l1",
+        "mw_28": "l1",
+        "mw_29": "l1",
+        "mw_30": "l1"
+      },
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {
+          "mw_07": 1,
+          "mw_09": 1,
+          "cw_01": 1,
+          "cw_02": 1,
+          "cw_13": 1,
+          "cw_14": 1,
+          "cw_16": 1,
+          "cw_17": 1,
+          "cw_18": 1,
+          "cw_19": 1,
+          "cw_20": 1,
+          "mw_06": -1,
+          "mw_04": -1
+        },
+        "mainDirectionMap": {
+          "mw_07": 1,
+          "mw_09": 1,
+          "mw_20": 1,
+          "mw_21": 1,
+          "mw_22": 1,
+          "mw_23": 1,
+          "mw_24": 1,
+          "mw_04": 1,
+          "mw_06": 1,
+          "mw_18": 1,
+          "mw_19": 1,
+          "mw_25": 1,
+          "mw_26": 1,
+          "mw_27": 1,
+          "mw_01": 1,
+          "mw_03": 1,
+          "mw_16": 1,
+          "mw_17": 1,
+          "mw_28": 1,
+          "mw_29": 1,
+          "mw_30": 1
+        }
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": true,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "SB1 stop",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "motor": "stopped",
+      "activeMainWireIds": [],
+      "activeControlWireIds": [],
+      "activeMainEdgeIds": [],
+      "activeControlEdgeIds": [],
+      "activeMainWirePhaseMap": {},
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {},
+        "mainDirectionMap": {}
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "forward overload",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "overload"
+        }
+      },
+      "motor": "stopped",
+      "activeMainWireIds": [],
+      "activeControlWireIds": [],
+      "activeMainEdgeIds": [],
+      "activeControlEdgeIds": [],
+      "activeMainWirePhaseMap": {},
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {},
+        "mainDirectionMap": {}
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "reverse overload",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "overload"
+        }
+      },
+      "motor": "stopped",
+      "activeMainWireIds": [],
+      "activeControlWireIds": [],
+      "activeMainEdgeIds": [],
+      "activeControlEdgeIds": [],
+      "activeMainWirePhaseMap": {},
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {},
+        "mainDirectionMap": {}
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    },
+    {
+      "label": "FR1 reset",
+      "operation": {
+        "power": "closed",
+        "controls": {
+          "stop": "released",
+          "forward": "released",
+          "reverse": "released"
+        },
+        "protections": {
+          "overload": "normal"
+        }
+      },
+      "motor": "stopped",
+      "activeMainWireIds": [],
+      "activeControlWireIds": [],
+      "activeMainEdgeIds": [],
+      "activeControlEdgeIds": [],
+      "activeMainWirePhaseMap": {},
+      "normalizedDirectionMapPresent": false,
+      "legacyDirections": {
+        "controlDirectionMap": {},
+        "mainDirectionMap": {}
+      },
+      "bridgeEvidence": [
+        {
+          "electricalWireId": "mw_02",
+          "visualWireId": "qf_fu_l1",
+          "fromPort": "qf1_l1_out",
+          "toPort": "fu1_l1_in",
+          "solverFromNode": "335,316",
+          "solverToNode": "335,316",
+          "solverRoutePoints": [
+            {
+              "x": 335,
+              "y": 316
+            },
+            {
+              "x": 335,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 220,
+              "y": 82
+            },
+            {
+              "x": 220,
+              "y": 94
+            }
+          ],
+          "visualPath": "M220 82 L220 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_05",
+          "visualWireId": "qf_fu_l2",
+          "fromPort": "qf1_l2_out",
+          "toPort": "fu1_l2_in",
+          "solverFromNode": "393,316",
+          "solverToNode": "393,316",
+          "solverRoutePoints": [
+            {
+              "x": 393,
+              "y": 316
+            },
+            {
+              "x": 393,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 282,
+              "y": 82
+            },
+            {
+              "x": 282,
+              "y": 94
+            }
+          ],
+          "visualPath": "M282 82 L282 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        },
+        {
+          "electricalWireId": "mw_08",
+          "visualWireId": "qf_fu_l3",
+          "fromPort": "qf1_l3_out",
+          "toPort": "fu1_l3_in",
+          "solverFromNode": "452,316",
+          "solverToNode": "452,316",
+          "solverRoutePoints": [
+            {
+              "x": 452,
+              "y": 316
+            },
+            {
+              "x": 452,
+              "y": 316
+            }
+          ],
+          "visualPoints": [
+            {
+              "x": 346,
+              "y": 82
+            },
+            {
+              "x": 346,
+              "y": 94
+            }
+          ],
+          "visualPath": "M346 82 L346 94",
+          "visualLength": 12,
+          "activeMain": false,
+          "activeControl": false,
+          "activePhase": null,
+          "adjoiningMainEdgesActive": false,
+          "activeHighlightPresent": false
+        }
+      ],
+      "flowCount": 0,
+      "flowAnimationCount": 0
+    }
+  ],
+  "cleanup": {
+    "flowNodes": 0,
+    "flowAnimations": 0,
+    "scope": {
+      "moduleId": "ch02_reverse",
+      "disposed": false,
+      "timeoutCount": 0,
+      "intervalCount": 0,
+      "cleanupCount": 0
+    }
+  },
+  "browserErrors": []
+}

@@ -1,0 +1,237 @@
+[data-module="ch02_reverse"].ch02-reverse-static-module {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+
+.ch02-reverse-static-module .ch02-reverse-board {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  aspect-ratio: 1435 / 610;
+  background: #ffffff;
+}
+
+.ch02-reverse-board .ch02-reverse-background {
+  fill: #ffffff;
+}
+
+.ch02-reverse-board .ch02-reverse-wire,
+.ch02-reverse-board .ch02-reverse-component,
+.ch02-reverse-board .ch02-reverse-mechanical-layer {
+  fill: none;
+  stroke: #111111;
+  stroke-width: 1.8;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+/* Stage 3: static Solver-conductive overlay. The overlay is a <use> of the
+   exact base wire path, with no animation or alternate route geometry. */
+.ch02-reverse-board .ch02-reverse-wire-active {
+  fill: none;
+  stroke: #c62828;
+  stroke-width: 4.2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  pointer-events: none;
+}
+
+.ch02-reverse-board .ch02-reverse-component.is-active-edge {
+  stroke: #c62828;
+  stroke-width: 2.35;
+}
+
+.ch02-reverse-board .ch02-reverse-component.is-active-edge rect,
+.ch02-reverse-board .ch02-reverse-component.is-active-edge ellipse,
+.ch02-reverse-board .ch02-reverse-component.is-active-edge circle {
+  stroke: #c62828;
+}
+
+.ch02-reverse-board .ch02-reverse-component rect,
+.ch02-reverse-board .ch02-reverse-component ellipse,
+.ch02-reverse-board .ch02-reverse-component circle {
+  fill: #ffffff;
+}
+
+.ch02-reverse-board .ch02-reverse-component .ch02-reverse-hitbox {
+  fill: transparent;
+  stroke: none;
+  pointer-events: all;
+}
+
+/* Approved QF1-only exception: preserve hit testing but never join the phases visually. */
+.ch02-reverse-board .ch02-reverse-component[data-component-id="qf1"] .ch02-reverse-hitbox {
+  stroke: none;
+  fill: transparent;
+}
+
+/* Stage 4: reused wire/conductive-stroke geometry, no arrows and no JS timers.
+   One pitch per 1.6 seconds; all phases share the same illustrative speed. */
+.ch02-reverse-board .ch02-reverse-flow {
+  fill: none;
+  stroke: #ffaaa5;
+  stroke-width: 1.6;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-dasharray: 6 26;
+  animation: ch02ReverseFlow 1.6s linear infinite;
+  pointer-events: none;
+}
+
+.ch02-reverse-board .ch02-reverse-flow.is-undirected {
+  animation-direction: alternate;
+}
+
+@keyframes ch02ReverseFlow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -32; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ch02-reverse-board .ch02-reverse-flow {
+    animation: none;
+    display: none;
+  }
+}
+
+.ch02-reverse-board .ch02-reverse-junction-layer {
+  fill: #111111;
+  stroke: none;
+}
+
+.ch02-reverse-board .ch02-reverse-junction.is-active-junction {
+  fill: #c62828;
+}
+
+.ch02-reverse-board .ch02-reverse-mechanical-layer,
+.ch02-reverse-board .thermal-link {
+  stroke-dasharray: 7 7;
+  stroke-width: 1.7;
+}
+
+.ch02-reverse-board text {
+  fill: #111111;
+  stroke: none;
+  font-family: "Times New Roman", "SimSun", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.ch02-reverse-board .terminal,
+.ch02-reverse-board .node,
+.ch02-reverse-board .phase {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.ch02-reverse-board .motor {
+  font-size: 23px;
+}
+
+/* Stage 2 changes only component presentation; the approved wire layer stays black and untouched. */
+.ch02-reverse-board .ch02-reverse-component {
+  transition: opacity 90ms ease, fill 90ms ease, stroke-width 90ms ease;
+}
+
+.ch02-reverse-board .ch02-reverse-component[data-interactive="true"] {
+  cursor: pointer;
+}
+
+.ch02-reverse-board .ch02-reverse-component[data-interactive="true"]:focus {
+  outline: none;
+}
+
+.ch02-reverse-board .ch02-reverse-component[data-interactive="true"]:focus-visible {
+  filter: drop-shadow(0 0 1.2px #2e6f93);
+}
+
+.ch02-reverse-board .ch02-reverse-component.is-pressed {
+  opacity: 0.74;
+}
+
+.ch02-reverse-board .ch02-reverse-component.is-energized rect {
+  fill: #e4eee5;
+  stroke: #386246;
+  stroke-width: 2.15;
+}
+
+.ch02-reverse-board .ch02-reverse-component.is-tripped {
+  opacity: 0.66;
+}
+
+.ch02-reverse-board .ch02-reverse-component.motor-forward ellipse {
+  fill: #e4eee5;
+  stroke: #386246;
+  stroke-width: 2.15;
+}
+
+.ch02-reverse-board .ch02-reverse-component.motor-reverse ellipse {
+  fill: #eef0d8;
+  stroke: #7a6a2a;
+  stroke-width: 2.15;
+}
+
+.ch02-reverse-board .motor-state {
+  font-family: Arial, "SimSun", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Stage 5: focus is a soft blue halo, never an electrical stroke/flow path. */
+.ch02-reverse-board .is-teaching-focus {
+  filter: drop-shadow(0 0 5px #72a8e3);
+}
+
+/* Container-only adaptation of the original shell; frozen SVG coordinates untouched. */
+body.ch02-reverse-active .workspace {
+  grid-template-columns: 210px minmax(0, 1fr) 324px;
+  gap: 10px;
+  padding: 12px;
+}
+body.ch02-reverse-active .stage-panel { height: calc(100vh - 96px); }
+body.ch02-reverse-active .inspector { grid-column: 3; grid-row: 1; }
+body.ch02-reverse-active .inspector > section { flex: 0 0 auto; }
+body.ch02-reverse-active .stage-card { flex: 1; height: auto; min-height: 0; }
+body.ch02-reverse-active .module-canvas { padding: 6px; }
+body.ch02-reverse-active .footerbar { min-height: 140px; flex: 0 0 auto; padding: 12px 14px; }
+body.ch02-reverse-active .footer-playback-head { flex-wrap: wrap; gap: 8px; }
+body.ch02-reverse-active .footer-playback-actions { flex-wrap: wrap; }
+body.ch02-reverse-active .principle-play-btn { width: auto; height: auto; min-width: 52px; border-radius: 6px; font-size: 13px; color: white; }
+body.ch02-reverse-active .principle-play-btn::before { content: none; }
+body.ch02-reverse-active .footer-playback-meta { flex-wrap: wrap; gap: 8px; }
+body.ch02-reverse-active #currentStepText { white-space: normal; }
+body.ch02-reverse-active #reverseScenarioLabel { font-size: 13px; color: #475569; }
+body.ch02-reverse-active #reverseScenario { font: inherit; padding: 5px; border: 1px solid #ccd5e0; border-radius: 5px; background: white; }
+body.ch02-reverse-active .info-card,
+body.ch02-reverse-active .operation-control-card { padding: 10px 12px; }
+body.ch02-reverse-active .info-card h3,
+body.ch02-reverse-active .operation-control-card h3 { margin-bottom: 8px; }
+body.ch02-reverse-active .control-grid { gap: 5px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+body.ch02-reverse-active .control-grid .ctrl-btn,
+body.ch02-reverse-active .control-grid .qf-btn { min-height: 64px; height: 64px; padding: 5px 3px; gap: 2px; }
+body.ch02-reverse-active .control-grid .ctrl-btn .chip { width: 16px; height: 16px; margin: 0; }
+body.ch02-reverse-active #actionFeedbackBox p { display: none; } /* Full explanation remains in the principle card. */
+body.ch02-reverse-active .operation-feedback-inline { min-height: 0; padding: 6px 8px; }
+body.ch02-reverse-active .operation-control-card > .btn-row { position: static; margin-top: 7px; justify-content: flex-end; }
+body.ch02-reverse-active #principleCard { min-height: 0; }
+body.ch02-reverse-active #principleCard .box { min-height: 0; }
+body.ch02-reverse-active #teachText { font-size: 13px; line-height: 1.7; }
+body.ch02-reverse-active .reverse-teaching-hint { font-size: 12px; line-height: 1.6; color: #436788; }
+body.ch02-reverse-active #aiPlaceholderCard { min-height: 0; height: auto; }
+body.ch02-reverse-active #aiPlaceholderCard .box { min-height: 0; }
+body.ch02-reverse-active .status-row { padding: 5px; gap: 3px; min-height: 36px; }
+body.ch02-reverse-active .status-row:last-child { grid-column: 1 / -1; }
+body.ch02-reverse-active .status-row .pill { font-size: 11px; }
+@media (max-width: 1450px) {
+  body.ch02-reverse-active .workspace { grid-template-columns: 176px minmax(0, 1fr) 300px; }
+  body.ch02-reverse-active .platform-module-list .module-nav-item .label { font-size: 12px; }
+  body.ch02-reverse-active .stage-card-head { padding: 12px; }
+  body.ch02-reverse-active .stage-card-head h3 { font-size: 20px; }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>阶段4 Current Flow 验收截图 A–N</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;margin:24px;background:#f4f4f4;color:#222}
+main{max-width:1500px;margin:auto} section{background:white;padding:18px;margin:22px 0}
+.frames{display:flex;gap:16px;align-items:flex-start} figure{margin:0;flex:1;min-width:0}
+img{width:100%;height:auto;border:1px solid #ddd} a{color:#174f80}
+@media(max-width:850px){.frames{display:block}figure{margin-bottom:20px}}
+</style><main>
+<h1>阶段4 Current Flow — 等待人工验收</h1>
+<p>24 张真实浏览器截图。A–F、M、N 为同一状态连续两帧（间隔约 0.5 秒）；K/L 为按下与松开的分支切换对照。点击图片可查看原尺寸。</p>
+<p>移动短线仅示意交流闭合路径，不表示真实瞬时电流方向。线圈无内部绕组几何，Flow 止于端子；外框和机械机构不参与流动。</p>
+<p><a href="stage4-validation.json">完整验收数据</a> · <a href="STAGE4_REPORT.md">实现与冻结说明</a></p>
+<nav><a href="#A">A</a> · <a href="#B">B</a> · <a href="#C">C</a> · <a href="#D">D</a> · <a href="#E">E</a> · <a href="#F">F</a> · <a href="#G">G</a> · <a href="#H">H</a> · <a href="#I">I</a> · <a href="#J">J</a> · <a href="#K">K</a> · <a href="#L">L</a> · <a href="#M">M</a> · <a href="#N">N</a></nav>
+<section id="A"><h2>A — SB2 按下 · 控制回路</h2><div class="frames"><figure><a href="stage4-A1.png"><img loading="lazy" src="stage4-A1.png" alt="A1: SB2 按下 · 控制回路"></a><figcaption>A1</figcaption></figure><figure><a href="stage4-A2.png"><img loading="lazy" src="stage4-A2.png" alt="A2: SB2 按下 · 控制回路"></a><figcaption>A2</figcaption></figure></div></section>
+<section id="B"><h2>B — KI1 自锁 · 控制回路</h2><div class="frames"><figure><a href="stage4-B1.png"><img loading="lazy" src="stage4-B1.png" alt="B1: KI1 自锁 · 控制回路"></a><figcaption>B1</figcaption></figure><figure><a href="stage4-B2.png"><img loading="lazy" src="stage4-B2.png" alt="B2: KI1 自锁 · 控制回路"></a><figcaption>B2</figcaption></figure></div></section>
+<section id="C"><h2>C — 正转三相主回路</h2><div class="frames"><figure><a href="stage4-C1.png"><img loading="lazy" src="stage4-C1.png" alt="C1: 正转三相主回路"></a><figcaption>C1</figcaption></figure><figure><a href="stage4-C2.png"><img loading="lazy" src="stage4-C2.png" alt="C2: 正转三相主回路"></a><figcaption>C2</figcaption></figure></div></section>
+<section id="D"><h2>D — 按住 SB3 换向</h2><div class="frames"><figure><a href="stage4-D1.png"><img loading="lazy" src="stage4-D1.png" alt="D1: 按住 SB3 换向"></a><figcaption>D1</figcaption></figure><figure><a href="stage4-D2.png"><img loading="lazy" src="stage4-D2.png" alt="D2: 按住 SB3 换向"></a><figcaption>D2</figcaption></figure></div></section>
+<section id="E"><h2>E — KI2 自锁 · 控制回路</h2><div class="frames"><figure><a href="stage4-E1.png"><img loading="lazy" src="stage4-E1.png" alt="E1: KI2 自锁 · 控制回路"></a><figcaption>E1</figcaption></figure><figure><a href="stage4-E2.png"><img loading="lazy" src="stage4-E2.png" alt="E2: KI2 自锁 · 控制回路"></a><figcaption>E2</figcaption></figure></div></section>
+<section id="F"><h2>F — 反转三相主回路</h2><div class="frames"><figure><a href="stage4-F1.png"><img loading="lazy" src="stage4-F1.png" alt="F1: 反转三相主回路"></a><figcaption>F1</figcaption></figure><figure><a href="stage4-F2.png"><img loading="lazy" src="stage4-F2.png" alt="F2: 反转三相主回路"></a><figcaption>F2</figcaption></figure></div></section>
+<section id="G"><h2>G — SB1 按下停止</h2><div class="frames"><figure><a href="stage4-G.png"><img loading="lazy" src="stage4-G.png" alt="G: SB1 按下停止"></a><figcaption>G</figcaption></figure></div></section>
+<section id="H"><h2>H — 正转 FR1 过载</h2><div class="frames"><figure><a href="stage4-H.png"><img loading="lazy" src="stage4-H.png" alt="H: 正转 FR1 过载"></a><figcaption>H</figcaption></figure></div></section>
+<section id="I"><h2>I — 反转 FR1 过载</h2><div class="frames"><figure><a href="stage4-I.png"><img loading="lazy" src="stage4-I.png" alt="I: 反转 FR1 过载"></a><figcaption>I</figcaption></figure></div></section>
+<section id="J"><h2>J — FR1 复位 · 不自动重启</h2><div class="frames"><figure><a href="stage4-J.png"><img loading="lazy" src="stage4-J.png" alt="J: FR1 复位 · 不自动重启"></a><figcaption>J</figcaption></figure></div></section>
+<section id="K"><h2>K — SB2 按下 → 松开，切换 KI1 自锁</h2><div class="frames"><figure><a href="stage4-K1.png"><img loading="lazy" src="stage4-K1.png" alt="K1: SB2 按下 → 松开，切换 KI1 自锁"></a><figcaption>K1</figcaption></figure><figure><a href="stage4-K2.png"><img loading="lazy" src="stage4-K2.png" alt="K2: SB2 按下 → 松开，切换 KI1 自锁"></a><figcaption>K2</figcaption></figure></div></section>
+<section id="L"><h2>L — SB3 按下 → 松开，切换 KI2 自锁</h2><div class="frames"><figure><a href="stage4-L1.png"><img loading="lazy" src="stage4-L1.png" alt="L1: SB3 按下 → 松开，切换 KI2 自锁"></a><figcaption>L1</figcaption></figure><figure><a href="stage4-L2.png"><img loading="lazy" src="stage4-L2.png" alt="L2: SB3 按下 → 松开，切换 KI2 自锁"></a><figcaption>L2</figcaption></figure></div></section>
+<section id="M"><h2>M — KI1/KI2 换相区域 · 反转稳定</h2><div class="frames"><figure><a href="stage4-M1.png"><img loading="lazy" src="stage4-M1.png" alt="M1: KI1/KI2 换相区域 · 反转稳定"></a><figcaption>M1</figcaption></figure><figure><a href="stage4-M2.png"><img loading="lazy" src="stage4-M2.png" alt="M2: KI1/KI2 换相区域 · 反转稳定"></a><figcaption>M2</figcaption></figure></div></section>
+<section id="N"><h2>N — FR1 / 节点 7 / 完整返回线</h2><div class="frames"><figure><a href="stage4-N1.png"><img loading="lazy" src="stage4-N1.png" alt="N1: FR1 / 节点 7 / 完整返回线"></a><figcaption>N1</figcaption></figure><figure><a href="stage4-N2.png"><img loading="lazy" src="stage4-N2.png" alt="N2: FR1 / 节点 7 / 完整返回线"></a><figcaption>N2</figcaption></figure></div></section>
+</main></html>
