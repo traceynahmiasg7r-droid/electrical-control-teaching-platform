@@ -2784,7 +2784,14 @@
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_two_motor_sequence/module.css" />
 
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/module.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter01/modules/ch01_jog_textbook/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter01/modules/ch01_continuous_textbook/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter01/modules/ch01_limit_textbook/styles.css" />
   <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_reverse/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_main_control/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_jog/styles.css" />
+  <link rel="stylesheet" href="./src/chapters/chapter02/modules/ch02_continuous/styles.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -3062,6 +3069,7 @@
             <div class="footer-playback-head">
               <strong>展示原理（操作步骤回放）</strong>
               <label id="reverseScenarioLabel" class="hidden">场景 <select id="reverseScenario" aria-label="正反转教学场景"></select></label>
+              <label id="mainScenarioLabel" class="hidden">场景 <select id="mainScenario" aria-label="主电路教学场景"></select></label>
               <div class="footer-playback-actions">
                 <button id="showPrinciplePlayback" class="small-btn principle-play-btn" disabled>展示原理</button>
                 <div id="playbackControls" class="playback-controls">
@@ -3248,6 +3256,24 @@
   <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/facade.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_overload_protection/facade.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_jog/module.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog_textbook/circuit.data.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog_textbook/solver.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog_textbook/renderer.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog_textbook/teaching.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog_textbook/facade.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_jog_textbook/module.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_continuous_textbook/circuit.data.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_continuous_textbook/solver.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_continuous_textbook/renderer.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_continuous_textbook/teaching.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_continuous_textbook/facade.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_continuous_textbook/module.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_limit_textbook/circuit.data.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_limit_textbook/solver.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_limit_textbook/renderer.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_limit_textbook/teaching.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_limit_textbook/facade.js"></script>
+  <script src="./src/chapters/chapter01/modules/ch01_limit_textbook/module.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_direct_start_protection/module.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_overload_protection/module.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/circuit.data.js"></script>
@@ -3256,7 +3282,22 @@
   <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/facade.js"></script>
   <script src="./src/chapters/chapter01/modules/ch01_timed_auto_stop/module.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_main_control/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_main_control/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_main_control/visual-binding.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_main_control/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_main_control/teaching.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_main_control/playback.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_jog/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_jog/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_jog/visual-binding.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_jog/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_jog/teaching.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_jog/playback.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_continuous/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_continuous/visual-binding.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_continuous/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_continuous/teaching.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_continuous/playback.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_continuous/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_reverse/circuit.data.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_reverse/visual-binding.js"></script>
@@ -3314,6 +3355,14 @@
   <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/teaching.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/facade.js"></script>
   <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits/module.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/main.geometry.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/circuit.data.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/solver.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/renderer.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/teaching.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/playback.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/facade.js"></script>
+  <script src="./src/chapters/chapter02/modules/ch02_machine_tool_circuits_v2/module.js"></script>
   <script>
     window.__FORWARD_REVERSE_BUILD_ID__ = "artifact-audit-2026-08-14-v1";
 
@@ -3325,8 +3374,8 @@
         experimentSubtitle: "按住启动按钮时，KM 线圈得电并接通主回路；按钮松开后，线圈释放，电机立即停止。",
         principleTitle: "点动控制原理",
         principleText: "点动线路没有自锁支路，按钮的按下时间直接决定 KM 与电动机的运行时间。",
-        promptText: "先合上 QF，再按住并松开 SB；也可触发 FR 过载，观察保护触点切断控制回路。",
-        footerTip: "参考 PDF 第 3、12 页；电路由模块数据驱动，可重复复位和修改。",
+        promptText: "先接通电源，再按住点动按钮 SB1，观察 KM 主触点闭合；松开按钮，电机立即停止。",
+        footerTip: "依据第一章教材原图；图中没有自锁支路，接通电源仅设置外部供电条件。",
         placeholderTag: "", placeholderNote: "", zones: []
       },
       "ch01-direct-start-protection": {
@@ -3338,6 +3387,28 @@
         principleText: "SB1 建立启动通路，KM1 辅助常开触点完成自锁；SB2 或 FR1 断开控制回路后，KM1 释放，电动机停止。",
         promptText: "依次执行 QF1 合闸、SB1 启动、SB2 停止、FR1 过载与复位，观察完整保护链路。",
         footerTip: "参考 PDF 第 11 页；复位保护不会自动重启。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "ch01-continuous-control": {
+        code: "02",
+        name: "长动控制",
+        experimentTitle: "长动控制演示",
+        experimentSubtitle: "按下 SB1 后 KM 吸合并由辅助常开触点自锁；按下 SB2，停止按钮串联回路断开，KM 释放。",
+        principleTitle: "长动控制原理",
+        principleText: "SB1 启动支路与 KM 自锁支路并联，合流后经过 SB2 常闭触点和 KM 线圈；松开 SB1 后由自锁支路保持，按下 SB2 立即停止。",
+        promptText: "先接通外部电源，再按住 SB1 启动并释放，观察 KM 自锁；按住 SB2 停止，观察自锁触点释放。",
+        footerTip: "依据第一章长动控制教材原图；图中没有 QF、FU 或 FR，电源按钮只表示外部供电条件。",
+        placeholderTag: "", placeholderNote: "", zones: []
+      },
+      "ch01-limit-switch-control": {
+        code: "03",
+        name: "行程开关控制",
+        experimentTitle: "行程开关控制电路演示",
+        experimentSubtitle: "按下 SB1 启动并由 KM1 自锁；触发行程开关 SQ 或 FR1 过载触点动作时，控制回路断开，KM1 释放，电动机停止。",
+        principleTitle: "行程开关控制原理",
+        principleText: "SB1 建立启动通路，KM1 辅助常开触点完成自锁；SB2、SQ 和 FR1 常闭触点串联在控制回路中，任一保护或行程条件动作都会使 KM1 失电。",
+        promptText: "先接通外部电源，再按住 SB1 启动并释放观察自锁；随后触发 SQ 或 FR1，观察常闭触点断开、KM1 释放和电动机停止。",
+        footerTip: "按照第一章行程开关控制教材原图描摹；SQ、FR1 的动作和复位均由 Solver 状态驱动。SB1 已松开时复位不会重启，持续按住 SB1 时则会按真实回路重新启动。",
         placeholderTag: "", placeholderNote: "", zones: []
       },
       "timed-auto-stop": {
@@ -3473,14 +3544,14 @@
         placeholderTag: "", placeholderNote: "", zones: []
       },
       "machine-tool-circuits": {
-        code: "07",
+        code: "05",
         name: "\u673a\u5e8a\u7efc\u5408\u7ebf\u8def",
         experimentTitle: "\u673a\u5e8a\u7efc\u5408\u7ebf\u8def\u6f14\u793a",
-        experimentSubtitle: "CA6140 \u5367\u5f0f\u8f66\u5e8a\u4e0e Z3040 \u6447\u81c2\u94bb\u5e8a\u7535\u6c14\u63a7\u5236\u7ebf\u8def\u3002",
-        principleTitle: "\u673a\u5e8a\u7efc\u5408\u7ebf\u8def\u539f\u7406",
-        principleText: "\u7efc\u5408\u9a8c\u8bc1\u4e3b\u8f74\u3001\u6b63\u53cd\u8f6c\u3001\u6447\u81c2\u5347\u964d\u3001\u6db2\u538b\u4e0e\u9650\u4f4d\u4fdd\u62a4\u3002",
-        promptText: "\u5728 CA6140 \u4e0e Z3040 \u4e4b\u95f4\u5207\u6362\uff0c\u89c2\u5bdf SQ\u3001KT\u3001YV \u4e0e\u53cc\u4fdd\u62a4\u72b6\u6001\u3002",
-        footerTip: "Current Flow \u7531 Solver wire IDs \u4e0e circuit.data routePoints \u552f\u4e00\u9a71\u52a8\u3002",
+        experimentSubtitle: "\u6309\u6559\u6750\u539f\u56fe\u5fe0\u5b9e\u6570\u5b57\u5316 Z3040 \u6447\u81c2\u94bb\u5e8a\u4e3b\u56de\u8def\u3001\u63a7\u5236\u56de\u8def\u4e0e\u8f85\u52a9\u56de\u8def\u3002",
+        principleTitle: "Z3040 \u673a\u5e8a\u7efc\u5408\u7ebf\u8def\u539f\u7406",
+        principleText: "\u4ee5\u6559\u6750\u539f\u56fe\u4e3a\u552f\u4e00\u89c6\u89c9\u771f\u6e90\uff0c\u9a8c\u8bc1\u4e3b\u8f74\u3001\u6447\u81c2\u5347\u964d\u3001\u5939\u7d27\u677e\u5f00\u3001\u6db2\u538b\u3001\u51b7\u5374\u4e0e\u9650\u4f4d\u4fdd\u62a4\u3002",
+        promptText: "\u5148\u5408\u4e0a QF\uff0c\u518d\u5206\u522b\u64cd\u4f5c SB1~SB6 \u548c\u9650\u4f4d\u5f00\u5173\uff0c\u89c2\u5bdf KM1~KM5\u3001KT\u3001YV\u3001FR1/FR2 \u4e0e\u7535\u52a8\u673a\u72b6\u6001\u3002",
+        footerTip: "\u4e2d\u592e SVG \u51e0\u4f55\u4e0e Solver \u72b6\u6001\u5171\u4eab\u540c\u4e00\u5957\u5143\u4ef6\u3001\u7ebf\u8def\u4e0e\u5bfc\u901a\u8fb9\u7f18\u6570\u636e\u3002",
         placeholderTag: "",
         placeholderNote: "",
         zones: []
@@ -4077,77 +4148,77 @@
     );
 
     const mainControlPortMap = {
-      src_l1: { x: 155, y: 160, kind: "port" },
-      src_l2: { x: 228, y: 160, kind: "port" },
-      src_l3: { x: 302, y: 160, kind: "port" },
-      qf1_l1_in: { x: 155, y: 184, kind: "terminal" },
-      qf1_l1_out: { x: 155, y: 259, kind: "terminal" },
-      qf1_l2_in: { x: 228, y: 184, kind: "terminal" },
-      qf1_l2_out: { x: 228, y: 259, kind: "terminal" },
-      qf1_l3_in: { x: 302, y: 184, kind: "terminal" },
-      qf1_l3_out: { x: 302, y: 259, kind: "terminal" },
-      fu1_l1_in: { x: 155, y: 259, kind: "terminal" },
-      fu1_l1_out: { x: 155, y: 350, kind: "terminal" },
-      fu1_l2_in: { x: 228, y: 259, kind: "terminal" },
-      fu1_l2_out: { x: 228, y: 350, kind: "terminal" },
-      fu1_l3_in: { x: 302, y: 259, kind: "terminal" },
-      fu1_l3_out: { x: 302, y: 350, kind: "terminal" },
+      src_l1: { x: 155, y: 185, kind: "port" },
+      src_l2: { x: 228, y: 185, kind: "port" },
+      src_l3: { x: 302, y: 185, kind: "port" },
+      qf1_l1_in: { x: 155, y: 220, kind: "terminal" },
+      qf1_l1_out: { x: 155, y: 300, kind: "terminal" },
+      qf1_l2_in: { x: 228, y: 220, kind: "terminal" },
+      qf1_l2_out: { x: 228, y: 300, kind: "terminal" },
+      qf1_l3_in: { x: 302, y: 220, kind: "terminal" },
+      qf1_l3_out: { x: 302, y: 300, kind: "terminal" },
+      fu1_l1_in: { x: 155, y: 300, kind: "terminal" },
+      fu1_l1_out: { x: 155, y: 376, kind: "terminal" },
+      fu1_l2_in: { x: 228, y: 300, kind: "terminal" },
+      fu1_l2_out: { x: 228, y: 376, kind: "terminal" },
+      fu1_l3_in: { x: 302, y: 300, kind: "terminal" },
+      fu1_l3_out: { x: 302, y: 376, kind: "terminal" },
       main_phase_b_split: { x: 228, y: 508, kind: "node" },
       main_phase_c_split: { x: 302, y: 450, kind: "node" },
       km1_main_a_in: { x: 155, y: 606, kind: "terminal" },
-      km1_main_a_out: { x: 166, y: 743, kind: "terminal" },
+      km1_main_a_out: { x: 155, y: 760, kind: "terminal" },
       km1_main_b_in: { x: 228, y: 606, kind: "terminal" },
-      km1_main_b_out: { x: 239, y: 743, kind: "terminal" },
+      km1_main_b_out: { x: 228, y: 760, kind: "terminal" },
       km1_main_c_in: { x: 302, y: 606, kind: "terminal" },
-      km1_main_c_out: { x: 312, y: 743, kind: "terminal" },
+      km1_main_c_out: { x: 302, y: 760, kind: "terminal" },
       km2_main_a_in: { x: 457, y: 606, kind: "terminal" },
-      km2_main_a_out: { x: 468, y: 743, kind: "terminal" },
+      km2_main_a_out: { x: 457, y: 760, kind: "terminal" },
       km2_main_b_in: { x: 530, y: 606, kind: "terminal" },
-      km2_main_b_out: { x: 541, y: 743, kind: "terminal" },
+      km2_main_b_out: { x: 530, y: 760, kind: "terminal" },
       km2_main_c_in: { x: 603, y: 606, kind: "terminal" },
-      km2_main_c_out: { x: 614, y: 743, kind: "terminal" },
-      fr1_u_in: { x: 166, y: 743, kind: "terminal" },
-      fr1_u_out: { x: 166, y: 781, kind: "terminal" },
-      fr1_v_in: { x: 239, y: 743, kind: "terminal" },
-      fr1_v_out: { x: 239, y: 781, kind: "terminal" },
-      fr1_w_in: { x: 312, y: 743, kind: "terminal" },
-      fr1_w_out: { x: 312, y: 781, kind: "terminal" },
-      fr2_u_in: { x: 468, y: 743, kind: "terminal" },
-      fr2_u_out: { x: 468, y: 781, kind: "terminal" },
-      fr2_v_in: { x: 541, y: 743, kind: "terminal" },
-      fr2_v_out: { x: 541, y: 781, kind: "terminal" },
-      fr2_w_in: { x: 614, y: 743, kind: "terminal" },
-      fr2_w_out: { x: 614, y: 781, kind: "terminal" },
-      motor1_u_in: { x: 166, y: 854, kind: "terminal" },
-      motor1_v_in: { x: 239, y: 854, kind: "terminal" },
-      motor1_w_in: { x: 312, y: 854, kind: "terminal" },
-      motor2_u_in: { x: 468, y: 854, kind: "terminal" },
-      motor2_v_in: { x: 541, y: 854, kind: "terminal" },
-      motor2_w_in: { x: 614, y: 854, kind: "terminal" },
+      km2_main_c_out: { x: 603, y: 760, kind: "terminal" },
+      fr1_u_in: { x: 155, y: 779, kind: "terminal" },
+      fr1_u_out: { x: 155, y: 819, kind: "terminal" },
+      fr1_v_in: { x: 228, y: 779, kind: "terminal" },
+      fr1_v_out: { x: 228, y: 819, kind: "terminal" },
+      fr1_w_in: { x: 302, y: 779, kind: "terminal" },
+      fr1_w_out: { x: 302, y: 819, kind: "terminal" },
+      fr2_u_in: { x: 457, y: 779, kind: "terminal" },
+      fr2_u_out: { x: 457, y: 819, kind: "terminal" },
+      fr2_v_in: { x: 530, y: 779, kind: "terminal" },
+      fr2_v_out: { x: 530, y: 819, kind: "terminal" },
+      fr2_w_in: { x: 603, y: 779, kind: "terminal" },
+      fr2_w_out: { x: 603, y: 819, kind: "terminal" },
+      motor1_u_in: { x: 188, y: 902, kind: "terminal" },
+      motor1_v_in: { x: 228, y: 887, kind: "terminal" },
+      motor1_w_in: { x: 268, y: 902, kind: "terminal" },
+      motor2_u_in: { x: 490, y: 902, kind: "terminal" },
+      motor2_v_in: { x: 530, y: 887, kind: "terminal" },
+      motor2_w_in: { x: 570, y: 902, kind: "terminal" },
       control_supply_left: { x: 809, y: 408, kind: "port" },
       control_supply_right: { x: 1394, y: 408, kind: "port" },
       control_left_top: { x: 809, y: 469, kind: "node" },
       control_right_top: { x: 1394, y: 469, kind: "node" },
       control_left_bottom: { x: 809, y: 697, kind: "node" },
       control_right_bottom: { x: 1394, y: 697, kind: "node" },
-      sb1_l: { x: 845, y: 469, kind: "port" },
-      sb1_r: { x: 910, y: 469, kind: "port" },
-      sb2_l: { x: 1028, y: 469, kind: "port" },
-      sb2_r: { x: 1100, y: 469, kind: "port" },
-      sb3_l: { x: 845, y: 697, kind: "port" },
-      sb3_r: { x: 910, y: 697, kind: "port" },
-      sb4_l: { x: 1028, y: 697, kind: "port" },
-      sb4_r: { x: 1100, y: 697, kind: "port" },
+      sb1_l: { x: 860, y: 469, kind: "port" },
+      sb1_r: { x: 908, y: 469, kind: "port" },
+      sb2_l: { x: 994, y: 469, kind: "port" },
+      sb2_r: { x: 1035, y: 469, kind: "port" },
+      sb3_l: { x: 860, y: 697, kind: "port" },
+      sb3_r: { x: 908, y: 697, kind: "port" },
+      sb4_l: { x: 994, y: 697, kind: "port" },
+      sb4_r: { x: 1035, y: 697, kind: "port" },
       km1_after_stop: { x: 956, y: 469, kind: "node" },
       km2_after_stop: { x: 956, y: 697, kind: "node" },
-      km1_self_l: { x: 956, y: 526, kind: "port" },
-      km1_self_r: { x: 1100, y: 526, kind: "port" },
-      km2_self_l: { x: 956, y: 754, kind: "port" },
-      km2_self_r: { x: 1100, y: 754, kind: "port" },
-      fr1_nc_l: { x: 1172, y: 469, kind: "port" },
-      fr1_nc_r: { x: 1240, y: 469, kind: "port" },
-      fr2_nc_l: { x: 1172, y: 697, kind: "port" },
-      fr2_nc_r: { x: 1240, y: 697, kind: "port" },
+      km1_self_l: { x: 860, y: 526, kind: "port" },
+      km1_self_r: { x: 908, y: 526, kind: "port" },
+      km2_self_l: { x: 860, y: 754, kind: "port" },
+      km2_self_r: { x: 908, y: 754, kind: "port" },
+      fr1_nc_l: { x: 1112, y: 469, kind: "port" },
+      fr1_nc_r: { x: 1129, y: 469, kind: "port" },
+      fr2_nc_l: { x: 1112, y: 697, kind: "port" },
+      fr2_nc_r: { x: 1129, y: 697, kind: "port" },
       coil_km1_l: { x: 1263, y: 469, kind: "port" },
       coil_km1_r: { x: 1343, y: 469, kind: "port" },
       coil_km2_l: { x: 1263, y: 697, kind: "port" },
@@ -4196,52 +4267,52 @@
     ];
 
     const mainControlWires = [
-      { wireId: "mw_01", kind: "main", fromPort: "src_l1", toPort: "qf1_l1_in", routePoints: [{ x: 155, y: 160 }, { x: 155, y: 184 }] },
-      { wireId: "mw_02", kind: "main", fromPort: "src_l2", toPort: "qf1_l2_in", routePoints: [{ x: 228, y: 160 }, { x: 228, y: 184 }] },
-      { wireId: "mw_03", kind: "main", fromPort: "src_l3", toPort: "qf1_l3_in", routePoints: [{ x: 302, y: 160 }, { x: 302, y: 184 }] },
-      { wireId: "mw_04", kind: "main", fromPort: "qf1_l1_out", toPort: "fu1_l1_in", routePoints: [{ x: 155, y: 259 }, { x: 155, y: 259 }] },
-      { wireId: "mw_05", kind: "main", fromPort: "qf1_l2_out", toPort: "fu1_l2_in", routePoints: [{ x: 228, y: 259 }, { x: 228, y: 259 }] },
-      { wireId: "mw_06", kind: "main", fromPort: "qf1_l3_out", toPort: "fu1_l3_in", routePoints: [{ x: 302, y: 259 }, { x: 302, y: 259 }] },
-      { wireId: "mw_07", kind: "main", fromPort: "fu1_l1_out", toPort: "km1_main_a_in", routePoints: [{ x: 155, y: 350 }, { x: 155, y: 606 }] },
+      { wireId: "mw_01", kind: "main", fromPort: "src_l1", toPort: "qf1_l1_in", routePoints: [{ x: 155, y: 185 }, { x: 155, y: 220 }] },
+      { wireId: "mw_02", kind: "main", fromPort: "src_l2", toPort: "qf1_l2_in", routePoints: [{ x: 228, y: 185 }, { x: 228, y: 220 }] },
+      { wireId: "mw_03", kind: "main", fromPort: "src_l3", toPort: "qf1_l3_in", routePoints: [{ x: 302, y: 185 }, { x: 302, y: 220 }] },
+      { wireId: "mw_04", kind: "main", fromPort: "qf1_l1_out", toPort: "fu1_l1_in", routePoints: [{ x: 155, y: 300 }, { x: 155, y: 300 }] },
+      { wireId: "mw_05", kind: "main", fromPort: "qf1_l2_out", toPort: "fu1_l2_in", routePoints: [{ x: 228, y: 300 }, { x: 228, y: 300 }] },
+      { wireId: "mw_06", kind: "main", fromPort: "qf1_l3_out", toPort: "fu1_l3_in", routePoints: [{ x: 302, y: 300 }, { x: 302, y: 300 }] },
+      { wireId: "mw_07", kind: "main", fromPort: "fu1_l1_out", toPort: "km1_main_a_in", routePoints: [{ x: 155, y: 376 }, { x: 155, y: 606 }] },
       { wireId: "mw_08", kind: "main", fromPort: "km1_main_a_in", toPort: "km2_main_a_in", routePoints: [{ x: 155, y: 606 }, { x: 457, y: 606 }] },
-      { wireId: "mw_09", kind: "main", fromPort: "km1_main_a_out", toPort: "fr1_u_in", routePoints: [{ x: 166, y: 743 }, { x: 166, y: 743 }] },
-      { wireId: "mw_10", kind: "main", fromPort: "fu1_l2_out", toPort: "main_phase_b_split", routePoints: [{ x: 228, y: 350 }, { x: 228, y: 508 }] },
+      { wireId: "mw_09", kind: "main", fromPort: "km1_main_a_out", toPort: "fr1_u_in", routePoints: [{ x: 155, y: 760 }, { x: 155, y: 779 }] },
+      { wireId: "mw_10", kind: "main", fromPort: "fu1_l2_out", toPort: "main_phase_b_split", routePoints: [{ x: 228, y: 376 }, { x: 228, y: 508 }] },
       { wireId: "mw_11", kind: "main", fromPort: "main_phase_b_split", toPort: "km1_main_b_in", routePoints: [{ x: 228, y: 508 }, { x: 228, y: 606 }] },
       { wireId: "mw_12", kind: "main", fromPort: "main_phase_b_split", toPort: "km2_main_b_in", routePoints: [{ x: 228, y: 508 }, { x: 530, y: 508 }, { x: 530, y: 606 }] },
-      { wireId: "mw_13", kind: "main", fromPort: "fu1_l3_out", toPort: "main_phase_c_split", routePoints: [{ x: 302, y: 350 }, { x: 302, y: 450 }] },
+      { wireId: "mw_13", kind: "main", fromPort: "fu1_l3_out", toPort: "main_phase_c_split", routePoints: [{ x: 302, y: 376 }, { x: 302, y: 450 }] },
       { wireId: "mw_14", kind: "main", fromPort: "main_phase_c_split", toPort: "km1_main_c_in", routePoints: [{ x: 302, y: 450 }, { x: 302, y: 606 }] },
       { wireId: "mw_15", kind: "main", fromPort: "main_phase_c_split", toPort: "km2_main_c_in", routePoints: [{ x: 302, y: 450 }, { x: 603, y: 450 }, { x: 603, y: 606 }] },
-      { wireId: "mw_16", kind: "main", fromPort: "km1_main_b_out", toPort: "fr1_v_in", routePoints: [{ x: 239, y: 743 }, { x: 239, y: 743 }] },
-      { wireId: "mw_17", kind: "main", fromPort: "km1_main_c_out", toPort: "fr1_w_in", routePoints: [{ x: 312, y: 743 }, { x: 312, y: 743 }] },
-      { wireId: "mw_18", kind: "main", fromPort: "fr1_u_out", toPort: "motor1_u_in", routePoints: [{ x: 166, y: 781 }, { x: 166, y: 854 }] },
-      { wireId: "mw_19", kind: "main", fromPort: "fr1_v_out", toPort: "motor1_v_in", routePoints: [{ x: 239, y: 781 }, { x: 239, y: 854 }] },
-      { wireId: "mw_20", kind: "main", fromPort: "fr1_w_out", toPort: "motor1_w_in", routePoints: [{ x: 312, y: 781 }, { x: 312, y: 854 }] },
-      { wireId: "mw_21", kind: "main", fromPort: "km2_main_a_out", toPort: "fr2_u_in", routePoints: [{ x: 468, y: 743 }, { x: 468, y: 743 }] },
-      { wireId: "mw_22", kind: "main", fromPort: "km2_main_b_out", toPort: "fr2_v_in", routePoints: [{ x: 541, y: 743 }, { x: 541, y: 743 }] },
-      { wireId: "mw_23", kind: "main", fromPort: "km2_main_c_out", toPort: "fr2_w_in", routePoints: [{ x: 614, y: 743 }, { x: 614, y: 743 }] },
-      { wireId: "mw_24", kind: "main", fromPort: "fr2_u_out", toPort: "motor2_u_in", routePoints: [{ x: 468, y: 781 }, { x: 468, y: 854 }] },
-      { wireId: "mw_25", kind: "main", fromPort: "fr2_v_out", toPort: "motor2_v_in", routePoints: [{ x: 541, y: 781 }, { x: 541, y: 854 }] },
-      { wireId: "mw_26", kind: "main", fromPort: "fr2_w_out", toPort: "motor2_w_in", routePoints: [{ x: 614, y: 781 }, { x: 614, y: 854 }] },
+      { wireId: "mw_16", kind: "main", fromPort: "km1_main_b_out", toPort: "fr1_v_in", routePoints: [{ x: 228, y: 760 }, { x: 228, y: 779 }] },
+      { wireId: "mw_17", kind: "main", fromPort: "km1_main_c_out", toPort: "fr1_w_in", routePoints: [{ x: 302, y: 760 }, { x: 302, y: 779 }] },
+      { wireId: "mw_18", kind: "main", fromPort: "fr1_u_out", toPort: "motor1_u_in", routePoints: [{ x: 155, y: 819 }, { x: 155, y: 881 }, { x: 188, y: 902 }] },
+      { wireId: "mw_19", kind: "main", fromPort: "fr1_v_out", toPort: "motor1_v_in", routePoints: [{ x: 228, y: 819 }, { x: 228, y: 887 }] },
+      { wireId: "mw_20", kind: "main", fromPort: "fr1_w_out", toPort: "motor1_w_in", routePoints: [{ x: 302, y: 819 }, { x: 302, y: 881 }, { x: 268, y: 902 }] },
+      { wireId: "mw_21", kind: "main", fromPort: "km2_main_a_out", toPort: "fr2_u_in", routePoints: [{ x: 457, y: 760 }, { x: 457, y: 779 }] },
+      { wireId: "mw_22", kind: "main", fromPort: "km2_main_b_out", toPort: "fr2_v_in", routePoints: [{ x: 530, y: 760 }, { x: 530, y: 779 }] },
+      { wireId: "mw_23", kind: "main", fromPort: "km2_main_c_out", toPort: "fr2_w_in", routePoints: [{ x: 603, y: 760 }, { x: 603, y: 779 }] },
+      { wireId: "mw_24", kind: "main", fromPort: "fr2_u_out", toPort: "motor2_u_in", routePoints: [{ x: 457, y: 819 }, { x: 457, y: 881 }, { x: 490, y: 902 }] },
+      { wireId: "mw_25", kind: "main", fromPort: "fr2_v_out", toPort: "motor2_v_in", routePoints: [{ x: 530, y: 819 }, { x: 530, y: 887 }] },
+      { wireId: "mw_26", kind: "main", fromPort: "fr2_w_out", toPort: "motor2_w_in", routePoints: [{ x: 603, y: 819 }, { x: 603, y: 881 }, { x: 570, y: 902 }] },
       { wireId: "cw_01", kind: "control", fromPort: "control_supply_left", toPort: "control_left_top", routePoints: [{ x: 809, y: 408 }, { x: 809, y: 469 }] },
       { wireId: "cw_02", kind: "control", fromPort: "control_left_top", toPort: "control_left_bottom", routePoints: [{ x: 809, y: 469 }, { x: 809, y: 697 }] },
-      { wireId: "cw_03", kind: "control", fromPort: "control_left_bottom", toPort: "sb3_l", routePoints: [{ x: 809, y: 697 }, { x: 845, y: 697 }] },
+      { wireId: "cw_03", kind: "control", fromPort: "control_left_bottom", toPort: "sb3_l", routePoints: [{ x: 809, y: 697 }, { x: 860, y: 697 }] },
       { wireId: "cw_04", kind: "control", fromPort: "control_supply_right", toPort: "control_right_bottom", routePoints: [{ x: 1394, y: 408 }, { x: 1394, y: 697 }] },
-      { wireId: "cw_05", kind: "control", fromPort: "control_left_top", toPort: "sb1_l", routePoints: [{ x: 809, y: 469 }, { x: 845, y: 469 }] },
-      { wireId: "cw_06", kind: "control", fromPort: "sb1_r", toPort: "km1_after_stop", routePoints: [{ x: 910, y: 469 }, { x: 956, y: 469 }] },
-      { wireId: "cw_07", kind: "control", fromPort: "km1_after_stop", toPort: "sb2_l", routePoints: [{ x: 956, y: 469 }, { x: 1028, y: 469 }] },
-      { wireId: "cw_08", kind: "control", fromPort: "sb2_r", toPort: "fr1_nc_l", routePoints: [{ x: 1100, y: 469 }, { x: 1172, y: 469 }] },
-      { wireId: "cw_09", kind: "control", fromPort: "fr1_nc_r", toPort: "coil_km1_l", routePoints: [{ x: 1240, y: 469 }, { x: 1263, y: 469 }] },
+      { wireId: "cw_05", kind: "control", fromPort: "control_left_top", toPort: "sb1_l", routePoints: [{ x: 809, y: 469 }, { x: 860, y: 469 }] },
+      { wireId: "cw_06", kind: "control", fromPort: "sb1_r", toPort: "km1_after_stop", routePoints: [{ x: 908, y: 469 }, { x: 956, y: 469 }] },
+      { wireId: "cw_07", kind: "control", fromPort: "km1_after_stop", toPort: "sb2_l", routePoints: [{ x: 956, y: 469 }, { x: 994, y: 469 }] },
+      { wireId: "cw_08", kind: "control", fromPort: "sb2_r", toPort: "fr1_nc_l", routePoints: [{ x: 1035, y: 469 }, { x: 1112, y: 469 }] },
+      { wireId: "cw_09", kind: "control", fromPort: "fr1_nc_r", toPort: "coil_km1_l", routePoints: [{ x: 1129, y: 469 }, { x: 1263, y: 469 }] },
       { wireId: "cw_10", kind: "control", fromPort: "coil_km1_r", toPort: "control_right_top", routePoints: [{ x: 1343, y: 469 }, { x: 1394, y: 469 }] },
-      { wireId: "cw_11", kind: "control", fromPort: "km1_after_stop", toPort: "km1_self_l", routePoints: [{ x: 956, y: 469 }, { x: 956, y: 526 }] },
-      { wireId: "cw_12", kind: "control", fromPort: "km1_self_r", toPort: "sb2_r", routePoints: [{ x: 1100, y: 526 }, { x: 1100, y: 469 }] },
-      { wireId: "cw_13", kind: "control", fromPort: "sb3_r", toPort: "km2_after_stop", routePoints: [{ x: 910, y: 697 }, { x: 956, y: 697 }] },
-      { wireId: "cw_14", kind: "control", fromPort: "km2_after_stop", toPort: "sb4_l", routePoints: [{ x: 956, y: 697 }, { x: 1028, y: 697 }] },
-      { wireId: "cw_15", kind: "control", fromPort: "sb4_r", toPort: "fr2_nc_l", routePoints: [{ x: 1100, y: 697 }, { x: 1172, y: 697 }] },
-      { wireId: "cw_16", kind: "control", fromPort: "fr2_nc_r", toPort: "coil_km2_l", routePoints: [{ x: 1240, y: 697 }, { x: 1263, y: 697 }] },
+      { wireId: "cw_11", kind: "control", fromPort: "control_left_top", toPort: "km1_self_l", routePoints: [{ x: 809, y: 469 }, { x: 809, y: 526 }, { x: 860, y: 526 }] },
+      { wireId: "cw_12", kind: "control", fromPort: "km1_self_r", toPort: "km1_after_stop", routePoints: [{ x: 908, y: 526 }, { x: 956, y: 526 }, { x: 956, y: 469 }] },
+      { wireId: "cw_13", kind: "control", fromPort: "sb3_r", toPort: "km2_after_stop", routePoints: [{ x: 908, y: 697 }, { x: 956, y: 697 }] },
+      { wireId: "cw_14", kind: "control", fromPort: "km2_after_stop", toPort: "sb4_l", routePoints: [{ x: 956, y: 697 }, { x: 994, y: 697 }] },
+      { wireId: "cw_15", kind: "control", fromPort: "sb4_r", toPort: "fr2_nc_l", routePoints: [{ x: 1035, y: 697 }, { x: 1112, y: 697 }] },
+      { wireId: "cw_16", kind: "control", fromPort: "fr2_nc_r", toPort: "coil_km2_l", routePoints: [{ x: 1129, y: 697 }, { x: 1263, y: 697 }] },
       { wireId: "cw_17", kind: "control", fromPort: "coil_km2_r", toPort: "control_right_bottom", routePoints: [{ x: 1343, y: 697 }, { x: 1394, y: 697 }] },
       { wireId: "cw_18", kind: "control", fromPort: "control_right_top", toPort: "control_right_bottom", routePoints: [{ x: 1394, y: 469 }, { x: 1394, y: 697 }] },
-      { wireId: "cw_19", kind: "control", fromPort: "km2_after_stop", toPort: "km2_self_l", routePoints: [{ x: 956, y: 697 }, { x: 956, y: 754 }] },
-      { wireId: "cw_20", kind: "control", fromPort: "km2_self_r", toPort: "sb4_r", routePoints: [{ x: 1100, y: 754 }, { x: 1100, y: 697 }] }
+      { wireId: "cw_19", kind: "control", fromPort: "control_left_bottom", toPort: "km2_self_l", routePoints: [{ x: 809, y: 697 }, { x: 809, y: 754 }, { x: 860, y: 754 }] },
+      { wireId: "cw_20", kind: "control", fromPort: "km2_self_r", toPort: "km2_after_stop", routePoints: [{ x: 908, y: 754 }, { x: 956, y: 754 }, { x: 956, y: 697 }] }
     ];
 
     const mainControlCrossings = [];
@@ -4255,10 +4326,10 @@
       { edgeId: "fu1_edge_l1", fromPort: "fu1_l1_in", toPort: "fu1_l1_out", deviceId: "dev_fu1", domain: "supply", label: "FU1 L1" },
       { edgeId: "fu1_edge_l2", fromPort: "fu1_l2_in", toPort: "fu1_l2_out", deviceId: "dev_fu1", domain: "supply", label: "FU1 L2" },
       { edgeId: "fu1_edge_l3", fromPort: "fu1_l3_in", toPort: "fu1_l3_out", deviceId: "dev_fu1", domain: "supply", label: "FU1 L3" },
-      { edgeId: "edge_sb1_nc", fromPort: "sb1_l", toPort: "sb1_r", deviceId: "dev_sb1", domain: "control", label: "SB1 NC" },
-      { edgeId: "edge_sb2_no", fromPort: "sb2_l", toPort: "sb2_r", deviceId: "dev_sb2", domain: "control", label: "SB2 NO" },
-      { edgeId: "edge_sb3_nc", fromPort: "sb3_l", toPort: "sb3_r", deviceId: "dev_sb3", domain: "control", label: "SB3 NC" },
-      { edgeId: "edge_sb4_no", fromPort: "sb4_l", toPort: "sb4_r", deviceId: "dev_sb4", domain: "control", label: "SB4 NO" },
+      { edgeId: "edge_sb1_no", fromPort: "sb1_l", toPort: "sb1_r", deviceId: "dev_sb1", domain: "control", label: "SB1 NO" },
+      { edgeId: "edge_sb2_nc", fromPort: "sb2_l", toPort: "sb2_r", deviceId: "dev_sb2", domain: "control", label: "SB2 NC" },
+      { edgeId: "edge_sb3_no", fromPort: "sb3_l", toPort: "sb3_r", deviceId: "dev_sb3", domain: "control", label: "SB3 NO" },
+      { edgeId: "edge_sb4_nc", fromPort: "sb4_l", toPort: "sb4_r", deviceId: "dev_sb4", domain: "control", label: "SB4 NC" },
       { edgeId: "edge_km1_main_a", fromPort: "km1_main_a_in", toPort: "km1_main_a_out", deviceId: "dev_km1", domain: "main", label: "KM1 主触点 A" },
       { edgeId: "edge_km1_main_b", fromPort: "km1_main_b_in", toPort: "km1_main_b_out", deviceId: "dev_km1", domain: "main", label: "KM1 主触点 B" },
       { edgeId: "edge_km1_main_c", fromPort: "km1_main_c_in", toPort: "km1_main_c_out", deviceId: "dev_km1", domain: "main", label: "KM1 主触点 C" },
@@ -6444,6 +6515,40 @@
       return normalized;
     }
 
+    // Main-control textbook regression: SB1/SB3 are NO starts, SB2/SB4 are NC stops.
+    function runMainControlSolverTests() {
+      const reports = [];
+      const op = { qf1: "open", sb1: "released", sb2: "released", sb3: "released", sb4: "released", fr1: "normal", fr2: "normal" };
+      let coils = { km1: false, km2: false };
+      const check = (id, patch, expected) => {
+        Object.assign(op, patch);
+        const control = solveMainControlControlCircuit(op, coils), main = solveMainControlMainCircuit(control.edgeStates);
+        coils = { ...control.coils };
+        const actual = { km1: coils.km1, km2: coils.km2, motor1: main.motorStates.motor1, motor2: main.motorStates.motor2 };
+        reports.push({ id, pass: Object.keys(expected).every((key) => actual[key] === expected[key]), expected, actual });
+      };
+      const stopped = { km1: false, km2: false, motor1: "stopped", motor2: "stopped" };
+      check("TEST 01 open", {}, stopped);
+      check("TEST 02 QF close", { qf1: "closed" }, stopped);
+      check("TEST 03 SB1 start", { sb1: "pressed" }, { km1: true, km2: false, motor1: "running", motor2: "stopped" });
+      check("TEST 04 SB1 release self-hold", { sb1: "released" }, { km1: true, km2: false, motor1: "running", motor2: "stopped" });
+      check("TEST 05 SB2 stop", { sb2: "pressed" }, stopped);
+      check("TEST 06 SB2 release", { sb2: "released" }, stopped);
+      check("TEST 07 SB3 start", { sb3: "pressed" }, { km1: false, km2: true, motor1: "stopped", motor2: "running" });
+      check("TEST 08 SB3 release self-hold", { sb3: "released" }, { km1: false, km2: true, motor1: "stopped", motor2: "running" });
+      check("TEST 09 SB4 stop", { sb4: "pressed" }, stopped);
+      check("TEST 10 SB4 release", { sb4: "released" }, stopped);
+      check("TEST 11 both starts", { sb1: "pressed", sb3: "pressed" }, { km1: true, km2: true, motor1: "running", motor2: "running" });
+      check("TEST 12 FR1 overload", { sb1: "released", sb3: "released", fr1: "overload" }, { km1: false, km2: true, motor1: "stopped", motor2: "running" });
+      check("TEST 13 FR1 reset no restart", { fr1: "normal" }, { km1: false, km2: true, motor1: "stopped", motor2: "running" });
+      check("TEST 14 SB1 restart", { sb1: "pressed" }, { km1: true, km2: true, motor1: "running", motor2: "running" });
+      check("TEST 15 SB2 stop", { sb2: "pressed" }, { km1: false, km2: true, motor1: "stopped", motor2: "running" });
+      check("TEST 16 FR2 overload", { sb1: "released", sb2: "released", sb4: "pressed", fr2: "overload" }, stopped);
+      check("TEST 17 FR2 reset no restart", { sb4: "released", fr2: "normal" }, stopped);
+      state.mainControl.solver.testReport = reports;
+      return reports;
+    }
+
     function runSolverTests() {
       if (isContinuousControlModule()) {
         return runContinuousControlSolverTests();
@@ -8026,14 +8131,14 @@
         case "fu1_edge_l2":
         case "fu1_edge_l3":
           return true;
-        case "edge_sb1_nc":
-          return operationState.sb1 === "released";
-        case "edge_sb2_no":
-          return operationState.sb2 === "pressed";
-        case "edge_sb3_nc":
-          return operationState.sb3 === "released";
-        case "edge_sb4_no":
-          return operationState.sb4 === "pressed";
+        case "edge_sb1_no":
+          return operationState.sb1 === "pressed";
+        case "edge_sb2_nc":
+          return operationState.sb2 === "released";
+        case "edge_sb3_no":
+          return operationState.sb3 === "pressed";
+        case "edge_sb4_nc":
+          return operationState.sb4 === "released";
         case "edge_km1_main_a":
         case "edge_km1_main_b":
         case "edge_km1_main_c":
@@ -13831,10 +13936,14 @@
     }
 
     function renderModulePlayback() {
-      const view = getCurrentFacadeInstance()?.getPlaybackViewModel?.();
-      const label = document.getElementById("reverseScenarioLabel");
-      const selector = document.getElementById("reverseScenario");
+      const reverseView = getCurrentFacadeInstance()?.getPlaybackViewModel?.();
+      const isReverse = reverseView?.displayState?.snapshot?.moduleId === "ch02_reverse";
+      const view = reverseView;
+      const label = document.getElementById(isReverse ? "reverseScenarioLabel" : "mainScenarioLabel");
+      const selector = document.getElementById(isReverse ? "reverseScenario" : "mainScenario");
+      const otherLabel = document.getElementById(isReverse ? "mainScenarioLabel" : "reverseScenarioLabel");
       const exit = document.getElementById("reversePlaybackExit");
+      otherLabel.classList.add("hidden");
       label.classList.toggle("hidden", !view);
       exit.classList.toggle("hidden", !view);
       if (!view) {
@@ -13847,10 +13956,16 @@
         }
         return;
       }
-      if (!selector.options.length) view.scenarios.forEach((scenario) => {
-        const option = document.createElement("option");
-        option.value = scenario.id; option.textContent = scenario.title; selector.appendChild(option);
-      });
+      const scenarioKey = JSON.stringify([view.displayState.snapshot.moduleId, view.scenarios]);
+      if (selector.dataset.scenarioKey !== scenarioKey) {
+        selector.replaceChildren();
+        view.scenarios.forEach((scenario) => {
+          const option = document.createElement("option");
+          option.value = scenario.id; option.textContent = scenario.title; selector.appendChild(option);
+        });
+        selector.dataset.scenarioKey = scenarioKey;
+        selector.setAttribute("aria-label", `${moduleCatalog[uiState.currentModule].name}教学场景`);
+      }
       selector.value = view.scenarioId;
       refs.showPrinciplePlayback.dataset.modulePlayer = "true";
       refs.showPrinciplePlayback.textContent = "重播";
@@ -13871,7 +13986,9 @@
       hint.className = "reverse-teaching-hint";
       hint.textContent = view.step
         ? `教学观察 ${view.index + 1}/${view.count} · ${view.step.displayState.electricalPhase === "solver-iteration-release" ? "Solver 换向瞬态（已放慢）" : "Solver 求解状态"}。蓝色为教学焦点，红色为导通路径。`
-        : "图中按钮可按住操作；右侧按钮为一次完整按下/松开。底部可独立回放八个教学场景。";
+        : view.displayState.snapshot.moduleId === "ch02_jog"
+          ? "点动控制没有自锁支路，SB 松开后 KM 和电机立即停止。"
+          : `当前模块有 ${view.scenarios.length} 个教学场景。`;
       refs.principleStepList.appendChild(hint);
     }
 
@@ -13967,6 +14084,25 @@
       }
       return Object.freeze({
         readRawState,
+        evaluateDisplay: (operation, previousCoils) => {
+          const op = cloneFacadePortValue(operation);
+          const control = solveMainControlControlCircuit(op, previousCoils);
+          const main = solveMainControlMainCircuit(control.edgeStates);
+          return cloneFacadePortValue({
+            final: {
+              operationState: op,
+              stableControlState: control.coils,
+              solver: {
+                ...state.mainControl.solver,
+                ...control,
+                ...main,
+                stableControlState: control.coils,
+                partialControlWireIds: control.partialControlWireIds || [],
+                lastAction: "Detached main-control teaching evaluation"
+              }
+            }
+          });
+        },
         reset: () => {
           resetMainControlSolverState();
           return readRawState();
@@ -13984,6 +14120,10 @@
         resetProtection: () => resetFr(),
         toggleSecondaryProtection: () => handleTripFr2ButtonClick(),
         resetSecondaryProtection: () => resetFr2(),
+        setOperationState: (patch, actionMessage) => {
+          setMainControlOperationState(patch, actionMessage);
+          return readRawState();
+        },
         render: () => render(),
         pause: () => cancelCurrentFlowReplay(),
         unmount: () => {
@@ -14009,6 +14149,14 @@
       }
       return Object.freeze({
         readRawState,
+        // Detached evaluation for teaching playback. The live continuous
+        // Solver and its fixed-point topology remain unchanged.
+        evaluateDisplay: (operation, previousCoils) => {
+          const op = cloneFacadePortValue(operation);
+          const control = solveContinuousControlControlCircuit(op, cloneFacadePortValue(previousCoils || { km1: false }));
+          const main = solveContinuousControlMainCircuit(control.edgeStates);
+          return cloneFacadePortValue({ final: { operationState: op, stableControlState: control.coils, solver: { ...control, ...main, stableControlState: control.coils, controlSupplyBoundary: "from_main_after_fu1", lastAction: "Detached continuous teaching evaluation" } } });
+        },
         reset: () => {
           resetContinuousControlSolverState();
           return readRawState();
@@ -14046,11 +14194,31 @@
         const solver = cloneFacadePortValue(state.jogControl.solver);
         return {
           operationState: cloneJogControlOperationState(),
+          stableControlState: cloneJogControlCoilState(),
           solver
         };
       }
       return Object.freeze({
         readRawState,
+        // Evaluate the unchanged Solver with detached inputs for teaching playback.
+        evaluateDisplay: (operation, previousCoils) => {
+          const op = cloneFacadePortValue(operation);
+          const control = solveJogControlControlCircuit(op, cloneFacadePortValue(previousCoils || { km: false }));
+          const main = solveJogControlMainCircuit(control.edgeStates);
+          return cloneFacadePortValue({
+            final: {
+              operationState: op,
+              stableControlState: control.coils,
+              solver: {
+                ...control,
+                ...main,
+                stableControlState: control.coils,
+                controlSupplyBoundary: "from_main_after_fu1",
+                lastAction: "Detached jog teaching evaluation"
+              }
+            }
+          });
+        },
         reset: () => {
           resetJogControlSolverState();
           return readRawState();
@@ -14089,6 +14257,14 @@
       }
       return Object.freeze({
         readRawState,
+        evaluateDisplay: (operation, previousCoils) => {
+          const op = cloneFacadePortValue(operation);
+          const control = solveMainControlControlCircuit(op, previousCoils);
+          const main = solveMainControlMainCircuit(control.edgeStates);
+          return cloneFacadePortValue({
+            final: { operationState: op, stableControlState: control.coils, solver: { ...state.mainControl.solver, ...control, ...main, stableControlState: control.coils, partialControlWireIds: control.partialControlWireIds || [], lastAction: "Detached main-control teaching evaluation" } }
+          });
+        },
         // Display-only evaluation. Explicit arguments avoid all live-state defaults.
         // Core Solver, graph search and topology remain frozen.
         evaluateDisplay: (operation, previousCoils) => {
@@ -14160,22 +14336,25 @@
       }
 
       platformModuleRegistry = platform.registry.createModuleRegistry(platform.contracts);
+      const mainControlCircuitData = platform.moduleCircuitData.createMainControlCircuitData(getLegacyCircuitData("main-control"));
       const registrations = [
-        platform.moduleDefinitions.createCh01Jog(),
+        platform.moduleDefinitions.createCh01TextbookJog(),
         platform.moduleDefinitions.createCh01DirectStartProtection(),
         platform.moduleDefinitions.createCh01TimedAutoStop(),
         platform.moduleDefinitions.createCh01ForwardReverse(),
         platform.moduleDefinitions.createCh01OverloadProtection(),
+        platform.moduleDefinitions.createCh01TextbookContinuous(),
+        platform.moduleDefinitions.createCh01TextbookLimit(),
         platform.moduleDefinitions.createCh02MainControl({
-          circuitData: getLegacyCircuitData("main-control"),
+          circuitData: mainControlCircuitData,
           port: createMainControlModulePort()
         }),
         platform.moduleDefinitions.createCh02Jog({
-          circuitData: getLegacyCircuitData("jog-control"),
+          circuitData: platform.moduleCircuitData.createJogCircuitData(getLegacyCircuitData("jog-control")),
           port: createJogModulePort()
         }),
         platform.moduleDefinitions.createCh02Continuous({
-          circuitData: getLegacyCircuitData("self-lock"),
+          circuitData: platform.moduleCircuitData.createContinuousCircuitData(getLegacyCircuitData("self-lock")),
           port: createContinuousModulePort()
         }),
         platform.moduleDefinitions.createCh02Reverse({
@@ -14184,7 +14363,7 @@
         }),
         platform.moduleDefinitions.createCh02MixedControl(),
         platform.moduleDefinitions.createCh02MultisiteControl(),
-        platform.moduleDefinitions.createCh02MachineToolCircuits(),
+        platform.moduleDefinitions.createCh02MachineToolCircuitsV2(),
         platform.moduleDefinitions.createCh02TwoMotorSequence({
           baseCircuitData: getLegacyCircuitData("main-control")
         }),
@@ -14192,6 +14371,12 @@
         platform.moduleDefinitions.createCh02TimeSequence()
       ];
       registrations.forEach((definition) => platformModuleRegistry.register(definition));
+
+      const requestedModuleAlias = new URLSearchParams(window.location.search).get("module");
+      const requestedDefinition = requestedModuleAlias && platformModuleRegistry.resolve(requestedModuleAlias);
+      if (requestedDefinition && moduleCatalog[requestedDefinition.meta.routeId]) {
+        uiState.currentModule = requestedDefinition.meta.routeId;
+      }
 
       platformNavigation = platform.navigation.mountChapterNavigation({
         container: refs.chapterNavigation,
@@ -14221,6 +14406,7 @@
       });
 
       platformModuleLoader.load(uiState.currentModule, { force: true, reason: "platform-start" });
+      render();
       window.platformApi = Object.freeze({
         switchModule,
         resetCurrent: () => platformModuleLoader.resetCurrent(),
@@ -14263,6 +14449,8 @@
           const current = platformModuleLoader.getCurrent();
           return current ? current.instance.buildTeachingFeedback() : null;
         },
+        getNavigationState: () => platformNavigation?.getState?.() || null,
+        getFormalNavigation: () => platformNavigation?.getFormalModules?.() || [],
         getCurrentPlaybackViewModel: () => getCurrentFacadeInstance()?.getPlaybackViewModel?.() || null,
         dispatchPlayback: (command, value) => dispatchModulePlayback(command, value)
       });
@@ -14417,6 +14605,7 @@
     refs.pressSb3.addEventListener("click", handleTertiaryPlatformAction);
     refs.pressSb4.addEventListener("click", handleQuaternaryPlatformAction);
     refs.pressSb2.addEventListener("pointerdown", (event) => {
+      if (isJogControlModule() && event.button !== 0) return;
       if (!dispatchCurrentFacadeControl("secondary", "press", { reason: "SB pointerdown" })) return;
       event.preventDefault();
     });
@@ -14428,6 +14617,19 @@
     });
     refs.pressSb2.addEventListener("pointercancel", () => {
       dispatchCurrentFacadeControl("secondary", "release", { reason: "SB pointercancel" });
+    });
+    refs.pressSb2.addEventListener("keydown", (event) => {
+      if (!isJogControlModule() || !["Enter", " "].includes(event.key)) return;
+      event.preventDefault();
+      if (!event.repeat) dispatchCurrentFacadeControl("secondary", "press", { reason: "SB keydown" });
+    });
+    refs.pressSb2.addEventListener("keyup", (event) => {
+      if (!isJogControlModule() || !["Enter", " "].includes(event.key)) return;
+      event.preventDefault();
+      dispatchCurrentFacadeControl("secondary", "release", { reason: "SB keyup" });
+    });
+    refs.pressSb2.addEventListener("blur", () => {
+      if (isJogControlModule()) dispatchCurrentFacadeControl("secondary", "release", { reason: "SB focus loss" });
     });
     refs.tripFr.addEventListener("click", handleProtectionPlatformAction);
     refs.tripFr2.addEventListener("click", handleSecondaryProtectionPlatformAction);
@@ -14471,6 +14673,7 @@
     });
 
     document.getElementById("reverseScenario").addEventListener("change", (event) => dispatchModulePlayback("scenario", event.target.value));
+    document.getElementById("mainScenario").addEventListener("change", (event) => dispatchModulePlayback("scenario", event.target.value));
     document.getElementById("reversePlaybackExit").addEventListener("click", () => dispatchModulePlayback("exit"));
 
     refs.boardFu1.addEventListener("click", () => { setInfo("fu1"); render(); });

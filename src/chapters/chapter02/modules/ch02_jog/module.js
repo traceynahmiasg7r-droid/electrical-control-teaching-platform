@@ -4,7 +4,7 @@
   platform.moduleDefinitions = platform.moduleDefinitions || {};
   platform.moduleDefinitions.createCh02Jog = (options) => platform.facadeAdapter.createFacadeModuleDefinition({
     circuitData: options.circuitData,
-    createFacade: () => platform.moduleFacades.createJogFacade({ port: options.port }),
+    createFacade: (context) => platform.moduleFacades.createJogFacade({ context, circuitData: options.circuitData, port: options.port }),
     meta: {
       schemaVersion: "1.0",
       chapterId: "ch02",
@@ -18,7 +18,8 @@
       maturity: "M3",
       status: "ready",
       integrationMode: "facade-v1",
-      geometryLockId: "jog_control_geometry_v1_locked"
+      renderTarget: "module-canvas",
+      geometryLockId: "jog_control_textbook_trace_v1"
     },
     aliases: ["ch02_jog"]
   });

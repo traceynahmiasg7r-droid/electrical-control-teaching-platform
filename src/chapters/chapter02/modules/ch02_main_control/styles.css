@@ -1,0 +1,237 @@
+[data-module="ch02_main_control"].ch02-main-control-static-module {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.ch02-main-control-static-module .ch02-main-control-board {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  aspect-ratio: 1509 / 1102;
+  background: #ffffff;
+}
+
+.ch02-main-control-board .ch02-main-control-background {
+  fill: #ffffff;
+}
+
+.ch02-main-control-board .ch02-main-control-wire,
+.ch02-main-control-board .ch02-main-control-component,
+.ch02-main-control-board .thermal-link {
+  fill: none;
+  stroke: #111111;
+  stroke-width: 1.8;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.ch02-main-control-board .ch02-main-control-wire-active {
+  fill: none;
+  stroke: #c62828;
+  stroke-width: 4.2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  pointer-events: none;
+}
+
+.ch02-main-control-board .ch02-main-control-component.is-active-edge {
+  stroke: #c62828;
+  stroke-width: 2.3;
+}
+
+.ch02-main-control-board .ch02-main-control-component rect,
+.ch02-main-control-board .ch02-main-control-component ellipse,
+.ch02-main-control-board .ch02-main-control-component circle {
+  fill: #ffffff;
+}
+
+.ch02-main-control-board .ch02-main-control-component .fuse-body,
+.ch02-main-control-board .ch02-main-control-component .thermal-body,
+.ch02-main-control-board .ch02-main-control-component .coil-body {
+  fill: #ffffff;
+}
+
+.ch02-main-control-board .ch02-main-control-component .ch02-main-control-hitbox {
+  fill: transparent;
+  stroke: none;
+  pointer-events: all;
+}
+
+.ch02-main-control-board .ch02-main-control-flow {
+  fill: none;
+  stroke: #ffaaa5;
+  stroke-width: 1.6;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-dasharray: 6 26;
+  animation: ch02MainControlFlow 1.6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes ch02MainControlFlow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -32; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ch02-main-control-board .ch02-main-control-flow {
+    animation: none;
+    display: none;
+  }
+}
+
+.ch02-main-control-board .ch02-main-control-junction-layer {
+  fill: #111111;
+  stroke: none;
+}
+
+.ch02-main-control-board .ch02-main-control-junction.is-active-junction {
+  fill: #c62828;
+}
+
+.ch02-main-control-board .thermal-link {
+  stroke-dasharray: 3 4;
+  stroke-width: 1.7;
+}
+
+.ch02-main-control-board .mechanical-link {
+  fill: none;
+  stroke: #111111;
+  stroke-width: 1.4;
+  stroke-dasharray: 10 8;
+}
+
+.ch02-main-control-board .button-cap,
+.ch02-main-control-board .button-actuator {
+  fill: none;
+  stroke: #111111;
+  stroke-width: 1.6;
+}
+
+.ch02-main-control-board .button-actuator {
+  stroke-dasharray: 5 4;
+}
+
+.ch02-main-control-board .motor-terminal {
+  fill: #ffffff;
+  stroke: #111111;
+  stroke-width: 1.4;
+}
+
+.ch02-main-control-board .ch02-main-control-component .motor-shell {
+  fill: #ffffff;
+  stroke: #111111;
+  stroke-width: 1.8;
+}
+
+.ch02-main-control-board text.motor-inside {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ch02-main-control-board text {
+  fill: #111111;
+  stroke: none;
+  font-family: "Times New Roman", "SimSun", serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.ch02-main-control-board text.phase,
+.ch02-main-control-board text.node,
+.ch02-main-control-board text.terminal {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.ch02-main-control-board text.motor {
+  font-size: 27px;
+}
+
+.ch02-main-control-board text.device {
+  font-size: 24px;
+}
+
+.ch02-main-control-board text.section {
+  font-size: 42px;
+}
+
+.ch02-main-control-board .ch02-main-control-component {
+  transition: opacity 90ms ease, fill 90ms ease, stroke-width 90ms ease;
+}
+
+.ch02-main-control-board .ch02-main-control-component[data-interactive="true"] {
+  cursor: pointer;
+}
+
+.ch02-main-control-board .ch02-main-control-component[data-interactive="true"]:focus {
+  outline: none;
+}
+
+.ch02-main-control-board .ch02-main-control-component[data-interactive="true"]:focus-visible {
+  filter: drop-shadow(0 0 1.2px #2e6f93);
+}
+
+.ch02-main-control-board .ch02-main-control-component.is-pressed {
+  opacity: 0.72;
+}
+
+.ch02-main-control-board .ch02-main-control-component.is-energized rect,
+.ch02-main-control-board .ch02-main-control-component.is-energized ellipse {
+  fill: #e4eee5;
+  stroke: #386246;
+  stroke-width: 2.15;
+}
+
+.ch02-main-control-board .ch02-main-control-component.is-tripped {
+  opacity: 0.66;
+}
+
+.ch02-main-control-board .ch02-main-control-component.motor-running ellipse {
+  fill: #e4eee5;
+  stroke: #386246;
+  stroke-width: 2.15;
+}
+
+.ch02-main-control-board .is-teaching-focus {
+  filter: drop-shadow(0 0 5px #72a8e3);
+}
+
+/* Keep all responsive changes at the shell level; the frozen SVG coordinate
+   system and its geometry are not transformed here. */
+body.ch02-main-control-active .workspace {
+  grid-template-columns: 210px minmax(0, 1fr) 324px;
+  gap: 10px;
+  padding: 12px;
+}
+
+body.ch02-main-control-active .stage-panel { height: calc(100vh - 96px); }
+body.ch02-main-control-active .stage-card { flex: 1; height: auto; min-height: 0; }
+body.ch02-main-control-active .module-canvas { padding: 6px; }
+body.ch02-main-control-active .footerbar { min-height: 140px; flex: 0 0 auto; padding: 12px 14px; }
+body.ch02-main-control-active .footer-playback-head { flex-wrap: wrap; gap: 8px; }
+body.ch02-main-control-active .footer-playback-actions { flex-wrap: wrap; }
+body.ch02-main-control-active .footer-playback-meta { flex-wrap: wrap; gap: 8px; }
+body.ch02-main-control-active #currentStepText { white-space: normal; }
+body.ch02-main-control-active .info-card,
+body.ch02-main-control-active .operation-control-card { padding: 10px 12px; }
+body.ch02-main-control-active .control-grid { gap: 5px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+body.ch02-main-control-active .control-grid .ctrl-btn,
+body.ch02-main-control-active .control-grid .qf-btn { min-height: 64px; height: 64px; padding: 5px 3px; gap: 2px; }
+
+@media (max-width: 1450px) {
+  body.ch02-main-control-active .workspace { grid-template-columns: 176px minmax(0, 1fr) 300px; }
+  body.ch02-main-control-active .platform-module-list .module-nav-item .label { font-size: 12px; }
+  body.ch02-main-control-active .stage-card-head { padding: 12px; }
+  body.ch02-main-control-active .stage-card-head h3 { font-size: 20px; }
+  body.ch02-main-control-active .stage-panel { height: auto; align-self: start; }
+  body.ch02-main-control-active .stage-card { flex: 0 0 auto; min-height: 720px; }
+}

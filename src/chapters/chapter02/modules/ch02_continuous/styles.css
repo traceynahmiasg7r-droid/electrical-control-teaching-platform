@@ -1,0 +1,33 @@
+.ch02-continuous-module { width: 100%; height: 100%; min-height: 0; display: flex; align-items: center; justify-content: center; background: #fff; }
+.ch02-continuous-board { display: block; width: 100%; height: auto; max-height: 100%; background: #fff; font-family: "Times New Roman", "SimSun", serif; }
+.continuous-background { fill: #fff; }
+.ch02-continuous-wire, .ch02-continuous-component .continuous-conductor { fill: none; stroke: #111; stroke-width: 4.5; stroke-linecap: square; stroke-linejoin: miter; }
+.ch02-continuous-wire-active { fill: none; stroke: #d32929; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; opacity: .72; pointer-events: none; }
+.ch02-continuous-flow { fill: none; stroke: #ff8d86; stroke-width: 3.5; stroke-dasharray: 13 13; animation: continuousFlow 1s linear infinite; pointer-events: none; }
+@keyframes continuousFlow { to { stroke-dashoffset: -52; } }
+.ch02-continuous-component .continuous-conductor.is-conductive { stroke: #c62828; stroke-width: 6.5; }
+.continuous-fixed, .continuous-mechanical, .continuous-button-cap, .continuous-button-rod, .continuous-thermal-link, .continuous-thermal-arm, .continuous-source-slash { fill: none; stroke: #111; stroke-width: 4.5; stroke-linecap: square; stroke-linejoin: miter; }
+.continuous-mechanical, .continuous-thermal-link { stroke-dasharray: 11 8; stroke-width: 2.8; }
+.continuous-source-terminal, .continuous-fuse, .continuous-fuse-control-vertical, .continuous-fuse-control-return, .continuous-thermal, .continuous-coil, .continuous-motor { fill: #fff; stroke: #111; stroke-width: 4.5; }
+.continuous-fuse-control-vertical, .continuous-fuse-control-return { fill: #fff; }
+.continuous-motor { stroke-width: 5.5; }
+.continuous-motor-shell { fill: none; stroke: none; pointer-events: none; }
+.continuous-motor-mark { fill: #111; stroke: none; text-anchor: middle; font-size: 27px; font-weight: 700; }
+.continuous-label-frame { fill: #fff; stroke: #111; stroke-width: 3.5; }
+.continuous-label-section { fill: #001bc4; font-weight: 700; font-family: "KaiTi", "STKaiti", serif; }
+.continuous-label-diagram-title { fill: #111; font-weight: 700; font-family: "SimSun", "Songti SC", serif; }
+.continuous-label-phase, .continuous-label-device { fill: #111; font-weight: 700; }
+.continuous-hitbox { fill: transparent; stroke: none; cursor: pointer; pointer-events: all; }
+.ch02-continuous-component.is-energized > .continuous-coil, .ch02-continuous-component.is-energized > .continuous-motor { fill: #e5f0e7; stroke: #356845; stroke-width: 7; }
+.ch02-continuous-component.is-pressed .continuous-button-cap { stroke: #246baf; }
+.ch02-continuous-component.is-teaching-focus > * { filter: drop-shadow(0 0 6px rgba(245, 158, 11, .9)); }
+.ch02-continuous-component[data-interactive="true"] { cursor: pointer; }
+@media (max-width: 700px) {
+  html.ch02-continuous-active-root { min-width: 0; width: 100%; overflow-x: hidden; }
+  html body.ch02-continuous-active { min-width: 0; width: 100%; overflow-x: hidden; }
+  body.ch02-continuous-active .workspace { width: 100%; min-width: 0; grid-template-columns: minmax(0, 1fr); padding: 8px; }
+  body.ch02-continuous-active .sidebar, body.ch02-continuous-active .stage-panel, body.ch02-continuous-active .inspector { grid-column: 1; width: 100%; min-width: 0; }
+  body.ch02-continuous-active .sidebar { position: static; height: auto; max-height: none; }
+  body.ch02-continuous-active .stage-card { height: auto; min-height: 420px; }
+  body.ch02-continuous-active .inspector { position: static; max-height: none; }
+}

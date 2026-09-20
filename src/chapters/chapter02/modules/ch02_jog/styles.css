@@ -1,0 +1,40 @@
+.ch02-jog-module { width: 100%; height: 100%; min-height: 0; display: flex; align-items: center; justify-content: center; background: #fff; }
+.ch02-jog-board { display: block; width: 100%; height: auto; max-height: 100%; background: #fff; font-family: "Times New Roman", "SimSun", serif; }
+.ch02-jog-background { fill: #fff; }
+.ch02-jog-wire, .ch02-jog-component .jog-conductor { fill: none; stroke: #111; stroke-width: 5; stroke-linecap: square; stroke-linejoin: miter; }
+.ch02-jog-wire-active { fill: none; stroke: #d32929; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; opacity: .72; pointer-events: none; }
+.ch02-jog-flow { fill: none; stroke: #ff8d86; stroke-width: 4; stroke-dasharray: 14 14; animation: ch02JogFlow 1s linear infinite; pointer-events: none; }
+@keyframes ch02JogFlow { to { stroke-dashoffset: -56; } }
+.ch02-jog-component .jog-conductor.is-conductive { stroke: #c62828; stroke-width: 7; }
+.jog-fixed-terminal, .jog-mechanical-link, .jog-button-cap, .jog-button-actuator, .jog-thermal-link, .jog-thermal-arm { fill: none; stroke: #111; stroke-width: 5; stroke-linecap: square; stroke-linejoin: miter; }
+.jog-mechanical-link, .jog-thermal-link { stroke-dasharray: 12 9; stroke-width: 3; }
+.source-terminal, .jog-fuse, .jog-fuse-control, .jog-thermal-body, .jog-coil-body, .jog-motor-shell { fill: #fff; stroke: #111; stroke-width: 5; }
+.jog-motor-shell { stroke-width: 6; }
+.jog-fuse-control { fill: #d7f1f2; }
+.jog-motor-mark, .jog-motor-phase { fill: #111; stroke: none; text-anchor: middle; font-weight: 700; }
+.jog-motor-mark { font-size: 30px; }
+.jog-motor-phase { font-size: 26px; }
+.jog-label-frame { fill: #fff; stroke: #111; stroke-width: 4; }
+.jog-label-section { fill: #001bc4; font-weight: 700; }
+.jog-label-phase, .jog-label-device { fill: #111; font-weight: 700; }
+.jog-label-section { font-family: "KaiTi", "STKaiti", serif; }
+.ch02-jog-junction { fill: #111; stroke: none; }
+.ch02-jog-crossing { fill: #fff; stroke: none; }
+.ch02-jog-hitbox { fill: transparent; stroke: none; cursor: pointer; pointer-events: all; }
+.ch02-jog-component.is-energized > .jog-coil-body, .ch02-jog-component.is-energized > .jog-motor-shell { fill: #e5f0e7; stroke: #356845; stroke-width: 7; }
+.ch02-jog-component.is-pressed .jog-button-cap { stroke: #246baf; }
+.ch02-jog-component.is-active-edge .jog-coil-body { fill: #e5f0e7; }
+.ch02-jog-component.is-teaching-focus > * { filter: drop-shadow(0 0 6px rgba(245, 158, 11, .9)); }
+.ch02-jog-component[data-interactive="true"] { cursor: pointer; }
+@media (max-width: 700px) { .ch02-jog-module { min-height: 300px; overflow: hidden; } .ch02-jog-board { min-width: 0; width: 100%; } }
+@media (max-width: 700px) {
+  html.ch02-jog-active-root { min-width: 0; width: 100%; overflow-x: hidden; }
+  html body.ch02-jog-active { min-width: 0; width: 100%; overflow-x: hidden; }
+  body.ch02-jog-active .workspace { width: 100%; min-width: 0; grid-template-columns: minmax(0, 1fr); padding: 8px; }
+  body.ch02-jog-active .sidebar,
+  body.ch02-jog-active .stage-panel,
+  body.ch02-jog-active .inspector { grid-column: 1; width: 100%; min-width: 0; }
+  body.ch02-jog-active .sidebar { position: static; height: auto; max-height: none; }
+  body.ch02-jog-active .stage-card { height: auto; min-height: 420px; }
+  body.ch02-jog-active .inspector { position: static; max-height: none; }
+}

@@ -4,7 +4,7 @@
   platform.moduleDefinitions = platform.moduleDefinitions || {};
   platform.moduleDefinitions.createCh02MainControl = (options) => platform.facadeAdapter.createFacadeModuleDefinition({
     circuitData: options.circuitData,
-    createFacade: () => platform.moduleFacades.createMainControlFacade({ port: options.port }),
+    createFacade: (context) => platform.moduleFacades.createMainControlFacade({ context, circuitData: options.circuitData, port: options.port }),
     meta: {
       schemaVersion: "1.0",
       chapterId: "ch02",
@@ -18,7 +18,8 @@
       maturity: "M3",
       status: "ready",
       integrationMode: "facade-v1",
-      geometryLockId: "main_control_geometry_v1_locked"
+      renderTarget: "module-canvas",
+      geometryLockId: "main_control_textbook_static_v2"
     },
     aliases: ["ch02_main_control"]
   });

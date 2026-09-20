@@ -1,0 +1,27 @@
+"use strict";
+const fs = require("node:fs"), path = require("node:path"), vm = require("node:vm"), crypto = require("node:crypto"), assert = require("node:assert/strict");
+const base = path.resolve(__dirname, ".."), root = path.resolve(__dirname, "../../../../../..");
+const context = { console }; vm.createContext(context); vm.runInContext(fs.readFileSync(path.join(base, "circuit.data.js"), "utf8"), context);
+const data = context.ECTPPlatform.moduleCircuitData.ch01JogTextbook, tests = [];
+const check = (name, predicate) => { assert(predicate, name); tests.push(name); };
+const byId = new Map(data.ports.map((p) => [p.portId, p]));
+const source = fs.readFileSync(data.reference.path);
+check("supplied source identity and original dimensions", crypto.createHash("sha256").update(source).digest("hex").toUpperCase() === data.reference.sha256 && source.readUInt32BE(16) === 1845 && source.readUInt32BE(20) === 1297);
+check("source-native graph passes structural validation", data.validateGeometry().valid);
+check("public module identity preserved", data.moduleId === "ch01_jog");
+check("only the four source components exist", data.components.length === 4 && !data.components.some((c) => /qf|fr|fuse/i.test(c.componentId)));
+check("no invented crossing or junction", data.junctions.length === 0 && data.crossings.length === 0);
+check("source symbols excluded from electrical current geometry", data.sourceBars.length === 2 && data.sourceBars.every((bar) => !data.wires.some((wire) => wire.wireId === bar.id)));
+check("control phase A has explicit source mapping and no fake visual bridge", byId.get("src_a").electricalNodeId === byId.get("control_a").electricalNodeId && !data.wires.some((wire) => [wire.from, wire.to].includes("src_a") && [wire.from, wire.to].includes("control_a")));
+check("source KM three poles and SB1 normally-open contact", data.deviceEdges.filter((e) => e.componentId === "km_main").length === 3 && data.deviceEdges.find((e) => e.edgeId === "sb1_no").condition === "SB1");
+check("coil is a load, no fabricated self-hold edge", data.deviceEdges.filter((e) => e.kind === "load").length === 1 && data.deviceEdges.find((e) => e.kind === "load").edgeId === "km_coil" && !data.deviceEdges.some((e) => /hold|self/i.test(e.edgeId)));
+function reachable(from, to, edges) { const seen = new Set([from]), queue = [from]; while (queue.length) { const a = queue.shift(); for (const e of edges) { const b = e.from === a ? e.to : e.to === a ? e.from : null; if (b && !seen.has(b)) { seen.add(b); queue.push(b); } } } return seen.has(to); }
+check("open SB cannot be bypassed by a base wire", !reachable("control_a", "km_coil_a", data.wires));
+check("open main poles cannot be bypassed by a base wire", ["a", "b", "c"].every((phase, i) => !reachable(`src_${phase}`, `m_${["u", "v", "w"][i]}`, data.wires)));
+check("each visual wire starts and ends at its named electrical ports", data.wires.every((w) => w.points[0].x === byId.get(w.from).x && w.points[0].y === byId.get(w.from).y && w.points.at(-1).x === byId.get(w.to).x && w.points.at(-1).y === byId.get(w.to).y));
+const motor = data.components.find((c) => c.type === "motor").geometry;
+check("all three motor leads meet the actual ellipse", motor.phasePorts.every((id) => { const p = byId.get(id); return Math.abs(((p.x - motor.x) / motor.rx) ** 2 + ((p.y - motor.y) / motor.ry) ** 2 - 1) < 1e-9; }));
+check("source asymmetric control/main layout retained", byId.get("control_a").x === 860 && byId.get("control_a").y === 730 && motor.x === 471 && motor.y === 1073 && byId.get("km_coil_a").x === 1299);
+check("AC mark has extra viewport margin without shifting geometry", data.labels.find((x) => x.text === "~").y === 485 && data.viewBox.y <= 446);
+const result = { passed: true, checks: tests.length, tests, geometry: data.validateGeometry(), reference: data.reference };
+fs.mkdirSync(path.join(root, "output/playwright"), { recursive: true }); fs.writeFileSync(path.join(root, "output/playwright/ch01-jog-geometry-validation.json"), JSON.stringify(result, null, 2)); console.log(JSON.stringify(result, null, 2));

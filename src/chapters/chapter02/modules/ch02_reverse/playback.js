@@ -1,10 +1,11 @@
 (function installReversePlayback(global) {
   "use strict";
   const platform = global.ECTPPlatform = global.ECTPPlatform || {};
-  platform.createReversePlayback = ({ scope, evaluate, onChange }) => {
-    let scenarioId = "forward-start", steps = [], index = -1, running = false, speed = 1, timer = null, completed = false;
+  platform.createReversePlayback = ({ scope, evaluate, onChange, teaching = platform.reverseTeaching }) => {
+    // Same accepted player, with an optional module-owned teaching catalogue.
+    let scenarioId = teaching.scenarios[0].id, steps = [], index = -1, running = false, speed = 1, timer = null, completed = false;
     const clearTimer = () => { if (timer !== null) scope.clearTimeout(timer); timer = null; };
-    const ensureSteps = () => { if (!steps.length) steps = platform.reverseTeaching.buildScenario(scenarioId, evaluate); };
+    const ensureSteps = () => { if (!steps.length) steps = teaching.buildScenario(scenarioId, evaluate); };
     function schedule() {
       clearTimer();
       if (running && index >= 0) timer = scope.timeout(() => {
@@ -19,13 +20,13 @@
     return Object.freeze({
       current: () => index < 0 ? null : steps[index],
       steps: () => { ensureSteps(); return steps; },
-      view: () => ({ scenarioId, scenarios: platform.reverseTeaching.scenarios, index, count: steps.length,
+      view: () => ({ scenarioId, scenarios: teaching.scenarios, index, count: steps.length,
         running, speed, completed, step: index < 0 ? null : steps[index], mode: index < 0 ? "Live" : "Playback" }),
       cancel,
       command(command, value) {
         switch (command) {
           case "scenario":
-            if (!platform.reverseTeaching.scenarios.some((s) => s.id === value)) throw new Error("Unknown teaching scenario");
+            if (!teaching.scenarios.some((s) => s.id === value)) throw new Error("Unknown teaching scenario");
             cancel(); scenarioId = value; steps = []; ensureSteps(); break;
           case "restart": cancel(); ensureSteps(); index = 0; running = true; break;
           case "toggle": ensureSteps(); if (index < 0) index = 0; running = !running; completed = false; break;

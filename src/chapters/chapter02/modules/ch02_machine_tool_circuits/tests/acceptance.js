@@ -34,7 +34,7 @@ check("Module Contract有效", platform.contracts.validateModuleContract(instanc
 check("Facade输出有效", (() => { try { platform.contracts.assertFacadeOutputs(instance); return true; } catch (_) { return false; } })());
 check("模块内Solver与Geometry测试通过", instance.runTests().passed);
 check("正式公共层加载机床模块资源", publicIndex.includes("ch02_machine_tool_circuits/module.js") && publicIndex.includes("ch02_machine_tool_circuits/module.css"));
-check("正式公共层注册机床综合线路", publicIndex.includes("platform.moduleDefinitions.createCh02MachineToolCircuits()"));
+check("正式路由注册v2且保留旧资源", publicIndex.includes("platform.moduleDefinitions.createCh02MachineToolCircuitsV2()") && publicIndex.includes("ch02_machine_tool_circuits/facade.js"));
 check("第二章菜单顺序为07", definition.meta.chapterId === "ch02" && definition.meta.code === "07" && definition.meta.order === 7);
 check("公共层扩展操作区已接入", publicIndex.includes('id="moduleExtraControls"') && publicIndex.includes("control.payload || {}"));
 

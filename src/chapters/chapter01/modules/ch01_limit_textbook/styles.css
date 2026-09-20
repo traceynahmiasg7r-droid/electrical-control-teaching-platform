@@ -1,0 +1,66 @@
+.ch01-limit-textbook-module { width: 100%; height: 100%; min-height: 0; background: #fff; }
+.ch01-limit-textbook-board { display: block; width: 100%; height: 100%; background: #fff; fill: none; stroke: none; }
+.ch01-limit-textbook-board .ch01-limit-textbook-background { fill: #fff; stroke: none; }
+.ch01-limit-textbook-wire, .ch01-limit-textbook-conductor, .ch01-limit-textbook-symbol,
+.ch01-limit-textbook-striker, .ch01-limit-textbook-heater, .ch01-limit-textbook-heater-detail {
+  fill: none; stroke: #222; stroke-width: 2.6; stroke-linejoin: miter; stroke-linecap: butt;
+}
+.ch01-limit-textbook-board .ch01-limit-textbook-active,
+.ch01-limit-textbook-board .ch01-limit-textbook-conductor.is-active {
+  fill: none; stroke: #d62828; stroke-width: 3.8; stroke-linecap: butt; stroke-linejoin: miter;
+}
+.ch01-limit-textbook-flow {
+  fill: none; stroke: #ffc2a0; stroke-width: 2.2; stroke-dasharray: 8 13;
+  animation: ch01LimitTextbookFlow 1s linear infinite; pointer-events: none;
+}
+@keyframes ch01LimitTextbookFlow { to { stroke-dashoffset: -42; } }
+.ch01-limit-textbook-contact-dot, .ch01-limit-textbook-source,
+.ch01-limit-textbook-coil, .ch01-limit-textbook-motor {
+  fill: #fff; stroke: #222; stroke-width: 2.6;
+}
+.ch01-limit-textbook-component.is-energized .ch01-limit-textbook-contact-dot { stroke: #d62828; }
+.ch01-limit-textbook-linkage { fill: none; stroke: #444; stroke-width: 2; stroke-dasharray: 7 6; }
+.ch01-limit-textbook-component.is-energized .ch01-limit-textbook-coil,
+.ch01-limit-textbook-component.is-running .ch01-limit-textbook-motor { fill: #e1f3e8; stroke: #198149; }
+.ch01-limit-textbook-component.is-operating .ch01-limit-textbook-striker { stroke: #198149; stroke-width: 3.4; }
+.ch01-limit-textbook-component.is-tripped .ch01-limit-textbook-heater { fill: #fff2e7; stroke: #ba562f; }
+.ch01-limit-textbook-motor-motion {
+  fill: none; stroke: #198149; stroke-width: 2; stroke-dasharray: 10 9;
+  animation: ch01LimitTextbookFlow .75s linear infinite; pointer-events: none;
+}
+.ch01-limit-textbook-board .ch01-limit-textbook-label {
+  fill: #222; stroke: none; font-family: Georgia, "SimSun", "Songti SC", serif;
+  font-weight: 700; letter-spacing: 0;
+}
+.ch01-limit-textbook-board .ch01-limit-textbook-label.title { font-weight: 600; }
+.ch01-limit-textbook-junction { fill: #222; stroke: none; }
+.ch01-limit-textbook-hitbox { fill: transparent; fill-opacity: 0; stroke: none; cursor: pointer; pointer-events: all; }
+.ch01-limit-textbook-hitbox:focus-visible { outline: 3px solid #197996; outline-offset: 4px; }
+.ch01-limit-textbook-component.is-teaching-focus { filter: drop-shadow(0 0 6px #65c5db); }
+.ch01-limit-textbook-flow-layer, .ch01-limit-textbook-label-layer { pointer-events: none; }
+@media (prefers-reduced-motion: reduce) {
+  .ch01-limit-textbook-flow, .ch01-limit-textbook-motor-motion { animation: none; }
+}
+@media (max-width: 700px) {
+  html:has(body.ch01-limit-textbook-active), body.ch01-limit-textbook-active { min-width: 0; width: 100%; }
+  body.ch01-limit-textbook-active .topbar { padding: 12px; height: auto; min-height: 64px; }
+  body.ch01-limit-textbook-active .topbar-brand { font-size: 17px; gap: 9px; white-space: normal; }
+  body.ch01-limit-textbook-active .platform-logo { transform: scale(.82); margin: -4px; }
+  body.ch01-limit-textbook-active .workspace { width: 100%; min-width: 0; padding: 8px; grid-template-columns: minmax(0, 1fr); }
+  body.ch01-limit-textbook-active .sidebar,
+  body.ch01-limit-textbook-active .stage-panel,
+  body.ch01-limit-textbook-active .inspector { grid-column: 1; width: 100%; min-width: 0; }
+  body.ch01-limit-textbook-active .sidebar { position: static; height: 235px; }
+  body.ch01-limit-textbook-active .stage-card { height: auto; min-height: 350px; }
+  body.ch01-limit-textbook-active .stage-head { padding: 14px; }
+  body.ch01-limit-textbook-active .inspector { position: static; max-height: none; display: grid; grid-template-columns: minmax(0, 1fr); }
+  body.ch01-limit-textbook-active .principle-toolbar { flex-wrap: wrap; min-width: 0; }
+  body.ch01-limit-textbook-active .principle-toolbar select { max-width: 100%; }
+  body.ch01-limit-textbook-active .footer-playback-head { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+  body.ch01-limit-textbook-active .footer-playback-head > strong { grid-column: 1; }
+  body.ch01-limit-textbook-active .footer-playback-head > label {
+    grid-column: 1; display: flex; flex-wrap: wrap; align-items: center;
+    gap: 6px; min-width: 0; max-width: 100%;
+  }
+  body.ch01-limit-textbook-active .footer-playback-head select { flex: 1 1 200px; min-width: 0; max-width: 100%; }
+}

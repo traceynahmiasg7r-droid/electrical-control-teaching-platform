@@ -1,0 +1,16 @@
+"use strict";
+const assert = require("node:assert/strict");
+const path = require("node:path");
+const base = path.resolve(__dirname, "..");
+require(path.join(base, "circuit.data.js"));
+const data = globalThis.ECTPPlatform.moduleCircuitData.ch01ContinuousTextbook;
+const report = data.validateGeometry();
+assert.equal(report.valid, true, report.errors.join("; "));
+assert.deepEqual(data.reference, { path: "C:/电路截图/第一章长动控制.png", sha256: "E6150D4C6C330B6C4CCB7A4B8D13DF6A31FCADE7C4986D182EED9ECDA56FA75C", width: 1798, height: 1219, sourceCrop: { left: 207, top: 450, right: 1580, bottom: 1186 } });
+assert.deepEqual({ wires: data.wires.length, edges: data.deviceEdges.length, ports: data.ports.length, components: data.components.length, junctions: data.junctions.length, crossings: data.crossings.length }, { wires: 14, edges: 7, ports: 24, components: 6, junctions: 2, crossings: 0 });
+assert.equal(data.junctions.every((item) => item.visible === false), true);
+assert.deepEqual(data.deviceEdges.map((item) => item.edgeId), ["km_main_a", "km_main_b", "km_main_c", "sb1_no", "km_self_no", "sb2_nc", "km_coil"]);
+assert.equal(data.components.find((item) => item.componentId === "sb2").contactType, "NC");
+assert.equal(data.components.find((item) => item.componentId === "sb1").contactType, "NO");
+assert.equal(data.ports.filter((item) => item.portId.startsWith("m_")).length, 3);
+console.log(JSON.stringify({ passed: true, counts: report.counts, reference: data.reference }, null, 2));

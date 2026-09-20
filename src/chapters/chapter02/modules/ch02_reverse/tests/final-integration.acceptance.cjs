@@ -182,13 +182,19 @@ async function runFinalChecks(page) {
     check("reentry one input handler " + i, (await view()).displayState.snapshot.operation.power === "closed");
     check("reentry zero timers " + i, await page.evaluate(() => platformApi.getDiagnostics().loader.currentScope.timeoutCount === 0));
   }
-  // Optional facade extension must not commandeer legacy Chapter 2 players.
-  for (const route of ["jog-control", "self-lock", "main-control"]) {
+  // Jog and continuous self-lock both expose detached playback through their
+  // Facades; the reverse module itself remains on its legacy player contract.
+  for (const route of ["jog-control", "self-lock"]) {
     await page.evaluate((route) => platformApi.switchModule(route), route);
-    check(route + " original contract", await page.evaluate(() => platformApi.getCurrentContractReport().valid && !platformApi.getCurrentPlaybackViewModel()));
+    check(route + " contract", await page.evaluate(() => platformApi.getCurrentContractReport().valid
+      && Boolean(platformApi.getCurrentPlaybackViewModel())));
     await page.locator("#toggleQf").click();
     check(route + " original power action", await page.evaluate(() => platformApi.getCurrentOperationViewModel().power.closed));
   }
+  await page.evaluate(() => platformApi.switchModule("main-control"));
+  check("main-control upgraded contract", await page.evaluate(() => platformApi.getCurrentContractReport().valid && Boolean(platformApi.getCurrentPlaybackViewModel())));
+  await page.locator("#toggleQf").click();
+  check("main-control upgraded power action", await page.evaluate(() => platformApi.getCurrentOperationViewModel().power.closed));
   check("disposed scope resources empty", await page.evaluate(() => finalTestScopes.slice(0, -1).every((scope) => {
     const d = scope.diagnostics(); return d.disposed && !d.timeoutCount && !d.intervalCount && !d.cleanupCount;
   })));

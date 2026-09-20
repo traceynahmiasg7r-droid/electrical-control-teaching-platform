@@ -4,7 +4,7 @@
   platform.moduleDefinitions = platform.moduleDefinitions || {};
   platform.moduleDefinitions.createCh02Continuous = (options) => platform.facadeAdapter.createFacadeModuleDefinition({
     circuitData: options.circuitData,
-    createFacade: () => platform.moduleFacades.createContinuousFacade({ port: options.port }),
+    createFacade: (context) => platform.moduleFacades.createContinuousFacade({ context, circuitData: options.circuitData, port: options.port }),
     meta: {
       schemaVersion: "1.0",
       chapterId: "ch02",
@@ -18,6 +18,7 @@
       maturity: "M3",
       status: "ready",
       integrationMode: "facade-v1",
+      renderTarget: "module-canvas",
       geometryLockId: "continuous_control_geometry_v1_locked"
     },
     aliases: ["ch02_continuous"]

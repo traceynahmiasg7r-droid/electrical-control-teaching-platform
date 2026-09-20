@@ -1,0 +1,49 @@
+.machine-v2-module { display: flex; flex-direction: column; gap: 8px; width: 100%; height: 100%; min-height: 0; background: #fff; }
+.machine-v2-scene-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 5px; padding: 0 4px; }
+.machine-v2-scene-tab { min-width: 0; min-height: 34px; border: 1px solid #cdd8e5; border-radius: 4px; background: #f8fafc; color: #24344d; font: 700 12px/1.2 "Microsoft YaHei", sans-serif; cursor: pointer; }
+.machine-v2-scene-tab:hover, .machine-v2-scene-tab:focus-visible { border-color: #2563eb; outline: 2px solid #2563eb33; }
+.machine-v2-scene-tab.is-active { border-color: #1d4ed8; background: #e7efff; color: #163f96; }
+.machine-v2-canvas-shell { flex: 1; min-height: 0; overflow: hidden; background: #fff; border-top: 1px solid #dce4ed; }
+.machine-v2-board { display: block; width: 100%; height: 100%; background: #fff; font-family: "Times New Roman", "SimSun", serif; }
+.machine-v2-background { fill: #fff; }
+/* Defs contain shape only; each use supplies paint for base/active/flow. */
+.machine-v2-wire, .machine-v2-conductor, .machine-v2-symbol { fill: none; stroke: #161616; stroke-width: 3.6; stroke-linecap: square; stroke-linejoin: miter; }
+.machine-v2-wire-active, .machine-v2-conductor.is-active-conductor { fill: none; stroke: #d32929; stroke-width: 5.4; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.machine-v2-wire-flow { fill: none; stroke: #ffd0b9; stroke-width: 2.7; stroke-dasharray: 10 15; stroke-linecap: round; animation: machineV2Flow 1.15s linear infinite; pointer-events: none; }
+@keyframes machineV2Flow { to { stroke-dashoffset: -50; } }
+.machine-v2-symbol-body, .machine-v2-coil-body, .machine-v2-motor-body, .machine-v2-lamp-body { fill: #fff; stroke: #161616; stroke-width: 3.6; }
+.machine-v2-contact-roller, .machine-v2-source-terminal { fill: #fff; stroke: #161616; stroke-width: 2.6; }
+.machine-v2-mechanical-link { fill: none; stroke: #161616; stroke-width: 2.6; stroke-dasharray: 21 13; stroke-linecap: butt; stroke-linejoin: miter; pointer-events: none; }
+.machine-v2-device-label, .machine-v2-label { fill: #161616; font-size: 31px; font-weight: 500; }
+.machine-v2-label-phase { font-size: 32px; }
+.machine-v2-state-label { fill: #187344; font-family: "Microsoft YaHei", sans-serif; font-weight: 600; }
+.machine-v2-motor-mark, .machine-v2-motor-phase { fill: #161616; font-weight: 500; }
+.machine-v2-timer-half { fill: #161616; stroke: none; }
+.machine-v2-coil.is-energized .machine-v2-coil-body { fill: #d6efdf; stroke: #16834b; stroke-width: 4.5; }
+.machine-v2-motor.is-running .machine-v2-motor-body { fill: #e5f5e9; stroke: #16834b; stroke-width: 4.5; }
+.machine-v2-motor-motion { fill: none; stroke: #16834b; stroke-width: 3.8; animation: machineV2Rotation 2.2s linear infinite; pointer-events: none; }
+.machine-v2-motor[data-direction="reverse"] .machine-v2-motor-motion, .machine-v2-motor[data-direction="down"] .machine-v2-motor-motion, .machine-v2-motor[data-direction="clamp"] .machine-v2-motor-motion { animation-direction: reverse; }
+@keyframes machineV2Rotation { to { transform: rotate(360deg); } }
+.machine-v2-lamp.is-energized .machine-v2-lamp-body { fill: #fff0a4; stroke: #b37900; stroke-width: 4.3; }
+.machine-v2-junction { fill: #161616; }
+.machine-v2-junction.is-active { fill: #d32929; }
+.machine-v2-hitbox { fill: transparent; stroke: none; pointer-events: all; cursor: pointer; }
+.machine-v2-device[data-interactive="true"] { cursor: pointer; outline: none; }
+.machine-v2-device[data-interactive="true"]:focus-visible, .machine-v2-device.is-teaching-focus { filter: drop-shadow(0 0 7px #7fc3eb); }
+.machine-v2-label-layer, .machine-v2-flow-layer, .machine-v2-decoration-layer, .machine-v2-junction-layer { pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .machine-v2-wire-flow, .machine-v2-motor-motion { animation: none; } }
+@media (max-width: 900px) { .machine-v2-scene-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); } .machine-v2-scene-tab { font-size: 11px; } }
+@media (max-width: 700px) {
+  html:has(body.ch02-machine-tool-v2-active), body.ch02-machine-tool-v2-active { min-width: 0; width: 100%; }
+  body.ch02-machine-tool-v2-active .topbar { padding: 12px; height: auto; min-height: 64px; }
+  body.ch02-machine-tool-v2-active .topbar-brand { font-size: 17px; gap: 9px; white-space: normal; }
+  body.ch02-machine-tool-v2-active .platform-logo { transform: scale(.82); margin: -4px; }
+  body.ch02-machine-tool-v2-active .workspace { width: 100%; min-width: 0; padding: 8px; grid-template-columns: minmax(0, 1fr); }
+  body.ch02-machine-tool-v2-active .sidebar, body.ch02-machine-tool-v2-active .stage-panel, body.ch02-machine-tool-v2-active .inspector { grid-column: 1; width: 100%; min-width: 0; }
+  body.ch02-machine-tool-v2-active .sidebar { position: static; height: 235px; }
+  body.ch02-machine-tool-v2-active .stage-card { height: auto; min-height: 400px; }
+  body.ch02-machine-tool-v2-active .stage-head { padding: 14px; }
+  body.ch02-machine-tool-v2-active .inspector { position: static; max-height: none; display: grid; grid-template-columns: minmax(0, 1fr); }
+  body.ch02-machine-tool-v2-active .principle-toolbar { flex-wrap: wrap; min-width: 0; }
+  body.ch02-machine-tool-v2-active .principle-toolbar select { max-width: 100%; }
+}

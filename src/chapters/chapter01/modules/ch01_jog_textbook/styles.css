@@ -1,0 +1,35 @@
+.ch01-jog-textbook-module { width: 100%; height: 100%; min-height: 0; background: #fff; }
+.ch01-jog-textbook-board { display: block; width: 100%; height: 100%; background: #fff; fill: none; stroke: none; }
+.ch01-jog-textbook-board .ch01-jog-textbook-background { fill: #fff; stroke: none; }
+.ch01-jog-textbook-wire, .ch01-jog-textbook-conductor, .ch01-jog-textbook-symbol { fill: none; stroke: #151515; stroke-width: 4.9; stroke-linejoin: miter; stroke-linecap: butt; }
+.ch01-jog-textbook-board .ch01-jog-textbook-active, .ch01-jog-textbook-conductor.is-active { fill: none; stroke: #d62828; stroke-width: 5.5; stroke-linecap: butt; stroke-linejoin: miter; }
+.ch01-jog-textbook-flow { fill: none; stroke: #ffd2bd; stroke-width: 2.7; stroke-dasharray: 10 15; animation: ch01JogTextbookFlow 1.1s linear infinite; pointer-events: none; }
+@keyframes ch01JogTextbookFlow { to { stroke-dashoffset: -50; } }
+.ch01-jog-textbook-source, .ch01-jog-textbook-coil, .ch01-jog-textbook-motor { fill: #fff; stroke: #151515; stroke-width: 4.9; }
+.ch01-jog-textbook-board .ch01-jog-textbook-label { fill: #151515; stroke: none; font-family: Arial, "Microsoft YaHei", sans-serif; font-weight: 700; }
+.ch01-jog-textbook-label.caption { font-family: "SimSun", "Songti SC", serif; font-weight: 400; }
+.ch01-jog-textbook-component.is-energized .ch01-jog-textbook-coil, .ch01-jog-textbook-component.is-running .ch01-jog-textbook-motor { fill: #e1f3e8; stroke: #198149; }
+.ch01-jog-textbook-motion { fill: none; stroke: #198149; stroke-width: 3; stroke-dasharray: 8 6; animation: ch01JogTextbookFlow .85s linear infinite; pointer-events: none; }
+.ch01-jog-textbook-hitbox { fill: transparent; stroke: none; cursor: pointer; pointer-events: all; }
+.ch01-jog-textbook-component[role="button"] { outline: none; cursor: pointer; }
+.ch01-jog-textbook-component:focus-visible, .ch01-jog-textbook-component.is-teaching-focus { filter: drop-shadow(0 0 7px #89c9ed); }
+.ch01-jog-textbook-flow-layer, .ch01-jog-textbook-label-layer { pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .ch01-jog-textbook-flow, .ch01-jog-textbook-motion { animation: none; } }
+@media (max-width: 700px) {
+  html:has(body.ch01-jog-textbook-active), body.ch01-jog-textbook-active { min-width: 0; width: 100%; }
+  body.ch01-jog-textbook-active .topbar { padding: 12px; height: auto; min-height: 64px; }
+  body.ch01-jog-textbook-active .topbar-brand { font-size: 17px; gap: 9px; white-space: normal; }
+  body.ch01-jog-textbook-active .platform-logo { transform: scale(.82); margin: -4px; }
+  body.ch01-jog-textbook-active .workspace { width: 100%; min-width: 0; padding: 8px; grid-template-columns: minmax(0, 1fr); }
+  body.ch01-jog-textbook-active .sidebar, body.ch01-jog-textbook-active .stage-panel, body.ch01-jog-textbook-active .inspector { grid-column: 1; width: 100%; min-width: 0; }
+  body.ch01-jog-textbook-active .sidebar { position: static; height: 235px; }
+  body.ch01-jog-textbook-active .stage-card { height: auto; min-height: 350px; }
+  body.ch01-jog-textbook-active .stage-head { padding: 14px; }
+  body.ch01-jog-textbook-active .inspector { position: static; max-height: none; display: grid; grid-template-columns: minmax(0, 1fr); }
+  body.ch01-jog-textbook-active .principle-toolbar { flex-wrap: wrap; min-width: 0; }
+  body.ch01-jog-textbook-active .principle-toolbar select { max-width: 100%; }
+  body.ch01-jog-textbook-active .footer-playback-head { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+  body.ch01-jog-textbook-active .footer-playback-head > strong { grid-column: 1; }
+  body.ch01-jog-textbook-active .footer-playback-head > label { grid-column: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; min-width: 0; max-width: 100%; }
+  body.ch01-jog-textbook-active .footer-playback-head select { flex: 1 1 200px; min-width: 0; max-width: 100%; }
+}
